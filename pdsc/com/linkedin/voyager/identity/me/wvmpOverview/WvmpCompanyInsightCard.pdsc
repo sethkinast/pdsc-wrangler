@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "WvmpCompanyInsightCard",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "Insight card about viewers who work at certain company.",
+  "fields": [
+    {
+      "name": "numViews",
+      "type": "long",
+      "doc": "Profile view count over the total time."
+    },
+    {
+      "name": "insight",
+      "type": "com.linkedin.voyager.identity.me.Insight",
+      "doc": "Insight about the company where viewers work at.",
+      "optional": true
+    },
+    {
+      "name" : "miniCompany",
+      "type" : "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc" : "Mini Company info for the company where viewers work."
+    },
+    {
+      "name": "cards",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.me.Card"
+      },
+      "doc": "Collection of all the various cards used for WVMP insight card",
+      "default": []
+    },
+    {
+      "name": "wvmpMetadata",
+      "type": "com.linkedin.voyager.identity.me.WvmpMetadata",
+      "doc": "Metadata about a collection of profile view cards.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "SeniorityCount",
+  "doc": "Seniority category and number of applicants with that seniority.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "seniority",
+      "type": "string",
+      "doc": "Seniority as a string (e.g. Entry)."
+    },
+    {
+      "name": "count",
+      "type": "long",
+      "doc": "Number of applicants with this seniority."
+    },
+    {
+      "name": "level",
+      "type": "int",
+      "doc": "Integer that maps to the seniority name."
+    }
+  ]
+}

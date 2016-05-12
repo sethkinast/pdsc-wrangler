@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "CareerAbout2",
+  "doc": "Information about the company career, containing a title, text, and a list of links about the company, etc.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "include": [
+    "CareerResources"
+  ],
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of section.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "doc": "Text written by the company about themselves.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "CareerVideo",
+  "doc": "The video used in career page.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "videoType",
+      "type": "CareerVideoType",
+      "doc": "Type of embed code for video",
+      "optional": true
+    },
+    {
+      "name": "videoCode",
+      "type": "string",
+      "doc": "For Youtube, this is code to embed video. For Embedly, this is the video url on Embedly"
+    },
+    {
+      "name": "richMediaUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "Complete URL for the video.",
+      "optional": true
+    }
+  ]
+}

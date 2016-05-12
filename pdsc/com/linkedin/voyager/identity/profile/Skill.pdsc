@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Skill",
+  "doc": "Skills of a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormSkill"],
+  "fields": [
+    {
+      "name": "standardizedSkill",
+      "type": "com.linkedin.voyager.entities.shared.MiniSkill",
+      "optional": true,
+      "doc": "Standard Skill, if this skill has been chosen from the dropdown."
+    }
+  ]
+}

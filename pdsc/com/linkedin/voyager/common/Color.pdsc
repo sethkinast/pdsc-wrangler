@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "Color",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "The color represented by Red, Green, Blue and Alpha components.",
+  "fields": [
+    {
+      "name": "red",
+      "type": "int",
+      "doc": "The Red component."
+    },
+    {
+      "name": "green",
+      "type": "int",
+      "doc": "The Green component."
+    },
+    {
+      "name": "blue",
+      "type": "int",
+      "doc": "The Blue component."
+    },
+    {
+      "name": "alpha",
+      "type": "int",
+      "doc": "The Alpha component."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "NotableAlumni",
+  "namespace": "com.linkedin.voyager.entities.school",
+  "doc": "This has a list of alumnus at a school.",
+  "fields": [
+    {
+      "name": "alumni",
+      "type": {
+        "type": "array",
+        "items": "Alumnus"
+      },
+      "doc": "A list of notable alumnus."
+    },
+    {
+      "name": "pagingInfo",
+      "type": "com.linkedin.voyager.entities.common.PagingInfo",
+      "doc": "The paging info for alumni."
+    }
+  ]
+}

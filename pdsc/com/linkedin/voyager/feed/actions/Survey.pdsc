@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Survey",
+  "doc": "Type for a Survey Action.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": []
+}

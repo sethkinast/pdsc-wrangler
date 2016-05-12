@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "PreviewImage",
+  "doc": "Model for representing ",
+  "namespace": "com.linkedin.voyager.feed.urlpreview",
+  "fields": [
+    {
+      "name": "originalImage",
+      "doc": "Preview images for this url.",
+      "type": "com.linkedin.voyager.common.Image"
+    },
+    {
+      "name": "mediaProxyImage",
+      "doc": "media Proxy image for preview.",
+      "type": "com.linkedin.voyager.common.Image"
+    }
+  ]
+}

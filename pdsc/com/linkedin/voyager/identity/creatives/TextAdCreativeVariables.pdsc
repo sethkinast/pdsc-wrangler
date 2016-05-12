@@ -1,0 +1,24 @@
+{
+  "type" : "record",
+  "name" : "TextAdCreativeVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for rendering the Text Ad creatives",
+  "fields" : [
+    {
+      "name" : "title",
+      "doc" : "Title of the creative",
+      "type" : "string"
+    },
+    {
+      "name" : "text",
+      "doc" : "Body text of the creative",
+      "type" : "string"
+    },
+    {
+      "name" : "image",
+      "doc" : "Image for the creative",
+      "type" : "string",
+      "optional" : true
+    }
+  ]
+}

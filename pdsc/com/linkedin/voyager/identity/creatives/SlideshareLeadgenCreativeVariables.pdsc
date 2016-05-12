@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "SlideshareLeadgenCreativeVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for rendering the Slideshare leadgen creatives.",
+  "fields" : [
+    {
+      "name" : "slideshareLeadCampaign",
+      "doc" : "Reference to the slideshare lead campaign.",
+      "type" : "com.linkedin.common.Urn"
+    },
+    {
+      "name" : "customText",
+      "doc" : "Custom text for the lead form",
+      "type" : "string",
+      "optional" : true
+    }
+  ]
+}

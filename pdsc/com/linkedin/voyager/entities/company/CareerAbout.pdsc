@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "CareerAbout",
+  "doc": "Information about the company careers containing a title, subtitle, an image, and text with another title.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title for the text section.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "doc": "Text written by the company about themselves.",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "type": "CareerImage",
+      "doc": "The company career image.",
+      "optional": true
+    },
+    {
+      "name": "careersTitle",
+      "type": "string",
+      "doc": "Main title for the careers section.",
+      "optional": true
+    },
+    {
+      "name": "careersSubtitle",
+      "type": "string",
+      "doc": "Main subtitle for the careers section.",
+      "optional": true
+    }
+  ]
+}

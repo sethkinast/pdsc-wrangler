@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "SharedGroupsInfo",
+  "namespace": "com.linkedin.voyager.identity.shared.profileHighlights",
+  "doc": "Shared groups between two members (viewer and viewee)",
+  "fields": [
+    {
+      "name": "sharedGroups",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.entities.shared.MiniGroup",
+        "doc": "A list of shared groups"
+      },
+      "doc": "A list of shared groups between the viewer and viewee"
+    }
+  ]
+}

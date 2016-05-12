@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "ImportedContacts",
+  "doc": "A list of imported contacts and their types, which can be members or guests. This is essentially the list of contacts obtained upon performing an address book import and uploading them.",
+  "namespace": "com.linkedin.voyager.growth.abi",
+  "fields": [
+    {
+      "name": "memberContacts",
+      "doc": "List of member contacts and their types.",
+      "type": {
+        "type": "array",
+        "items" : "com.linkedin.voyager.growth.abi.MemberContact"
+      },
+      "default": []
+    },
+    {
+      "name": "guestContacts",
+      "doc": "List of guest contacts identified by email or phone number.",
+      "type": {
+        "type": "array",
+        "items" : "com.linkedin.voyager.growth.abi.GuestContact"
+      },
+      "default": []
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "Tracking id associated with the current flow.",
+      "optional": true
+    }
+  ]
+}

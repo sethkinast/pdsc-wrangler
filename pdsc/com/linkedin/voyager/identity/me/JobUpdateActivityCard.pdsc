@@ -1,0 +1,61 @@
+{
+  "type": "record",
+  "name": "JobUpdateActivityCard",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "A notification card about comments and likes on a job update.",
+  "fields": [
+    {
+      "name": "publishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The timestamp in milliseconds since epoch of when this notification happened."
+    },
+    {
+      "name": "entity",
+      "type": "com.linkedin.common.Urn",
+      "doc": "URN of the job update associated with this card."
+    },
+    {
+      "name": "headline",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Localized headline of the card."
+    },
+    {
+      "name": "headlineV2",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "A second variant of the localized headline of the card. Please fallback to \"headline\" when this is empty.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Localized description of the underlying job update."
+    },
+    {
+      "name": "comment",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Comment to display on the card.",
+      "optional": true
+    },
+    {
+      "name": "commentUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "URN of the comment that is displayed.",
+      "optional": true
+    },
+    {
+      "name": "actor",
+      "type": "ActorMiniProfile",
+      "doc": "Profile of a commenter or liker to highlight."
+    },
+    {
+      "name": "totalSocialActivityCounts",
+      "type": "com.linkedin.voyager.feed.shared.SocialActivityCounts",
+      "doc": "Counts of total comments and likes on the underlying job update."
+    },
+    {
+      "name": "read",
+      "type": "boolean",
+      "doc": "Whether this card has been read by the member."
+    }
+  ]
+}

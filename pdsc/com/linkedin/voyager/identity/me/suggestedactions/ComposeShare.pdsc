@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "ComposeShare",
+  "namespace": "com.linkedin.voyager.identity.me.suggestedactions",
+  "doc": "Suggested action to compose a share.",
+  "fields": [
+    {
+      "name": "suggestedArticle",
+      "type": "SuggestedArticle",
+      "doc": "An article we suggest for the member to share. This is optional because we might not find one.",
+      "optional": true
+    }
+  ]
+}

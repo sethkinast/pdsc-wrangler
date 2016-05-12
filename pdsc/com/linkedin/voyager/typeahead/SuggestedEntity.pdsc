@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "SuggestedEntity",
+  "doc": "An entity in a typeahead suggestion, e.g. a skill, company, title, or school.",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "type",
+      "type": "SuggestedEntityType",
+      "doc": "The entity type."
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "doc": "The entity value, e.g. skill or company name.  If the suggestion is for a standardized entity, then we will populate the backendUrn instead.",
+      "optional": true
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "urn describing the entity. This is usually available if the backend gives us a standardized entity. Otherwise we expect the value field to be populated with the entity name. This should be used only for tracking.",
+      "optional": true
+    }
+  ]
+}

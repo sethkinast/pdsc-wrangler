@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "DegreeCount",
+  "doc": "Degree name and number of applicants with that degree for applicant analytics.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "degree",
+      "type": "string",
+      "doc": "Degree as a localized string (e.g. Bachelor's Degree)."
+    },
+    {
+      "name": "count",
+      "type": "long",
+      "doc": "Number of other applicants with this degree."
+    },
+    {
+      "name": "percent",
+      "type": "int",
+      "doc": "Percentage of applicants with this degree."
+    },
+    {
+      "name": "sharedDegree",
+      "type": "boolean",
+      "default": false,
+      "doc": "Flag denoting whether or not the viewer's highest degree is this degree."
+    }
+  ]
+}

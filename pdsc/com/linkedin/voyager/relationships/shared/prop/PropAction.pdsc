@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "PropAction",
+  "namespace": "com.linkedin.voyager.relationships.shared.prop",
+  "doc": "Action that person can take",
+  "fields": [
+    {
+      "name": "type",
+      "type": "PropActionType",
+      "doc": "Type of the action. Client will have different logic associated with every type we support"
+    },
+    {
+      "name": "displayText",
+      "type": "string",
+      "optional": true,
+      "doc": "Text to be displayed for this action"
+    },
+    {
+     "name": "prefilledMessage",
+     "type": "string",
+     "doc": "Pre-filled message for the action",
+     "optional": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "EnrichedLocation",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "Location information corresponding to a country code, postal code pair used for topcard location viewing and editing",
+  "fields": [
+    {
+      "name": "cityCode",
+      "type": "string",
+      "doc": "The city place code of the location, ex. Mountain View, California's will be '7-1-0-43-12'"
+    },
+    {
+      "name": "cityName",
+      "type": "string",
+      "doc": "The city name of the location, ex. Mountain View, California's will be 'Mountain View, California' in en_US locale."
+    },
+    {
+      "name": "regionCode",
+      "type": "string",
+      "doc": "The region code of the location, ex. Mountain View, California's will be '84'"
+    },
+    {
+      "name": "regionName",
+      "type": "string",
+      "doc": "The region name of the location, ex. Mountain View, California's will be 'San Francisco Bay Area' in en_US locale."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "type": "record",
+  "name": "InmailContent",
+  "namespace": "com.linkedin.voyager.messaging.event.message",
+  "doc": "InMail Message Custom Content",
+  "fields": [
+    {
+      "name": "inmailType",
+      "type": {
+        "name": "InmailType",
+        "type": "enum",
+        "doc": "Enum describing the type of inmail.",
+        "symbols": [
+          "JOB_OFFER",
+          "CONSULTING",
+          "DISCUSS_NEW_PRODUCTS",
+          "JOB_INQUIRIES",
+          "REQUEST_FOR_INFO",
+          "DEALS", "REFERENCE_CHECK", "RECONNECTION"],
+        "symbolDocs": {
+          "JOB_OFFER":"A career opportunity",
+          "CONSULTING": "A consulting offer",
+          "DISCUSS_NEW_PRODUCTS": "New venture",
+          "JOB_INQUIRIES": "Job inquiry",
+          "REQUEST_FOR_INFO": "Expertise is needed",
+          "DEALS": "New business deal",
+          "REFERENCE_CHECK": "Reference check request",
+          "RECONNECTION": "Reconnect with another user"
+        }
+      },
+      "doc": "Type of the proposal"
+    },
+    {
+      "name": "status",
+      "type": {
+        "name": "InmailStatus",
+        "type": "enum",
+        "doc": "Enum describing the status of the Inmail.",
+        "symbols": [
+          "PENDING",
+          "COMPLETE"
+        ],
+        "symbolDocs": {
+          "PENDING":"InMail is pending",
+          "COMPLETE":"InMail is complete"
+        }
+      },
+      "doc": "Status of the inmail",
+      "default": "PENDING"
+    },
+    {
+      "name": "actionType",
+      "type": {
+        "name": "InmailActionType",
+        "type": "enum",
+        "symbols": [
+          "ACCEPTED",
+          "DECLINED",
+          "RECEIVED"
+        ],
+        "symbolDocs": {
+          "ACCEPTED": "InMail has been accepted",
+          "DECLINED": "InMail has been declined",
+          "RECEIVED": "InMail has been received by recipient but not yet actioned"
+        }
+      },
+      "doc": "InMail's reply status. This field adds addition granularity to the status field.",
+      "default": "RECEIVED"
+    },
+    {
+      "name": "requestContactInfo",
+      "type": "boolean",
+      "doc": "Request contact info from user",
+      "default": false
+    },
+    {
+      "name": "senderContactInfo",
+      "type": "com.linkedin.voyager.messaging.shared.ContactInfo",
+      "doc": "Sender's contact info",
+      "optional": true
+    },
+    {
+      "name": "recruiterInmail",
+      "type": "boolean",
+      "doc": "True if inmail is from recruiter and false if inmail is from any other source (premium, lss)",
+      "default": false
+    }
+  ]
+}

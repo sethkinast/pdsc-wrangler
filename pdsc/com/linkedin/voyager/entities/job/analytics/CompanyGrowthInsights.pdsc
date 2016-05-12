@@ -1,0 +1,41 @@
+{
+  "type": "record",
+  "name": "CompanyGrowthInsights",
+  "doc": "Data about tenure and company size over time.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "optional": true,
+      "doc": "The mini company containing name and logo information."
+    },
+    {
+      "name": "averageTenureYears",
+      "type": "double",
+      "optional": true,
+      "doc": "Average length of tenure in years for employees of this company."
+    },
+    {
+      "name": "medianTenureYears",
+      "type": "double",
+      "optional": true,
+      "doc": "Median length of tenure in years for employees of this company."
+    },
+    {
+      "name": "growth",
+      "type": {
+        "type": "array",
+        "items": "EmployeeCount"
+      },
+      "default": [],
+      "doc": "The number of employee profiles on Linkedin over time."
+    },
+    {
+      "name": "companyGrowthPercent",
+      "type": "int",
+      "optional": true,
+      "doc": "The company size growth percent."
+    }
+  ]
+}

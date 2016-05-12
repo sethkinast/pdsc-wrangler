@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "SignedEmbed",
+  "doc": "Parent embed in the LinkedIn 1st party article, returned in response to creation of Embed.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "fields": [
+    {
+      "name": "universalEmbed",
+      "doc": "All allowed embeds example youtube/vimeo except SlideShare are universal embeds.",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "embedHtml",
+      "type": "string",
+      "doc": "Sanitized HTML containing embed code with signed URL pointing back to API server to get embed to display."
+    }
+  ]
+}

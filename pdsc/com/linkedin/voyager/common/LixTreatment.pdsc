@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "LixTreatment",
+  "doc": "The lix treatment for the current logged in member",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "testKey",
+      "doc": "Lix test key",
+      "type": "string"
+    },
+    {
+      "name": "treatment",
+      "doc": "The treatment for the current logged in member",
+      "type": "string"
+    }
+  ]
+}

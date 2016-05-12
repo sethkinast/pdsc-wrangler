@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "GroupContent",
+  "namespace": "com.linkedin.voyager.messaging.event.message",
+  "doc": "Group message custom content",
+  "fields": [
+    {
+      "name": "group",
+      "type": "com.linkedin.voyager.entities.shared.MiniGroup",
+      "doc": "Associate mini group of message"
+    }
+  ]
+}

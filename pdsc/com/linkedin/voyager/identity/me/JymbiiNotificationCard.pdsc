@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "JymbiiNotificationCard",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "A JYMBII notification card on the Me feed.",
+  "fields": [
+    {
+      "name": "publishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The timestamp in milliseconds of when this notification was published."
+    },
+    {
+      "name": "jobsCount",
+      "type": "long",
+      "doc": "Number of JYMBII job recommendations."
+    },
+    {
+      "name": "jobRecommendations",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.entities.shared.EntitiesJobRecommendation"
+      },
+      "doc": "List of JYMBII job recommendations."
+    },
+    {
+      "name": "read",
+      "type": "boolean",
+      "doc": "Whether this card has been read by the member."
+    }
+  ]
+}

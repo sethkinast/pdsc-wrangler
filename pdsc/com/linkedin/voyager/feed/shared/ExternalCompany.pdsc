@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "ExternalCompany",
+  "doc": "Name of a company that is not a LinkedIn company",
+  "namespace": "com.linkedin.voyager.feed.shared",
+  "fields": [
+    {
+      "name": "companyName",
+      "type": "string",
+      "doc": "Model for representing a Company for which we only know the name."
+    }
+  ]
+}

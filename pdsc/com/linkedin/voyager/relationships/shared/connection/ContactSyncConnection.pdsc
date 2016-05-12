@@ -1,0 +1,48 @@
+{
+  "type": "record",
+  "name": "ContactSyncConnection",
+  "namespace": "com.linkedin.voyager.relationships.shared.connection",
+  "doc": "Connection with contact info to support contacts sync",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.RelContactSyncConnectionUrn",
+      "doc": "Identifier for this mini profile"
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Mini profile data about a member."
+    },
+    {
+      "name": "phoneNumbers",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.PhoneNumber"
+      },
+      "doc": "The member's phone number. The first one is the primary",
+      "default": []
+    },
+    {
+      "name": "emailAddress",
+      "type": "com.linkedin.common.EmailAddress",
+      "doc": "The member's primary email address",
+      "optional": true
+    },
+    {
+      "name": "twitterHandles",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.TwitterHandle"
+      },
+      "doc": "A list of Twitter handles",
+      "default": []
+    },
+    {
+      "name": "weChatContactInfo",
+      "type": "com.linkedin.voyager.identity.profile.WeChatContactInfo",
+      "doc": "the member's wechat contact information",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "WeChatContactInfo",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "LinkedIn member's WeChat contact info",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "WeChat nickname, as entered by the user."
+    },
+    {
+      "name": "weChatHandle",
+      "type": "string",
+      "doc": "WeChat handle.",
+      "optional": true
+    },
+    {
+      "name": "qr",
+      "type": "com.linkedin.common.Url",
+      "doc": "WeChat QR image url"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "IM",
+  "doc": "Instant Messaging system that the user entered.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Id handle."
+    },
+    {
+      "name": "provider",
+      "type": "IMProvider",
+      "doc": "Category of InstantMessaging."
+    }
+  ]
+}

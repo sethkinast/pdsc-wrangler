@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "MediaProxyImage",
+  "doc": "Set of information describing a media-proxy image",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "Fully qualified CDNified media-proxy URL"
+    },
+    {
+      "name": "originalWidth",
+      "type": "int",
+      "optional": true,
+      "doc": "Width of original 3rd party hosted image"
+    },
+    {
+      "name": "originalHeight",
+      "type": "int",
+      "optional": true,
+      "doc": "Height of original 3rd party hosted image"
+    }
+  ]
+}

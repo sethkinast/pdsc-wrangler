@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "PersonalizedConnect",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Ability to send a personalized invitation to a member. This action always comes hand in hand with the Connect action.",
+  "fields": [
+    {
+      "name": "emailRequired",
+      "type": "boolean",
+      "doc": "optional boolean value indicating that the invitee requires that the inviter knows their email address as a requirement to send an invite.",
+      "optional": true
+    }
+  ]
+}

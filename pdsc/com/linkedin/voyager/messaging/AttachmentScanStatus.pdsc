@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "AttachmentScanStatus",
+  "namespace": "com.linkedin.voyager.messaging",
+  "doc": "Status of an attachment during upload",
+  "symbols": [
+    "VIRUS_DETECTED",
+    "VIRUS_NOT_DETECTED",
+    "SCANNING",
+    "ERROR"
+  ],
+  "symbolDocs": {
+    "VIRUS_DETECTED": "This attachment is a virus.",
+    "VIRUS_NOT_DETECTED": "No virus was detected in this attachment.",
+    "SCANNING": "Scan not yet complete.",
+    "ERROR": "Error while invoking antivirus service for attachment"
+  }
+}

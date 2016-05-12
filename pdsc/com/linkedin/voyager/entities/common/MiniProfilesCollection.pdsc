@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "MiniProfilesCollection",
+  "namespace": "com.linkedin.voyager.entities.common",
+  "doc": "A list of entities mini profiles.",
+  "fields": [
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.entities.shared.EntitiesMiniProfile"
+      },
+      "doc": "A list of entities mini profiles."
+    },
+    {
+      "name": "pagingInfo",
+      "type": "com.linkedin.voyager.entities.common.PagingInfo",
+      "doc": "The paging info for items."
+    }
+  ]
+}

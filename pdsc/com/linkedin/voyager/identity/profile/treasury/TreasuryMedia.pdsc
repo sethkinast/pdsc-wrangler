@@ -1,0 +1,68 @@
+{
+  "type": "record",
+  "name": "TreasuryMedia",
+  "doc": "A treasury media item",
+  "namespace": "com.linkedin.voyager.identity.profile.treasury",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.TreasuryMediaUrn",
+      "doc": "Identifier for this treasury media."
+    },
+    {
+      "name": "customTitle",
+      "type": "string",
+      "optional": true,
+      "doc": "User-defined title for this treasury media"
+    },
+    {
+      "name": "customDescription",
+      "type": "string",
+      "optional": true,
+      "doc": "User-defined description for this treasury media"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "optional": true,
+      "doc": "Generated title"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "optional": true,
+      "doc": "Generated description"
+    },
+    {
+      "name": "images",
+      "doc": "Media proxy images associated with this treasury media",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.MediaProxyImage"
+      },
+      "optional": true
+    },
+    {
+      "name": "data",
+      "type": [
+        "Video",
+        "com.linkedin.voyager.common.MediaProxyImage",
+        "RichText",
+        "Link"
+      ],
+      "doc": "This is a union field. It could contain either an image or a video or a rich text or a link"
+    },
+    {
+      "name": "sectionIds",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "optional": true,
+      "doc": "Education or position sections, used to determine which sections the treasury item is under e.g. ['position:123'].  This field is only populated when finder is used"
+    }
+  ],
+  "validate": {
+    "TreasuryValidator": {}
+  }
+}

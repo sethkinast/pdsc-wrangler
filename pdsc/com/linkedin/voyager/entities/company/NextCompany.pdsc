@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "NextCompany",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "Basic company information to be able to display on Next module.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.NextCompanyUrn",
+      "doc": "Identifier for this NextCompany.",
+      "optional": true
+    },
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Minimum information about the company."
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "The location of the company's headquarter.",
+      "optional": true
+    },
+    {
+      "name": "jobsCount",
+      "type": "int",
+      "doc": "This represents the number of matched jobs at this particular company.",
+      "optional": true
+    }
+  ]
+}

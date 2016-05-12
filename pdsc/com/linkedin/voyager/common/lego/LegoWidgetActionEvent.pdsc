@@ -1,0 +1,45 @@
+{
+  "name": "LegoWidgetActionEvent",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.common.lego",
+  "doc": "Represents an action on a Lego widget. This model is used for synchronous tracking",
+  "fields": [
+    {
+      "name": "trackingToken",
+      "type": "string",
+      "doc": "The widget's Lego tracking token."
+    },
+    {
+      "name": "trackingId",
+      "type" : "com.linkedin.common.TrackingId",
+      "optional": true,
+      "doc": "The fixed 16 representation of (short) trackingToken field."
+        },
+    {
+      "name": "actionCategory",
+      "type": {
+        "name": "ActionCategory",
+        "type": "enum",
+        "symbols": [
+          "PRIMARY_ACTION",
+          "SECONDARY_ACTION",
+          "SKIP",
+          "DISMISS"
+        ],
+        "symbolDocs": {
+          "PRIMARY_ACTION": "The main action of the widget (defined by widget owner).",
+          "SECONDARY_ACTION": "The secondary actions on the widget (defined by widget owner).",
+          "SKIP": "The action of skip a step of widget.",
+          "DISMISS": "The action of dismiss a widget."
+        }
+      },
+      "doc": "The type of action taken."
+    },
+    {
+      "name": "actionCount",
+      "type": "int",
+      "doc": "Can be used to signal that the action was performed more than once.",
+      "default": 1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "EmployeesInfo",
+  "doc": "Information about the employees of a company",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.EmployeesInfoUrn",
+      "doc": "Identifier for this EmployeesInfo."
+    },
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "The mini company containing name and logo information."
+    },
+    {
+       "name": "numberOfEmployees",
+       "type": "int",
+       "doc": "The number of employees at the company on LinkedIn."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "SchoolRankingInsights",
+  "doc": "Schools ranked by number of alumni employed by a particular company.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "rankings",
+      "type": {
+        "type": "array",
+        "items": "SchoolRanking"
+      },
+      "default": [],
+      "doc": "Ranking based on number of alumni employed by this company."
+    }
+  ]
+}

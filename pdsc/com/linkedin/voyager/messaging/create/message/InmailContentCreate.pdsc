@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "InmailContentCreate",
+  "namespace": "com.linkedin.voyager.messaging.create.message",
+  "doc": "InMail Reply Message Custom Content",
+  "fields": [
+    {
+      "name": "contactInfo",
+      "type": "com.linkedin.voyager.messaging.shared.ContactInfo",
+      "optional": true,
+      "doc": "Contact info for sender/recipient, used only for message send (client to server)"
+    },
+    {
+      "name": "action",
+      "type": {
+        "name": "InmailAction",
+        "type": "enum",
+        "doc": "Enum describing the type of Inmail actions that are possible.",
+        "symbols": [
+          "ACCEPT",
+          "DECLINE"
+        ],
+        "symbolDocs": {
+          "ACCEPT":"Accept an InMail",
+          "DECLINE":"Decline an InMail"
+        }
+      },
+      "optional": true,
+      "doc": "Action done on InMail, used only for message send"
+    }
+  ]
+}

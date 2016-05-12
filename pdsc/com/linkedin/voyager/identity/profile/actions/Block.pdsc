@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Block",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Profile overflow action to block a user",
+  "fields": []
+}

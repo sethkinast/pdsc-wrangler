@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "name": "SuggestedActionCard",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "A card about a suggested action.",
+  "fields": [
+    {
+      "name": "icon",
+      "type": "IconType",
+      "doc": "Icon to display on the card.",
+      "optional": true,
+      "deprecated": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of suggested action.",
+      "optional": true,
+      "deprecated": true
+    },
+    {
+      "name": "body",
+      "type": "string",
+      "doc": "Text describing suggested action.",
+      "optional": true,
+      "deprecated": true
+    },
+    {
+      "name": "cta",
+      "type": "string",
+      "doc": "Text describing the call to action.",
+      "optional": true,
+      "deprecated": true
+    },
+    {
+      "name": "action",
+      "type": "SuggestedAction",
+      "doc": "Action suggested by the card."
+    },
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "doc": "Lego tracking token id, used for tracking user actions performed on displayed widgets."
+    }
+  ]
+}

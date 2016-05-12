@@ -1,0 +1,74 @@
+{
+  "type": "record",
+  "name": "NormEducation",
+  "doc": "The entity that represents an education within a member's profile.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.EducationUrn",
+      "doc": "Identifier for this education",
+      "optional": true
+    },
+    {
+      "name": "schoolUrn",
+      "type": "com.linkedin.voyager.common.MiniSchoolUrn",
+      "optional": true,
+      "doc": "User-selected school from a typeahead."
+    },
+    {
+      "name": "schoolName",
+      "type": "string",
+      "optional": true,
+      "doc": "Free form school. This will be filled if there's no standard school available."
+    },
+    {
+      "name": "timePeriod",
+      "type": "com.linkedin.voyager.common.DateRange",
+      "optional": true,
+      "doc": "The time period of this education. This DateRange is meant for holding months and years only."
+    },
+    {
+      "name": "degreeName",
+      "type": "string",
+      "optional": true,
+      "doc": "The degree earned at this education as entered by the member."
+    },
+    {
+      "name": "degreeUrn",
+      "type": "com.linkedin.voyager.common.DegreeUrn",
+      "optional": true,
+      "doc": "URN of the degree."
+    },
+    {
+      "name": "fieldOfStudy",
+      "type": "string",
+      "optional": true,
+      "doc": "The field of study that was studied in this education. (This may be replaced with a more complex FieldOfStudy schema pending response from the higher ed team)."
+    },
+    {
+      "name": "fieldOfStudyUrn",
+      "type": "com.linkedin.voyager.common.FieldOfStudyUrn",
+      "optional": true,
+      "doc": "URN of the field of study."
+    },
+    {
+      "name": "activities",
+      "type": "string",
+      "optional": true,
+      "doc": "The activities and societies that the member was involved with at this education."
+    },
+    {
+      "name": "grade",
+      "type": "string",
+      "optional": true,
+      "doc": "The grade received at this education as entered by the member."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "optional": true,
+      "doc": "The member's description of this education."
+    }
+  ]
+}

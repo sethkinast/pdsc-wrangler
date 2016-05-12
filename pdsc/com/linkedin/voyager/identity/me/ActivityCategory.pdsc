@@ -1,0 +1,14 @@
+{
+  "type": "enum",
+  "name": "ActivityCategory",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Predetermined category of member actions. Modeled after ActivityCategory in Mirror.",
+  "symbols": [
+    "COMMENT",
+    "LIKE"
+  ],
+  "symbolDocs": {
+    "COMMENT": "Member commented on activity.",
+    "LIKE": "Member liked activity."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "name": "NormFirstPartyArticle",
+  "doc": "LinkedIn 1st party (publishing) article used for writing (creation and update). It's possible to save a 'blank' article draft.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "fields": [
+    {
+      "name": "authors",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.MemberUrn"
+      },
+      "doc": "The authors of the post. First author will be the primary author of the 1st party article."
+    },
+    {
+      "name": "state",
+      "type": "ArticleState",
+      "doc": "State of the 1st party article."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the post. Possible to save but not publish an article with a blank title.",
+      "optional": true
+    },
+    {
+      "name": "contentHtml",
+      "type": "string",  // v1 will only support HTML. In v2, we will support structured JSON data instead.
+      "doc": "Full text of the content body with HTML markup. Possible to save but not publish an article with an empty body.",
+      "optional": true
+    },
+    {
+      "name": "version",
+      "type": "int",
+      "doc": "Preceding version number of the 1st party article that we're updating from. This is zero-indexed.",
+      "optional": true
+    },
+    {
+      "name": "coverMedia",
+      "type": "com.linkedin.voyager.publishing.CoverMedia",
+      "doc": "Optional cover media to display at the top of the 1st party article.",
+      "optional": true
+    },
+    {
+      "name": "customPublishMessage",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Optional custom publish message to be shared on feed to connections, which could contain member mentions. Only evaluated if the article is being published.",
+      "optional": true
+    }
+  ]
+}

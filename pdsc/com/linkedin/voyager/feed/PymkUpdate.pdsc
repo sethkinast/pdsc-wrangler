@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "PymkUpdate",
+  "doc": "PYMK update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "actor",
+      "doc": "The member that the user may know and want to connect with",
+      "type": "PersonObject"
+    }
+  ]
+}

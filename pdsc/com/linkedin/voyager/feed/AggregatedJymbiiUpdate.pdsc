@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "AggregatedJymbiiUpdate",
+  "doc": "Aggregated Jymbii updates in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "jymbiiUpdates",
+      "doc": "The list will only ever contain JymbiiUpdates wrapped by Update.",
+      "type": {
+        "type": "array",
+        "items": "Update"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "PersonObject",
+  "doc": "Wrapper for member or influencer that appears as an object in the feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "actor",
+      "doc": "A person on LinkedIn (member of influencer).",
+      "type": [
+        "MemberActor",
+        "InfluencerActor"
+      ]
+    },
+    {
+      "name": "mutualConnections",
+      "doc": "Number of mutual connections (always returned unless backend call fails to resolve)",
+      "type": "com.linkedin.voyager.identity.shared.profileHighlights.SharedConnectionsInfo",
+      "optional" : true
+    }
+  ]
+}

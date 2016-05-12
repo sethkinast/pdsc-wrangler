@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "CompanyFollowingInfo",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Information about the following relationship between the viewer and the company.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.CompanyFollowingInfoUrn",
+      "doc": "Identifier for this CompanyFollowingInfo.",
+      "optional": true
+    },
+    {
+      "name": "following",
+      "type": "boolean",
+      "doc": "Indicates whether the member is already following this company"
+    }
+  ]
+}

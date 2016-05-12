@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "ControlActions",
+  "doc": "This is a type that will be included with all updates to add control menu actions.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "actions",
+      "doc": "A list of possible actions on this update.",
+      "type": {
+        "type": "array",
+        "items": "UpdateAction"
+      },
+      "default": []
+    }
+  ]
+}

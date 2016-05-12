@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "PremiumOnboardingCard",
+  "doc": "A container for all various premium onboarding cards used.",
+  "namespace": "com.linkedin.voyager.premium.onboarding",
+  "fields": [
+    {
+      "name": "card",
+      "type": [
+        "WelcomeCard",
+        "JobCard",
+        "InMailCard",
+        "FeaturedApplicantCard",
+        "WvmpCard",
+        "SearchCard",
+        "LaunchCard"
+      ],
+      "doc": "The actual onboarding card, typed as a union of all onboarding card types."
+    }
+  ]
+}

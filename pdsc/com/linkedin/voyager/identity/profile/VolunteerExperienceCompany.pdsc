@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "VolunteerExperienceCompany",
+  "doc": "Company model for profile position",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "doc": "Information about the mini company for this Volunteer experience.",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany"
+    }
+  ]
+}

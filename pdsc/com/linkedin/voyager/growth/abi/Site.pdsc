@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "Site",
+  "namespace" : "com.linkedin.voyager.growth.abi",
+  "doc" : "Websites associated with the contact.",
+  "fields" : [ {
+    "name" : "url",
+    "type" : "com.linkedin.common.Url",
+    "doc" : "Url of the website."
+  },
+  {
+    "name" : "name",
+    "type" : "string",
+    "doc" : "Name of the website.",
+    "optional" : true
+  },
+  {
+    "name" : "siteType",
+    "type" : "string",
+    "doc" : "Type of the site - blog, homepage, company.",
+    "optional" : true
+  } ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "WvmpViewersCard",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "A WVMP viewers card.",
+  "fields": [
+    {
+      "name": "insightCards",
+      "type": {
+        "type": "array",
+        "items": "WvmpInsightCard"
+      },
+      "doc": "Collection of all insight cards used in the WVMP viewers card."
+    }
+  ]
+}

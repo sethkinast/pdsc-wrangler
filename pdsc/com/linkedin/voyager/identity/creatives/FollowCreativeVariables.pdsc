@@ -1,0 +1,101 @@
+{
+  "type" : "record",
+  "name" : "FollowCreativeVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for rendering a FOLLOW creative",
+  "fields" : [
+    {
+      "name" : "format",
+      "doc" : "Display format (size and style)",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "advertisingEntity",
+      "doc" : "Urn of the entity that is being advertised (e.g. company)",
+      "type" : "com.linkedin.common.Urn"
+    },
+    {
+      "name" : "viewerProfile",
+      "doc" : "Profile of the member viewing this ad. Contains first name, last name, and picture url. Type is urn because we pass the urn to Deco and get back the profile object",
+      "type" : "com.linkedin.common.Urn"
+    },
+    {
+      "name" : "followInfo",
+      "doc" : "Whether or not the member is following the company. Derived at runtime.",
+      "type" : "com.linkedin.common.Urn"
+    },
+    {
+      "name" : "alternateEntityName",
+      "doc" : "Alternate name for entity for use in ad (optional)",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "alternateEntityLogo",
+      "doc" : "Alternate logo for entity for use in ad (optional)",
+      "type" : "com.linkedin.common.Urn",
+      "optional" : true
+    },
+    {
+      "name" : "topCallToAction",
+      "doc" : "First call to action message.  Usually at top of ad",
+      "type" : "string"
+    },
+    {
+      "name" : "topCallToActionPostFollow",
+      "doc" : "First call to action message post follow.  Usually at top of ad",
+      "type" : "string"
+    },
+    {
+      "name" : "bottomCallToAction",
+      "doc" : "Second call to action message.  Usually at bottom of ad or non-existent",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "bottomCallToActionPostFollow",
+      "doc" : "Second call to action message post follow.  Usually at bottom of ad or non-existent",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "hoverText",
+      "doc" : "Text you see when you hover the mouse on the follow button.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "hoverTextPostFollow",
+      "doc" : "Text you see when you hover the mouse on the visit button.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "buttonText",
+      "doc" : "Text on the follow button in the not following state",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "buttonTextPostFollow",
+      "doc" : "Text on the follow button in the already following state",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "customClickThroughUrl",
+      "doc" : "Custom click through url to use. (Like in forum ads). Can direct off LinkedIn.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "urlMap",
+      "doc" :  "Map of action to url that does that action and tracks it.  Possible actions are defined in TscpRenderingClickAction.java and their string versions are used as keys",
+      "type" : {
+        "type" : "map",
+        "values" : "string"
+      }
+    }
+  ]
+}

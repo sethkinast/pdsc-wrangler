@@ -1,0 +1,48 @@
+{
+  "type": "record",
+  "name": "ShareVideo",
+  "doc": "Video in Feed",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this update.",
+      "optional": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the video."
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "doc": "subtitle of the video (usually the source).",
+      "optional": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "description of the video (usually a snippet of its content). Should pass in on creation even if not used on mobile clients - it will appear on the desktop view",
+      "optional": true
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "Url for the video."
+    },
+    {
+      "name": "text",
+      "doc": "The share commentary",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "doc": "Image of the video",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true
+    }
+  ]
+}

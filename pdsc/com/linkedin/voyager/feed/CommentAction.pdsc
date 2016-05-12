@@ -1,0 +1,14 @@
+{
+  "name": "CommentAction",
+  "type": "enum",
+  "doc": "Type of action that can be performed on a Comment",
+  "namespace": "com.linkedin.voyager.feed",
+  "symbols": [
+    "DELETE",
+    "REPORT"
+  ],
+  "symbolDocs": {
+    "DELETE": "Delete the comment",
+    "REPORT": "Report the comment"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "LegoWidgetImpressionEvent",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.common.lego",
+  "doc": "Represents an impression on a Lego widget. This model is used for synchronous tracking",
+  "fields": [
+    {
+      "name": "trackingToken",
+      "type": "string",
+      "doc": "The widget's Lego tracking token."
+    },
+    {
+      "name": "trackingId",
+      "type" : "com.linkedin.common.TrackingId",
+      "optional": true,
+      "doc": "The fixed 16 representation of (short) trackingToken field."
+        },
+    {
+      "name": "visibility",
+      "type": {
+        "name": "Visibility",
+        "type": "enum",
+        "symbols": [
+          "SHOW",
+          "NO_DATA"
+        ],
+        "symbolDocs": {
+          "SHOW": "The widget got displayed.",
+          "NO_DATA": "The widget cannot be displayed as it has no data to show (e.g., PYMK returned no data for a new member)."
+        }
+      },
+      "doc": "The visibility of the widget."
+    }
+  ]
+}

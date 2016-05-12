@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "AggregatedFollowRecommendationUpdate",
+  "doc": "Aggregated Follow Recommendation updates in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "followRecommendationUpdates",
+      "doc": "The list will only ever contain FollowRecommendationUpdate wrapped by Update.",
+      "type": {
+        "type": "array",
+        "items": "Update"
+      }
+    },
+    {
+      "name": "recommendationText",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Editorial reason for recommending this entity",
+      "optional": true
+    }
+  ]
+}

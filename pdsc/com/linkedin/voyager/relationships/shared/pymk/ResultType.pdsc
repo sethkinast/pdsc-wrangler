@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "name": "ResultType",
+  "namespace": "com.linkedin.voyager.relationships.shared.pymk",
+  "doc": "Type of PYMK recommendations to be fetched.",
+  "symbols": [
+    "MEMBER",
+    "NON_MEMBER",
+    "ALL"
+  ],
+  "symbolDocs" : {
+    "MEMBER": "Only fetch LinkedIn members.",
+    "NON_MEMBER": "Only fetch non-members.",
+    "ALL": "Fetch a combination of members and non-members"
+  }
+}

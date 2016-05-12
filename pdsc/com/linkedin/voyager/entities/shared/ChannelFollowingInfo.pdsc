@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "ChannelFollowingInfo",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Information about the following relationship between the viewer and the channel.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ChannelFollowingInfoUrn",
+      "doc": "Identifier for this ChannelFollowingInfo.",
+      "optional": true
+    },
+    {
+      "name": "following",
+      "type": "boolean",
+      "doc": "Indicates whether the member is already following this channel"
+    },
+    {
+      "name": "followerCount",
+      "type": "int",
+      "optional": true,
+      "doc": "The total number of followers of this channel. If this cannot be resolved for some reason, we want to show the channel anyway."
+    }
+  ]
+}

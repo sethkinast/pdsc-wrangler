@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "CustomTaskInfo",
+  "doc": "Information for a task with custom logic each client must implement.",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "fields": [
+    {
+      "name": "taskName",
+      "type": "TaskNames",
+      "doc": "An identifier which represents which task this is. Clients should use this field to determine all business logic for this task."
+    }
+  ]
+}

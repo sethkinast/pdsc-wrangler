@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "name": "ShareAudience",
+  "namespace": "com.linkedin.voyager.feed",
+  "doc": "privacy of a share",
+  "symbols": [
+    "PUBLIC",
+    "FOLLOWERS",
+    "CONNECTIONS"
+  ],
+  "symbolDocs": {
+    "PUBLIC": "Shared with everyone.",
+    "FOLLOWERS": "Shared with first degree connections and any followers.",
+    "CONNECTIONS": "Shared with first degree connections only."
+  }
+}

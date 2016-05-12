@@ -1,0 +1,74 @@
+{
+  "type": "record",
+  "name": "NormInvitation",
+  "doc": "An instance of a linkedin invitation request. This entity is used for submitting an invitation.",
+  "include": ["com.linkedin.voyager.common.Trackable"],
+  "namespace": "com.linkedin.voyager.growth.invitation",
+  "fields": [
+    {
+      "name": "invitee",
+      "doc": "The identifier of the person who is receiving the invite.",
+      "type": [
+        {
+          "name": "InviteeProfile",
+          "type": "record",
+          "doc": "Obfuscated member ID for a member.",
+          "fields": [
+            {
+              "name": "profileId",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "InviteeEmail",
+          "type": "record",
+          "doc": "Invitee's email",
+          "fields": [
+            {
+              "name": "email",
+              "type": "com.linkedin.common.EmailAddress",
+              "doc": "Invitee's email"
+            }
+          ]
+        },
+        {
+          "name": "InviteePhone",
+          "type": "record",
+          "doc": "Invitee's phone",
+          "fields": [
+            {
+              "name": "phoneNumber",
+              "type": "com.linkedin.common.PhoneNumber"
+            },
+            {
+              "name": "firstName",
+              "type": "string",
+              "doc": "First name of the contact to be invited.",
+              "optional": true
+            },
+            {
+              "name": "lastName",
+              "type": "string",
+              "doc": "Last name of the contact to be invited.",
+              "optional": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "General invitation message to be sent to user. If omitted the default message will be used.",
+      "optional": true
+    },
+    {
+     "name": "uploadTransactionId",
+     "type": "string",
+     "doc": "DEPRECATED. Pass this as query param instead. Flow ID to link back this instance of invitation record to abook events. This is passed for ABI flow.",
+     "deprecated": true,
+     "optional": true
+    }
+  ]
+}

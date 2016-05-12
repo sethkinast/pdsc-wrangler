@@ -1,0 +1,87 @@
+{
+  "type": "record",
+  "name": "ShareArticle",
+  "doc": "Article in Feed - Could be article, rich media, or image from Babylonia",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend Urn for this update.",
+      "optional": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the article."
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "doc": "subtitle of the article (usually the source).",
+      "optional": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "description of the article (usually a snippet of its content). Should pass in on creation even if not used on mobile clients - it will appear on the desktop view",
+      "optional": true
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "Url for the article."
+    },
+    {
+      "name": "resolvedUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "resolved url for the article if this article was a bit.ly or some other url shortener link. If not, this is the original url. Optional for now while the client migrates to using this and populating in the create case.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "doc": "The share commentary",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "doc": "Image of the document",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true
+    },
+    {
+      "name": "articleType",
+      "doc": "The type of share article.",
+      "type": {
+        "type": "enum",
+        "doc": "Enum describing the type of article.",
+        "name": "ArticleType",
+        "symbols": [
+          "REGULAR",
+          "PONCHO"
+        ],
+        "symbolDocs": {
+          "REGULAR": "Regular article share.",
+          "PONCHO": "Poncho (LinkedIn user created) article."
+        }
+      }
+    },
+    {
+      "name": "publisher",
+      "type": "CompanyActor",
+      "doc": "Publisher of the article if known.",
+      "optional": true
+    },
+    {
+      "name": "author",
+      "doc": "Author of the article if known.",
+      "optional": true,
+      "type": [
+        "ExternalAuthor",
+        "InfluencerActor",
+        "MemberActor"
+      ]
+    }
+  ]
+}

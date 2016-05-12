@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "FirstPartyContent",
+  "doc": "Represents data needed display to a piece of 1st party content in a reading view.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "fields": [
+    {
+      "name": "content",
+      "doc": "Union of types of 1st party content to display.",
+      "type": [
+        "NativeArticle", // TODO mklee DO NOT USE. This PDSC will be deleted and replaced with FirstPartyArticle instead.
+        "FirstPartyArticle"
+      ]
+    },
+    {
+      "name": "publishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "Time when the content was published.",
+      "optional": true
+    },
+    {
+      "name": "updatedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "Time when the content was last updated.",
+      "optional": true
+    }
+  ]
+}

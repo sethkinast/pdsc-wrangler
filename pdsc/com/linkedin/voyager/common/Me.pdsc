@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "Me",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "The profile and contact information of the current logged in user.",
+  "fields": [
+    {
+      "name": "plainId",
+      "type": "long",
+      "doc": "The plain id of the logged-in member. This should not be used anymore other than just surface it for CS representatives or debugging purposes."
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "The basic information about this logged in user."
+    },
+    {
+      "name": "publicContactInfo",
+      "type": "com.linkedin.voyager.identity.shared.PublicContactInfo",
+      "doc": "The contact info of this logged in user that is visible to everyone on linkedin."
+    },
+    {
+      "name": "premiumSubscriber",
+      "type": "boolean",
+      "doc": "The flag which identifies if the member is a premium subscriber. It's false for free members (non-subscribers).",
+      "optional": true
+    }
+  ]
+}

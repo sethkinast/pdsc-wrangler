@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "CompanyCareerModuleTitle",
+  "deprecated": true,
+  "doc": "Company section module containing main title/subtitle text for the section.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Primary title text.",
+      "optional": true
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "doc": "Subtitle text.",
+      "optional": true
+    }
+  ]
+}

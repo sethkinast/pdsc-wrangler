@@ -1,0 +1,36 @@
+{
+  "type": "record",
+  "name": "LaunchAlert",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "The view model to construct an alert window to prompt for the current logged in user.",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "The title of the prop window"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "The message string of the prop window"
+    },
+    {
+      "name": "link",
+      "type": "string",
+      "doc": "The link that an action button uses.",
+      "optional": true
+    },
+    {
+      "name": "labelForAction",
+      "type": "string",
+      "doc": "The label for the action button.",
+      "optional": true
+    },
+    {
+      "name": "labelForCancel",
+      "type": "string",
+      "doc": "The label for the cancel button",
+      "optional": true
+    }
+  ]
+}

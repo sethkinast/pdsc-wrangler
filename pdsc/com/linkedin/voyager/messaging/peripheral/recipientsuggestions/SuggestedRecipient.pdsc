@@ -1,0 +1,26 @@
+{
+  "name": "SuggestedRecipient",
+  "namespace": "com.linkedin.voyager.messaging.peripheral.recipientsuggestions",
+  "type": "record",
+  "doc": "Suggested recipient object.",
+  "fields": [
+      {
+        "name": "text",
+        "type": "string",
+        "doc": "Title of this suggested recipient."
+      },
+      {
+        "name": "subtext",
+        "type": "string",
+        "optional": true,
+        "doc": "Sub title of this suggested recipient."
+      },
+    {
+      "name":"metadata",
+      "type": [
+        "com.linkedin.voyager.messaging.peripheral.recipientsuggestions.metadata.RecentConversation"
+      ],
+      "doc": "Metadata of this suggested recipient."
+    }
+  ]
+}

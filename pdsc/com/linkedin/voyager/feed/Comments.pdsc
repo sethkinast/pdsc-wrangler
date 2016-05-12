@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "Comments",
+  "doc": "Comments resource for fetching comments.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "elements",
+      "doc": "A list of comments.",
+      "type": {
+        "type": "array",
+        "items": "Comment"
+      }
+    },
+    {
+      "name": "paging",
+      "doc": "Pagination and collection information.",
+      "type": "com.linkedin.restli.common.CollectionMetadata"
+    },
+    {
+      "name": "metadata",
+      "doc": "Pagination and collection information.",
+      "type": "com.linkedin.voyager.feed.Metadata",
+      "optional": true
+    }
+  ]
+}

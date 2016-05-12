@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "Publication",
+  "doc": "Publications done by a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["CorePublication"],
+  "fields": [
+    {
+      "name": "authors",
+      "type": {
+        "type": "array",
+        "items": "Contributor"
+      },
+      "doc": "List of authors of this publication, must include the profile owner."
+    }
+  ]
+}

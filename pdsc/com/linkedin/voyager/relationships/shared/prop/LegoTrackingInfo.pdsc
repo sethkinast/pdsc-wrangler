@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "LegoTrackingInfo",
+  "namespace": "com.linkedin.voyager.relationships.shared.prop",
+  "doc": "Lego tracking information",
+  "fields": [
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "doc": "Tracking token for LEGO system"
+    }
+  ]
+}

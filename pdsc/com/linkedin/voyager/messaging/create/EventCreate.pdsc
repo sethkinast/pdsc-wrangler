@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "EventCreate",
+  "namespace": "com.linkedin.voyager.messaging.create",
+  "doc": "A container for various create actions.",
+  "fields": [
+    {
+      "name": "value",
+      "type": [
+        "com.linkedin.voyager.messaging.create.MessageCreate",
+        "com.linkedin.voyager.messaging.create.ParticipantChangeCreate",
+        "com.linkedin.voyager.messaging.create.StickerCreate"
+      ],
+      "doc": "The actual create action, typed as a union of all the create actions"
+    }
+  ]
+}

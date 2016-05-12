@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "WvmpOnboardingCard",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "A card in the WVMP overview page that is shown to users to introduce them to the WVMP overview page.",
+  "fields": [
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "doc": "The Lego tracking token used to send Lego tracking events when this card is shown or interacted with."
+    },
+    {
+      "name": "cards",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.me.Card"
+      },
+      "doc": "Collection of all the various cards used for WVMP insight card",
+      "default": []
+    },
+    {
+      "name": "wvmpMetadata",
+      "type": "com.linkedin.voyager.identity.me.WvmpMetadata",
+      "doc": "Metadata about a collection of profile view cards.",
+      "optional": true
+    }
+  ]
+}

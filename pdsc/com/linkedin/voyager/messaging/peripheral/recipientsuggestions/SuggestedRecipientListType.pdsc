@@ -1,0 +1,12 @@
+{
+  "type": "enum",
+  "name": "SuggestedRecipientListType",
+  "namespace": "com.linkedin.voyager.messaging.peripheral.recipientsuggestions",
+  "doc": "Category Type of suggested recipients",
+  "symbols": [
+    "RECENT_FIRST_DEGREE_CONVERSATION"
+  ],
+  "symbolDocs": {
+    "RECENT_FIRST_DEGREE_CONVERSATION": "List of recently messaged connections"
+  }
+}

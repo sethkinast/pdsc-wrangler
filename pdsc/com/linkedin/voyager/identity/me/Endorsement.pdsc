@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "Endorsement",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Represents an endorsement that's displayed in an endorsement card.",
+  "fields": [
+    {
+      "name": "endorsementUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Urn of the endorsement."
+    },
+    {
+      "name": "skill",
+      "type": "string",
+      "doc": "Skill that has been endorsed."
+    },
+    {
+      "name": "status",
+      "type": "EndorsementStatus",
+      "doc": "The current status of the endorsement."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "NotificationsMetadata",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Metadata about a collection of notification cards.",
+  "fields": [
+    {
+      "name": "numUnseen",
+      "type": "long",
+      "doc": "Number of unseen cards."
+    },
+    {
+      "name": "latestPublishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The timestamp when the latest notification card was published on this page. This is optional, because once this is used on the first page, all subsequent cards on the next pages are already marked as seen.",
+      "optional": true
+    },
+    {
+      "name": "nextStart",
+      "type": "int",
+      "doc": "Appropriate next value of the start parameter to supply to request the next page of notifications. When missing, there is no next page.",
+      "optional": true
+    }
+  ]
+}

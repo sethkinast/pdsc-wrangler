@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "Sticker",
+  "namespace": "com.linkedin.voyager.messaging.event.message",
+  "doc": "Emoticon image sent in message.",
+  "fields":
+    [
+      {
+        "name": "entityUrn",
+        "type": "com.linkedin.voyager.common.StickerUrn",
+        "doc": "Identifies a Sticker in a particular StickerPack."
+      },
+      {
+        "name": "image",
+        "type": "com.linkedin.voyager.common.Image",
+        "doc": "The actual image to present the sticker."
+      }
+    ]
+}

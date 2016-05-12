@@ -1,0 +1,92 @@
+{
+  "fields": [
+    {
+      "type": "boolean",
+      "name": "active",
+      "default": true,
+      "doc": "whether this address is still in use"
+    },
+    {
+      "type": "boolean",
+      "name": "headquarters",
+      "default": false,
+      "doc": "whether this location is headquarters"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "street1",
+      "doc": "first line of address"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "street2",
+      "doc": "second line of address"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "city",
+      "doc": "city of this location"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "state",
+      "doc": "state of this location"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "postalCode",
+      "doc": "postal code for this location"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "countryCode",
+      "doc": "country code for this location"
+    },
+    {
+      "optional": true,
+      "type": "int",
+      "name": "regionCode",
+      "doc": "linkedin region code for this location"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "phone1",
+      "doc": "first phone number"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "phone2",
+      "doc": "second phone number"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "fax",
+      "doc": "fax number"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "description",
+      "doc": "description"
+    },
+    {
+      "optional": true,
+      "type": "BizEmployeeCountRange",
+      "name": "employeeCountRange",
+      "doc": "employee count range"
+    }
+  ],
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "type": "record",
+  "name": "BizLocation",
+  "doc": "Business location"
+}

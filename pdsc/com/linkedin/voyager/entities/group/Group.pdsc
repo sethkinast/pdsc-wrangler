@@ -1,0 +1,70 @@
+{
+  "type": "record",
+  "name": "Group",
+  "doc": "Complete basic group information.",
+  "namespace": "com.linkedin.voyager.entities.group",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.GroupUrn",
+      "doc": "Identifier for this group.",
+      "optional": true
+    },
+    {
+      "name": "basicGroupInfo",
+      "type": "BasicGroupInfo",
+      "doc": "Basic information to be able to build a cell that will link to the group entity page."
+    },
+    {
+      "name": "groupType",
+      "type": "GroupType",
+      "doc": "The type of the group."
+    },
+    {
+      "name": "membershipInfo",
+      "type": "com.linkedin.voyager.entities.shared.GroupMembershipInfo",
+      "doc": "Information about the membership of the viewer in the group."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "optional": true,
+      "doc": "Description of the group."
+    },
+    {
+      "name": "heroImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true,
+      "doc": "Hero image of the group (cover photo)."
+    },
+    {
+      "name": "backgroundColor",
+      "type": "com.linkedin.voyager.common.Color",
+      "optional": true,
+      "doc": "The preferred background color for the group."
+    },
+    {
+      "name": "rules",
+      "type": "string",
+      "optional": true,
+      "doc": "Group rules."
+    },
+    {
+      "name": "owner",
+      "type": "com.linkedin.voyager.entities.shared.MiniProfileWithDistance",
+      "optional": true,
+      "doc": "The owner of the group."
+    },
+    {
+      "name": "sections",
+      "type": "GroupSections",
+      "optional": true,
+      "doc": "The possible sections/tabs on a group page."
+    },
+    {
+      "name": "entityInfo",
+      "type": "com.linkedin.voyager.entities.common.EntityInfo",
+      "doc": "It has the specific information about this entity."
+    }
+  ]
+}

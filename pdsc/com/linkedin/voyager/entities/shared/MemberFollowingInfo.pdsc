@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "MemberFollowingInfo",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Information about the following relationship between the viewer and the member.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MemberFollowingInfoUrn",
+      "doc": "Identifier for this MemberFollowingInfo.",
+      "optional": true
+    },
+    {
+      "name": "following",
+      "type": "boolean",
+      "doc": "Indicates whether the member is already following this member."
+    }
+  ]
+}

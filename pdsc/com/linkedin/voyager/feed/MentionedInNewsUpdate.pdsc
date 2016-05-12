@@ -1,0 +1,54 @@
+{
+  "type": "record",
+  "name": "MentionedInNewsUpdate",
+  "doc": "Mentioned in the news update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "backend Urn for this update.",
+      "optional": true
+    },
+    {
+      "name": "mentionedActor",
+      "doc": "**DEPRECATED** The actor that was mentioned in the article.",
+      "type": [
+        "CompanyActor",
+        "MemberActor"
+      ],
+      "optional": true
+    },
+    {
+      "name": "mentionedEntity",
+      "doc": "The entity : school, company, member that was mentioned in the article.",
+      "type": "SocialActor"
+    },
+    {
+      "name": "mentionedActorSnippet",
+      "doc": "A snippet of the article text where the actor was mentioned",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "header",
+      "doc": "**DEPRECATED** Header to display for this update, e.g Iosef Kaver was mentioned in the news.",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "footer",
+      "doc": "**DEPRECATED** Footer to display for this update, e.g Reach out to Iosef.",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "article",
+      "doc": "The entity, the article in which the reason was mentioned.",
+      "type": "ShareArticle"
+    }
+  ]
+}

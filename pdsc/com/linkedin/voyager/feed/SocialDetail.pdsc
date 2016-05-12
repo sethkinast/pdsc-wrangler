@@ -1,0 +1,54 @@
+{
+  "type": "record",
+  "name": "SocialDetail",
+  "doc": "The social detail of feed update.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Thread URN for this social gestures collection.",
+      "optional": true
+    },
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.SocialDetailUrn",
+      "doc": "Voyager specific URN for this social detail.",
+      "optional": true
+    },
+    {
+      "name": "totalSocialActivityCounts",
+      "type": "com.linkedin.voyager.feed.shared.SocialActivityCounts",
+      "doc": "Counts of total comments and likes on this update."
+    },
+    {
+      "name": "totalShares",
+      "doc": "Total share count.",
+      "type": "int",
+      "default": 0
+    },
+    {
+      "name": "liked",
+      "doc": "Is the update liked by viewer.",
+      "type": "boolean",
+      "default": false,
+      "deprecated": "Please use the liked field in totalSocialActivityCounts. This field is already being used by clients in the wild so cannot be removed until we stop supporting old enough clients."
+    },
+    {
+      "name": "likes",
+      "doc": "The likes resource for fetching likes. This should include enough data for rendering the first page.",
+      "type": "Likes"
+    },
+    {
+      "name": "comments",
+      "doc": "The comments resource for fetching likes. This should include enough data for rendering the first page.",
+      "type": "Comments"
+    },
+    {
+      "name": "threadId",
+      "doc": "The id of the thread that the likes/comments/shares belong to",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

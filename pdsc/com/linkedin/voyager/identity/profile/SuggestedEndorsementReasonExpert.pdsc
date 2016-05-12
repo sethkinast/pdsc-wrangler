@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "SuggestedEndorsementReasonExpert",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "For suggested endorsements generated through the expert model.",
+  "fields": [
+    {
+      "name": "highlight",
+      "type": "com.linkedin.voyager.identity.shared.Highlight",
+      "doc": "Highlight about a viewed member's profile as related to the viewer.",
+      "optional": true
+    }
+  ]
+}

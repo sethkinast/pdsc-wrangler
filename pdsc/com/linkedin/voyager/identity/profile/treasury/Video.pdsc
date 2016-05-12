@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "Video",
+  "doc": "Information about a treasury item of type video.",
+  "namespace": "com.linkedin.voyager.identity.profile.treasury",
+  "fields": [
+    {
+      "name": "html",
+      "type": "string",
+      "doc": "The html embed for this video."
+    },
+    {
+      "name": "width",
+      "type": "int",
+      "doc": "width of video"
+    },
+    {
+      "name": "height",
+      "type": "int",
+      "doc": "height of video"
+    },
+    {
+      "name": "duration",
+      "type": "string",
+      "optional": true,
+      "doc": "duration of the video"
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "optional": true,
+      "doc": "The url for this video"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "ItemInfo",
+  "doc": "This is the information about each item on Entity pages.",
+  "namespace": "com.linkedin.voyager.entities.common",
+  "fields": [
+    {
+      "name": "itemType",
+      "type": [
+        "com.linkedin.voyager.entities.company.CompanyItemType",
+        "com.linkedin.voyager.entities.company.ShowcaseItemType",
+        "com.linkedin.voyager.entities.school.SchoolItemType",
+        "com.linkedin.voyager.entities.group.GroupItemType",
+        "com.linkedin.voyager.entities.job.JobItemType"
+      ],
+      "doc": "The union of all entities (Company, Group, Showcase, etc.) item types."
+    },
+    {
+      "name": "rank",
+      "type": "int",
+      "optional": true,
+      "doc": "This has the information about the ranking of the item in a section/tab. TODO: remove this or make it required."
+    },
+    {
+      "name": "trackingId",
+      "type": "com.linkedin.voyager.common.Base64EncodedTrackingId",
+      "doc": "A unique id which represents this particular instance of an entity."
+    }
+  ]
+}

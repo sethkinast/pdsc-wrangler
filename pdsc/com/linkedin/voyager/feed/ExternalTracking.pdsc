@@ -1,0 +1,24 @@
+{
+  "name": "ExternalTracking",
+  "type": "record",
+  "doc": "External Tracking urls for this sponsored update.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "impressionUrls",
+      "doc": "impression tracking urls for this update.",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    },
+    {
+      "name": "clickUrls",
+      "doc": "click tracking urls for this sponsored update.",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    }
+  ]
+}

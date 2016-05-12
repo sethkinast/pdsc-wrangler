@@ -1,0 +1,16 @@
+{
+  "name": "BizMetadata", 
+  "doc": "BizProfile metadata for a handful of key value properties", 
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "version": "1", 
+  "fields": [
+    {
+      "optional": true,
+      "type": "string", 
+      "name": "salesForce",
+      "doc": "Company on salesforce"
+    }
+  ], 
+  "schemaType": "DocumentSchema", 
+  "type": "record"
+}

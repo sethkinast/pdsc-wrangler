@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "WidgetContent",
+  "doc": "A Lego widget.",
+  "namespace": "com.linkedin.voyager.growth.lego",
+  "fields": [
+    {
+      "name": "widgetId",
+      "type": "string",
+      "doc": "The Lego widget id."
+    },
+    {
+      "name": "trackingToken",
+      "type": "string",
+      "doc": "The tracking token to be used for sending Lego tracking events."
+    },
+    {
+      "name": "prefetchable",
+      "type": "boolean",
+      "doc": "If false, this widget should not be pre-fetched because its contents may be dependent on the user's latest actions."
+    }
+  ]
+}

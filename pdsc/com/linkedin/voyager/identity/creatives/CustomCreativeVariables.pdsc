@@ -1,0 +1,17 @@
+{
+  "type" : "record",
+  "name" : "CustomCreativeVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for rendering custom creatives",
+  "fields" : [
+    {
+      "name" : "attributes",
+      "doc" : "Custom attributes",
+      "optional" : true,
+      "type" : {
+        "type" : "map",
+        "values" : "string"
+      }
+    }
+  ]
+}

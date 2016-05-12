@@ -1,0 +1,110 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "NormProfile",
+  "doc": "Profile entity containing all non sub-entity fields about a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ProfileUrn",
+      "doc": "Identifier for this profile",
+      "optional": true
+    },
+    {
+      "name": "firstName",
+      "type": "string",
+      "doc": "First name of a member"
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "optional": true,
+      "doc": "Last name of a member"
+    },
+    {
+      "name": "maidenName",
+      "type": "string",
+      "optional": true,
+      "doc": "Maiden name of a member."
+    },
+    {
+      "name": "headline",
+      "type": "string",
+      "optional": true,
+      "doc": "Headline of this member."
+    },
+    {
+      "name": "industryName",
+      "type": "string",
+      "optional": true,
+      "doc": "Localizable name of industry as entered by the member"
+    },
+    {
+      "name": "industryUrn",
+      "type": "com.linkedin.voyager.common.IndustryUrn",
+      "optional": true,
+      "doc": "User-selected reference from typeahead."
+    },
+    {
+      "name": "location",
+      "type": "ProfileLocation",
+      "optional": true,
+      "doc": "Member's current location."
+    },
+    {
+      "name": "backgroundImage",
+      "type": "BackgroundImage",
+      "optional": true,
+      "doc": "The background image information for a profile."
+    },
+    {
+      "name": "pictureInfo",
+      "type": "Picture",
+      "optional": true,
+      "doc": "Profile picture information for a profile."
+    },
+    {
+      "name": "phoneticFirstName",
+      "type": "string",
+      "optional": true,
+      "doc": "Phonetic representation of the first name of a member."
+    },
+    {
+      "name": "phoneticLastName",
+      "type": "string",
+      "optional": true,
+      "doc": "Phonetic representation of the last name of a member."
+    },
+    {
+      "name": "contactInstructions",
+      "type": "string",
+      "optional": true,
+      "doc": "Notes on how to contact the member."
+    },
+    {
+      "name": "interests",
+      "type": "string",
+      "optional": true,
+      "doc": "Write up of interests that a member wishes to display on the profile."
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "optional": true,
+      "doc": "Address of the member to display on the profile."
+    },
+    {
+      "name": "birthDate",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "The birth date of the member."
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "optional": true,
+      "doc": "Summary provided by the member."
+    }
+  ]
+}

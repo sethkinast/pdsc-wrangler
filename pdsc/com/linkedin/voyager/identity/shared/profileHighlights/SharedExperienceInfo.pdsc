@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "SharedExperienceInfo",
+  "namespace": "com.linkedin.voyager.identity.shared.profileHighlights",
+  "doc": "A shared experience between two members (viewer and viewee)",
+  "fields": [
+    {
+      "name": "company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Basic information about the shared company"
+    },
+    {
+      "name": "overlapInfo",
+      "type": "OverlapInfo",
+      "doc": "Information about the overlap (if any) between the viewer and viewee at this school",
+      "optional" : true
+    }
+  ]
+}

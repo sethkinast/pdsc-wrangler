@@ -1,0 +1,13 @@
+{
+  "type": "typeref",
+  "name": "ShareType",
+  "doc": "All possible share content type.",
+  "namespace": "com.linkedin.voyager.feed",
+  "ref": [
+    "ShareText",
+    "ShareArticle",
+    "ShareDocument",
+    "ShareImage"
+  ]
+}
+

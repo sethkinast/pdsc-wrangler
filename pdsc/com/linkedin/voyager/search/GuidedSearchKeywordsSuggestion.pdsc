@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "GuidedSearchKeywordsSuggestion",
+  "doc": "Guided search suggestion for search keyword, e.g. 'square IPO'.",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": []
+}

@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "GenericMessageEvent",
+  "namespace": "com.linkedin.voyager.messaging.event",
+  "doc": "A Generic Message event that will always contain just a required body to be used as fallback",
+  "fields": [
+    {
+      "name": "body",
+      "type": "string",
+      "doc": "The body of the message"
+    }
+  ]
+}

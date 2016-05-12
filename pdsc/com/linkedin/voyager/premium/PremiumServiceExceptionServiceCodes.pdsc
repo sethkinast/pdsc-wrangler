@@ -1,0 +1,20 @@
+{
+  "type": "enum",
+  "name": "PremiumServiceExceptionServiceCodes",
+  "namespace": "com.linkedin.voyager.premium",
+  "doc": "Services code for some of the restli exception",
+  "symbols": [
+    "EMBARGO_COUNTRY",
+    "NO_PRODUCTS",
+    "ALREADY_A_SUBSCRIBER",
+    "MEMBER_WITHOUT_CONFIRMED_EMAIL",
+    "REDEEM_PROMO_NOT_APPLICABLE"
+  ],
+  "symbolDocs": {
+    "EMBARGO_COUNTRY": "Member is from an embargoed country.",
+    "NO_PRODUCTS": "There are no products to offer to the member.",
+    "ALREADY_A_SUBSCRIBER": "Member is already a subscriber.",
+    "MEMBER_WITHOUT_CONFIRMED_EMAIL": "Member provided phone number but no confirmed email.",
+    "REDEEM_PROMO_NOT_APPLICABLE": "Promo not applicable for current member"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TypeaheadCountry",
+  "doc": "Country information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the country. e.g., us:0 for united states"
+    },
+    {
+      "name": "countryUrn",
+      "type": "com.linkedin.voyager.common.CountryUrn",
+      "doc": "Urn representing the country."
+    }
+  ]
+}

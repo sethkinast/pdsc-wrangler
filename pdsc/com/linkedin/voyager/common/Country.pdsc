@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "Country",
+  "doc": "The representation of a country in voyager.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.CountryUrn",
+      "doc": "Identifier for this country.",
+      "optional": true
+    },
+    {
+      "name": "countryCode",
+      "type": "com.linkedin.common.CountryCode",
+      "doc": "2 character country code in lower case."
+    },
+    {
+      "name": "countryName",
+      "type": "string",
+      "doc": "The localized country name corresponding to the country code."
+    }
+  ]
+}

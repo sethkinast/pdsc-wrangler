@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "name": "IconType",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Type of icon.",
+  "symbols": [
+    "ROCKET",
+    "NAMETAG",
+    "SATELLITE_DISH"
+  ],
+  "symbolDocs": {
+    "ROCKET": "Icon of a rocket ship",
+    "NAMETAG": "Icon of a nametag",
+    "SATELLITE_DISH": "Icon of a satellite dish."
+  }
+}

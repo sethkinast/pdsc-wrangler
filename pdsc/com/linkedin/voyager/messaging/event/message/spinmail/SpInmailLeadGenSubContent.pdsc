@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "SpInmailLeadGenSubContent",
+  "namespace": "com.linkedin.voyager.messaging.event.message.spinmail",
+  "doc": "The contents of the lead generation Sponsored InMail and its click tracking data",
+  "fields": [
+    {
+      "name": "actionText",
+      "doc": "The text for the call to action button",
+      "type": "string"
+    },
+    {
+      "name": "afterActionText",
+      "doc": "The text to show after the action button was clicked",
+      "type": "string",
+      "optional": true
+    },
+    {
+      "name": "adUnit",
+      "doc": "The ad to be displayed with this sponsored inmail",
+      "type": "SpInmailAdUnit",
+      "optional": true
+    },
+    {
+      "name": "leadGenInterestedTracking",
+      "type": "com.linkedin.common.Url",
+      "doc": "Ad click tracking url for action. This url is fired when the user clicks the lead generation action button with interest, but doesn't want to share his or her contact info",
+      "optional": true
+    },
+    {
+      "name": "leadGenSharedEmailTracking",
+      "type": "com.linkedin.common.Url",
+      "doc": "Ad click tracking url for action. This url is fired when user clicks the lead generation action button with the intent to share his or her contact info",
+      "optional": true
+    }
+  ]
+}

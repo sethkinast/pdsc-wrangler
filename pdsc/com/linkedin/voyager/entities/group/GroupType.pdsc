@@ -1,0 +1,14 @@
+{
+  "type": "enum",
+  "name": "GroupType",
+  "doc": "The type of a group. (Copied from com.linkedin.groups.api.group.pdsc)",
+  "namespace": "com.linkedin.voyager.entities.group",
+  "symbols": [
+    "MEMBERS_ONLY",
+    "SECRET"
+  ],
+  "symbolDocs": {
+    "MEMBERS_ONLY": "Group that is members only, discoverable in directory/search",
+    "SECRET": "Group that is members only, non-discoverable in directory/search"
+  }
+}

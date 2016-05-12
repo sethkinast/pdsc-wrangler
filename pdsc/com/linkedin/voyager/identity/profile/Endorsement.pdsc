@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "Endorsement",
+  "doc": "Information needed to display an endorsement. Used for configuring showing/hiding of endorsements.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.EndorsementUrn",
+      "doc": "Identifier for this endorsement",
+      "optional": true
+    },
+    {
+      "name": "endorser",
+      "type": "EndorserMiniProfile",
+      "doc": "The profile of the endorser of this endorsement."
+    },
+    {
+      "name": "status",
+      "type": {
+        "name": "EndorsementStatusType",
+        "type": "enum",
+        "symbols": [
+          "ACCEPTED",
+          "PENDING",
+          "HIDDEN"
+        ],
+        "symbolDocs" : {
+          "ACCEPTED": "Represents that this endorsement is permitted to show on profile by the endorsee.",
+          "PENDING": "Represents that this endorsement is given to a skill not listed on the endorsee's profile and is waiting for acceptance.",
+          "HIDDEN": "Represents that this endorsement is forbidden to show on profile by the endorsee."
+        }
+      },
+      "doc": "The status concerning the endorsement being displayed to the member."
+    }
+  ]
+}

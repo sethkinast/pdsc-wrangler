@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "PremiumFeature",
+  "doc": "Premium feature associated with a Premium product.",
+  "namespace": "com.linkedin.voyager.premium",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "The one-line summary of the feature",
+      "optional": true
+    },
+    {
+      "name": "desc",
+      "type": "string",
+      "doc": "The detail description of the feature",
+      "optional": true
+    },
+    {
+      "name": "summarized",
+      "type": "boolean",
+      "doc": "Whether or not this feature is summarized from two or more individual features"
+    },
+    {
+      "name": "type",
+      "type": "PremiumFeatureType",
+      "doc": "The type of this feature",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "WelcomeCard",
+  "doc": "The first premium onboarding card on the voyager.",
+  "namespace": "com.linkedin.voyager.premium.onboarding",
+  "fields": [
+    {
+      "name": "productName",
+      "type": "string",
+      "doc": "The name of the premium product."
+    },
+    {
+      "name": "productDescription",
+      "type": "string",
+      "doc": "The description about the premium product."
+    }
+  ]
+}

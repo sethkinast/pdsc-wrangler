@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "TrackableEntity",
+  "doc": "This is a standard representation of an entity that can be tracked.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "a unique id which represents this particular instance of an entity, created when the entity is materialized"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "DateRange",
+  "doc": "The start date and the end date of a time period.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "startDate",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "The start date of this time period, which should be required in all use cases except in NormEducation (IDY-7073)."
+    },
+    {
+      "name": "endDate",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "The end date of this time period."
+    }
+  ]
+}

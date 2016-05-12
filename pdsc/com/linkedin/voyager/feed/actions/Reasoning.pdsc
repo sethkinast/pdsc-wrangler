@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Reasoning",
+  "doc": "Type for a Reasoning Action.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "reason",
+      "doc": "Reason that needs to be displayed to the user when this action is clicked. Should be i18n safe.",
+      "type": "string"
+    }
+  ]
+}

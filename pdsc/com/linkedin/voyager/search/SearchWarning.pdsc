@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "SearchWarning",
+  "namespace": "com.linkedin.voyager.search",
+  "doc": "Warning codes to indicate something unusual happened during search retrieval",
+  "symbols": [
+    "OK",
+    "INVALID_POSTAL_CODE",
+    "MISSING_COUNTRY_CODE",
+    "MISSING_POSTAL_CODE"
+  ],
+  "symbolDocs": {
+    "OK": "This represents that no search warnings were generated as part of the search. It is only used internally and should not be exposed to the client.",
+    "INVALID_POSTAL_CODE": "This represents that the search was unable to narrow results by postal code parameter.",
+    "MISSING_COUNTRY_CODE": "This represents that the search has a parameter which also required country code to be set.",
+    "MISSING_POSTAL_CODE": "This represents that the search has a parameter which also required postal code to be set."
+  }
+}

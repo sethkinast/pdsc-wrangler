@@ -1,0 +1,50 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "MiniPosition",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "The minimal set of information to display a position.",
+  "include": [
+    "com.linkedin.voyager.common.TrackableEntity"
+  ],
+  "fields": [
+    {
+      "name": "miniCompany",
+      "type": "MiniCompany",
+      "optional": true,
+      "doc": "Company for the position"
+    },
+    {
+      "name": "localizedTitle",
+      "type": "string",
+      "optional": true,
+      "doc": "Localized version of title"
+    },
+    {
+      "name": "startMonthYear",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "TODO: remove field. Start month and year at this position.",
+      "deprecated": true
+    },
+    {
+      "name": "startMonthYearOn",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "Start month and year at this position."
+    },
+    {
+      "name": "endMonthYear",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "TODO: remove field. Last month and year at this position. Missing value means the position is current.",
+      "deprecated": true
+    },
+    {
+      "name": "endMonthYearOn",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "Last month and year at this position. Missing value means the position is current."
+    }
+  ]
+}

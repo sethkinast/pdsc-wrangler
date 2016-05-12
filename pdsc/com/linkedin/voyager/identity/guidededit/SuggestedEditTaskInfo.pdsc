@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "SuggestedEditTaskInfo",
+  "doc": "One or more suggestions to be surfaced to a user.",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "fields": [
+    {
+      "name": "suggestions",
+      "type": {
+        "type": "array",
+        "items": "Suggestion"
+      },
+      "doc": "A list of suggestions which will be used in this task. This list should be used by the clients to construct the suggestions to display to the member."
+    },
+    {
+      "name": "taskName",
+      "type": "TaskNames",
+      "doc": "An identifier which represents which task this is. Clients should use this field to determine all business logic for this task."
+    }
+  ]
+}

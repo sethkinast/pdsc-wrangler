@@ -1,0 +1,60 @@
+{
+  "type": "record",
+  "name": "Education",
+  "doc": "The entity that represents an education within a member's profile.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormEducation"],
+  "fields": [
+    {
+      "name": "honors",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.HonorUrn"
+      },
+      "doc": "Awards earned for this education.",
+      "default": []
+    },
+    {
+      "name": "courses",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.CourseUrn"
+      },
+      "doc": "Awards earned for this education.",
+      "default": []
+    },
+    {
+      "name": "school",
+      "type": "com.linkedin.voyager.entities.shared.MiniSchool",
+      "optional": true,
+      "doc": "The school from where the member received his or her education."
+    },
+    {
+      "name": "testScores",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.TestScoreUrn"
+      },
+      "doc": "Awards earned for this education.",
+      "default": []
+    },
+    {
+      "name": "projects",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.ProjectUrn"
+      },
+      "doc": "Projects associated with the education.",
+      "default": []
+    },
+    {
+      "name": "recommendations",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.RecommendationUrn"
+      },
+      "doc": "List of urns containing the endorsements received by this member for the given education.",
+      "default": []
+    }
+  ]
+}

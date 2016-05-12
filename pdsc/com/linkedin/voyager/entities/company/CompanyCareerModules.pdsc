@@ -1,0 +1,36 @@
+{
+  "type" : "record",
+  "name" : "CompanyCareerModules",
+  "doc": "A model that contains different types of career related information of the company.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "deprecated": true,
+  "fields": [
+    {
+      "name": "title",
+      "type": "CompanyCareerModuleTitle",
+      "optional": true,
+      "doc": "The title of the career section."
+    },
+    {
+      "name": "quotes",
+      "type": "CompanyCareerModuleQuotes",
+      "optional": true,
+      "doc": "Employees' quotes about the company."
+    },
+    {
+      "name": "image",
+      "type": "CompanyCareerModuleImage",
+      "optional": true,
+      "doc": "The company career image."
+    },
+    {
+      "name": "brandings",
+      "type": {
+        "items": "CompanyCareerModuleBranding",
+        "type": "array"
+      },
+      "default": [],
+      "doc": "An array of branding modules, each containing some information about the company."
+    }
+  ]
+}

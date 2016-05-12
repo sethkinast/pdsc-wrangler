@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "GuidedSearchVerticalSuggestion",
+  "doc": "Guided search suggestion for search vertical, e.g. 'Jobs'",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "verticalType",
+      "type": "SearchType",
+      "doc": "Search vertical type of suggestion results"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "enum",
+  "name": "Origin",
+  "namespace": "com.linkedin.voyager.common.heathrow",
+  "doc": "Origin of the users action, such as accepting invitation from EMAIL, clicking on X accepted invitation IN-APP_NOTIFICATION, connecting from PYMK page etc.",
+  "symbols" : [
+    "EMAIL",
+    "PUSH",
+    "IN_APP_NOTIFICATION",
+    "DESKTOP_NOTIFICATION",
+    "PROFILE",
+    "PYMK",
+    "PEOPLE"
+  ],
+  "symbolDocs": {
+    "EMAIL" : "User action originates from clicking on a link in the email",
+    "PUSH" : "User action originates from clicking on a push notification",
+    "IN_APP_NOTIFICATION" : "User action originates from clicking on in-app notification, for example the one which is a badge on top of flag icon on mobile app",
+    "DESKTOP_NOTIFICATION" : "User action originates from clicking on a desktop notification, for example the badge on top of an icon in global navigation bar on Desktop",
+    "PROFILE" : "User action originates from the profile page",
+    "PYMK" : "User action originates from a page where PYMK results are shown",
+    "PEOPLE" : "User action originates from PEOPLE(go/hito) page which is also called as connecthub on flagship"
+  }
+}

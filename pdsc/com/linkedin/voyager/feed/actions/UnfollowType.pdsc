@@ -1,0 +1,13 @@
+{
+  "name": "UnfollowType",
+  "type": "typeref",
+  "doc": "Type of unfollow that can be performed.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "ref": [
+    "com.linkedin.voyager.feed.actions.UnfollowMember",
+    "com.linkedin.voyager.feed.actions.UnfollowCompany",
+    "com.linkedin.voyager.feed.actions.UnfollowChannel",
+    "com.linkedin.voyager.feed.actions.UnfollowSchool",
+    "com.linkedin.voyager.feed.actions.UnfollowGroup"
+  ]
+}

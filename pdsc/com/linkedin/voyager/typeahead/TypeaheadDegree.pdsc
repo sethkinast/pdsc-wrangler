@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "TypeaheadDegree",
+  "doc": "Academic degree information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the Degree.",
+      "deprecated": "Use degreeUrn instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.DegreeUrn",
+      "doc": "Backend urn representing the degree. This should be used only for tracking."
+    },
+    {
+      "name": "degreeUrn",
+      "type": "com.linkedin.voyager.common.DegreeUrn",
+      "doc": "Urn representing the degree. This can be used for frontend APIs to use in subsequent requests."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Panel",
+  "doc": "A container for all the various analytics panels used on the Me project.",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "fields": [
+    {
+      "name": "value",
+      "type": [
+        "ProfileViewsByTimePanel"
+      ],
+      "doc": "The actual panel, typed as a union of all the panel types."
+    }
+  ]
+}

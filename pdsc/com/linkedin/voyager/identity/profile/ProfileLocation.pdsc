@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "ProfileLocation",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "Profile location record that holds the member inputted location info.",
+  "fields": [
+    {
+      "name": "basicLocation",
+      "type": "com.linkedin.voyager.common.NormBasicLocation",
+      "doc": "The basic location info containing country code and possibly postal code."
+    },
+    {
+      "name": "preferredGeoPlace",
+      "type": "com.linkedin.common.Urn",
+      "optional": true,
+      "doc": "Holds the member's preference of profile top card displayed location. Can only either be a RegionUrn or a CityUrn. Because type urn is not yet supported in Restli, a generic Urn is used here instead of a union."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "type": "enum",
+  "name": "TakeoverType",
+  "namespace": "com.linkedin.voyager.common",
+  "symbols": [
+    "ONBOARDING",
+    "ABI",
+    "NEW_TO_VOYAGER",
+    "PHONE_COLLECT",
+    "SMS_REMINDER_CONSENT"
+  ],
+  "symbolDocs": {
+    "ONBOARDING": "Onboarding flow for lapsed users.",
+    "ABI": "Address Book Import.",
+    "NEW_TO_VOYAGER": "A special takeover for first-time Voyager users.",
+    "PHONE_COLLECT": "A takeover that reminds users to add a phone number to their account for recovery purposes.",
+    "SMS_REMINDER_CONSENT": "A takeover that asks users to consent to send SMS reminders to their invitees by LinkedIn"
+  },
+  "doc": "Possible takeover screens to show during app launch."
+}

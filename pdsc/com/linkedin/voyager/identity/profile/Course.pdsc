@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "Course",
+  "doc": "Course followed by a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormCourse"],
+  "fields": []
+}

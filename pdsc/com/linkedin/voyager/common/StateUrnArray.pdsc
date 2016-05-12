@@ -1,0 +1,5 @@
+{
+  "type": "array",
+  "items": "com.linkedin.voyager.common.StateUrn",
+  "doc": "List of geo state urns."
+}

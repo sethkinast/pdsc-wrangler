@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "UnitTestModel",
+  "doc": "DO NOT USE - TEST MODEL FOR CLIENTS.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "stringField",
+      "type": "string",
+      "doc": "DO NOT USE - TEST MODEL.",
+      "optional": true
+    },
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MiniProfileUrn",
+      "doc": "DO NOT USE - TEST MODEL."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "Email",
+  "namespace" : "com.linkedin.voyager.growth.abi",
+  "doc" : "An email address.",
+  "fields" : [ {
+    "name" : "emailAddress",
+    "type" : "com.linkedin.common.EmailAddress",
+    "doc" : "Using the Email address record already defined in commons."
+  },
+  {
+    "name" : "primary",
+    "type" : "boolean",
+    "doc" : "Indicates if this email is the primary email address.",
+    "default" : false
+  },
+  {
+    "name" : "type",
+    "type" : "string",
+    "doc" : "The user generated types of the email like Home, Work, custom etc.",
+    "optional" : true
+  } ]
+}

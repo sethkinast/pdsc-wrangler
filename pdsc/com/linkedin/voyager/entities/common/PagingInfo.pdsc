@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "PagingInfo",
+  "namespace": "com.linkedin.voyager.entities.common",
+  "doc": "The paging info, including total, count, etc.",
+  "fields": [
+    {
+      "name": "start",
+      "type": "int",
+      "doc": "The start index requested by client."
+    },
+    {
+      "name": "count",
+      "type": "int",
+      "doc": "The number of results requested by client."
+    },
+    {
+      "name": "total",
+      "type": "int",
+      "optional": true,
+      "doc": "The total number of results."
+    }
+  ]
+}

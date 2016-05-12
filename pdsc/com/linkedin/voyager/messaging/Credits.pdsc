@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Credits",
+  "namespace": "com.linkedin.voyager.messaging",
+  "doc": "Messaging credit data for a member",
+  "fields": [
+    {
+      "name": "inMail",
+      "type": "long",
+      "doc": "Number of InMail credits a premium member has."
+    }
+  ]
+}

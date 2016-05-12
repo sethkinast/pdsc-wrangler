@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "MediaProcessorFilters",
+  "doc": "A record whose keys are the client image filters. The values are uri templates used to construct the url for that filter.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "contain",
+      "type": "string",
+      "doc": "RFC 6570 style uri template describing how MPR urls corresponding to contain should be constructed. Will contain placeholders for size and id"
+    },
+    {
+      "name": "cover",
+      "type": "string",
+      "doc": "RFC 6570 style uri template describing how MPR urls corresponding to cover should be constructed. Will contain placeholders for size and id"
+    },
+    {
+      "name": "fill",
+      "type": "string",
+      "doc": "RFC 6570 style uri template describing how MPR urls corresponding to fill should be constructed. Will contain placeholders for size and id"
+    },
+    {
+      "name": "original",
+      "type": "string",
+      "doc": "RFC 6570 style uri template describing how MPR urls corresponding to original should be constructed. Will contain placeholder for id"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+// LINT_SUPPRESS: naming.time
+// LINT_SUPPRESS: naming.date
+// LINT_SUPPRESS: naming.fields.camel
+{
+  "name": "BizCompany",
+  "doc": "Company Profile",
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "version": "1",
+  "fields": [
+    {
+      "type": "long",
+      "name": "companyId",
+      "doc": "unique id of company"
+    },
+    {
+      "type": "string",
+      "name": "universalName",
+      "indexType": "attribute",
+      "doc": "canonical name"
+    },
+    {
+      "default": false,
+      "type": "boolean",
+      "name": "allEmployeesAsAdmins",
+      "doc": "setting for whether all employees will automatically be admins of the company page"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Uri",
+      "name": "blogRssUrl",
+      "doc": "blog url"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Time",
+      "name": "creationTime",
+      "doc": "time the company was created"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Urn",
+      "name": "creator",
+      "doc": "member urn of company page's creator"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.DateRange",
+      "name": "dateRange",
+      "doc": "date range"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Urn",
+      "name": "largeGraphic",
+      "doc": "urn of big graphic on company page"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Urn",
+      "name": "lastEditor",
+      "doc": "urn of last person who edited the company page"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Time",
+      "name": "lastModifiedTime",
+      "doc": "time of the last modification of the company page"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Urn",
+      "name": "logo",
+      "doc": "urn of the company logo (media)"
+    },
+    {
+      "type": "long",
+      "name": "dataVersion",
+      "doc" : "This is incremented each time this company is updated and is for optimistic locking."
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Urn",
+      "name": "squareLogo",
+      "doc": "urn of the square logo for the company."
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "stockSymbol",
+      "doc": "company's stock symbol, if it has one."
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "twitterId",
+      "doc": "Twitter handle for the company, if it has one."
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.Uri",
+      "name": "websiteUrl",
+      "doc": "Official website url for the company."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "com.linkedin.common.Urn",
+        "type": "array"
+      },
+      "name": "administrators",
+      "doc": "Member urns of company admins."
+    },
+    {
+      "optional": true,
+      "type": "BizMetadata",
+      "name": "metaData",
+      "doc": "Other metadata about the company"
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "string",
+        "type": "array"
+      },
+      "name": "specialities",
+      "doc": "Things this company specializes in"
+    },
+    {
+      "optional": true,
+      "type": {
+        "symbols": [
+          "OPERATING",
+          "OPERATING_SUBSIDIARY",
+          "REORGANIZING",
+          "OUT_OF_BUSINESS",
+          "ACQUIRED"
+        ],
+        "type": "enum",
+        "name": "BizCompanyStatus",
+        "symbolDocs": {
+          "OPERATING": "Company in operation",
+          "OPERATING_SUBSIDIARY": "Company in operation but is a subsidiary of some other company",
+          "REORGANIZING": "Company is undergoing reorg",
+          "OUT_OF_BUSINESS": "Company has shut down",
+          "ACQUIRED": "Company has been acquired"
+        }
+      },
+      "name": "status",
+      "doc": "Status of the company"
+    },
+    {
+      "optional": true,
+      "type": {
+        "symbols": [
+          "PUBLIC_COMPANY",
+          "EDUCATIONAL",
+          "SELF_EMPLOYED",
+          "GOVERNMENT_AGENCY",
+          "NON_PROFIT",
+          "SELF_OWNED",
+          "PRIVATELY_HELD",
+          "PARTNERSHIP",
+          "COLLEGE_PAGE",
+          "BRAND"
+        ],
+        "type": "enum",
+        "name": "BizCompanyType",
+        "symbolDocs": {
+          "PUBLIC_COMPANY": "Public",
+          "EDUCATIONAL": "Educational",
+          "SELF_EMPLOYED": "Single-person company, may not be publicly registered",
+          "GOVERNMENT_AGENCY": "Government agency",
+          "NON_PROFIT": "Non-profit organization",
+          "SELF_OWNED": "Self-owned company",
+          "PRIVATELY_HELD": "Private company",
+          "PARTNERSHIP": "Company that's a result of a partnership",
+          "COLLEGE_PAGE": "College page",
+          "BRAND": "Brand page that's part of a company"
+        }
+      },
+      "name": "companyType",
+      "doc": "type of company"
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizDescription",
+        "type": "array"
+      },
+      "name": "descriptions",
+      "doc": "alternative descriptions of the company"
+    },
+    {
+      "optional": true,
+      "type": "BizEmployeeCountRange",
+      "name": "employeeCountRange",
+      "doc": "company size, in ranges instead of exact count."
+    },
+    {
+      "optional": true,
+      "type": "BizExchangeSymbol",
+      "name": "exchangeSymbol",
+      "doc": "exchange symbol."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizIndustry",
+        "type": "array"
+      },
+      "name": "industries",
+      "doc": "industry this company belongs to."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizLocation",
+        "type": "array"
+      },
+      "name": "locations",
+      "doc": "locations this company is in."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizName",
+        "type": "array"
+      },
+      "name": "names",
+      "doc": "Alternative names for this company."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizRelationship",
+        "type": "array"
+      },
+      "name": "relationships",
+      "doc": "relationships with other companies on LinkedIn"
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizRevenue",
+        "type": "array"
+      },
+      "name": "revenues",
+      "doc": "revenues of this company"
+    },
+    {
+      "optional": true,
+      "type": "BizCroppedImage",
+      "name": "heroImage",
+      "doc": "hero image"
+    },
+    {
+      "type": "BizCompanyAttributes",
+      "name": "attributes",
+      "doc": "This field contains boolean attributes represented in the 'attributes' bitmap of a BizProfile object"
+    },
+    {
+      "type": "boolean",
+      "name": "active",
+      "default": true,
+      "doc": "Whether the company page is still active."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "com.linkedin.common.Urn",
+        "type": "array"
+      },
+      "name": "featuredUpdates",
+      "doc": "Urns of the company page's featured updates."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "string",
+        "type": "array"
+      },
+      "name": "emailDomains",
+      "doc": "company email domains"
+     },
+     {
+      "optional": true,
+      "type": {
+        "items": "com.linkedin.common.Urn",
+        "type": "array"
+      },
+      "name": "groups",
+      "doc": "urns of groups related to this company."
+    },
+    {
+      "type": "string",
+      "name": "localizedName",
+      "derived": true,
+      "optional": true,
+      "doc": "This field contains the derived localized company name."
+    },
+    {
+      "optional": true,
+      "type": {
+        "items": "BizImage",
+        "type": "array"
+      },
+      "name": "images",
+      "doc": "Company images, including logos"
+    },
+    {
+      "optional": true,
+      "type": "string",
+      "name": "ContentCertToken",
+      "doc": "Content Certification Token for use in UCF"
+    }
+  ],
+  "schemaType": "DocumentSchema",
+  "type": "record"
+}
+

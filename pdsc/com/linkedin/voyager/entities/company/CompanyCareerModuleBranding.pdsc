@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "CompanyCareerModuleBranding",
+  "deprecated": true,
+  "doc": "Company section module containing a title, text, and a list of quotes about the company.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of section.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "doc": "Text written by the company about themselves.",
+      "optional": true
+    },
+    {
+      "name": "links",
+      "type": {
+        "items": "com.linkedin.voyager.common.Link",
+        "type": "array"
+      },
+      "doc": "A list of links with their corresponding anchor text.",
+      "optional": true
+    },
+    {
+      "name": "media",
+      "type": [
+          "CompanyCareerModuleImage",
+          "CompanyCareerVideo",
+          "CompanyCareerSlidesCode"
+      ],
+      "doc": "Embedded media, either an image, a video, or a slideshare.",
+      "optional": true
+    }
+  ]
+}

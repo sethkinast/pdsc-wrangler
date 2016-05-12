@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "JobPremiumInsights",
+  "doc": "Premium insights for job postings including company insights (i.e. company rankings, company growth, school rankings) and applicant analytics (i.e. applications per day, education of other applicants).",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.JobPremiumInsightsUrn",
+      "doc": "Identifier for this JobPremiumInsights."
+    },
+    {
+      "name": "premium",
+      "type": "boolean",
+      "doc": "Whether the viewer is premium subscriber."
+    },
+    {
+      "name": "companyPremiumInsights",
+      "type": "CompanyPremiumInsights",
+      "optional": true,
+      "doc": "Premium insights for a company including school rankings, company rankings and company growth over time."
+    },
+    {
+      "name": "applicantAnalytics",
+      "type": "ApplicantAnalytics",
+      "optional": true,
+      "doc": "Premium insights on other applicants applying for the same job posting."
+    }
+  ]
+}

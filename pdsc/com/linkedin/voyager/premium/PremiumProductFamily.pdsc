@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "PremiumProductFamily",
+  "namespace": "com.linkedin.voyager.premium",
+  "doc": "Family of the product offered to members",
+  "symbols": [
+    "JSS",
+    "GENERAL",
+    "SALES",
+    "TALENT"
+  ],
+  "symbolDocs": {
+    "JSS": "Group for all job seeker products.",
+    "GENERAL": "Group for all general subs products",
+    "SALES": "Group for all sales navigator products.",
+    "TALENT": "Group for all talent solutions products."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "SuggestedEntityType",
+  "doc": "Type of suggested entity",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "symbols": [
+    "CURRENT_COMPANY",
+    "SKILL",
+    "TITLE",
+    "SCHOOL"
+  ],
+  "symbolDocs": {
+      "CURRENT_COMPANY": "A company, e.g. LinkedIn",
+      "SKILL": "A skill, e.g. wood working, programming javascript, competitive eating.",
+      "TITLE": "A job title, e.g. software engineer.",
+      "SCHOOL": "A school, e.g. Harvard University."
+    }
+}

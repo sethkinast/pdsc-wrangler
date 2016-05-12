@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "CompanyCareerSection",
+  "deprecated": true,
+  "doc": "Section of company page detailing work experience at the company, including employee quotes, videos, etc.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.CompanyCareerSectionUrn",
+      "doc": "Identifier for this CompanyCareerSection."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "User-entered name of this section."
+    },
+    {
+      "name": "modules",
+      "type": {
+        "items": [
+            "CompanyCareerModuleQuotes",
+            "CompanyCareerModuleBranding",
+            "CompanyCareerModuleImage",
+            "CompanyCareerModuleTitle"
+        ],
+        "type": "array"
+      },
+      "default": [],
+      "doc": "TODO: Deprecated. An array containing various types, each of which is a piece of content for the page (e.g. some quotes)."
+    },
+    {
+      "name": "moduleObjects",
+      "type": "CompanyCareerModules",
+      "doc": "A model that contains different types of career related information of the company."
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "Company",
+  "doc": "Company info",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.CompanyUrn",
+      "doc": "Identifier for this company.",
+      "optional": true
+    },
+    {
+      "name": "basicCompanyInfo",
+      "type": "BasicCompanyInfo",
+      "doc": "All of the basic information to a company (e.g. name, logo, following)."
+    },
+    {
+      "name": "heroImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Hero image",
+      "optional": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "Description about the company",
+      "optional": true
+    },
+    {
+      "name": "industries",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "Industries this company is a part of"
+    },
+    {
+      "name": "websiteUrl",
+      "type": "com.linkedin.common.Uri",
+      "doc": "URL for this company's website",
+      "optional": true
+    },
+    {
+      "name": "companyType",
+      "type": "string",
+      "doc": "The type of company; e.g. PUBLIC_COMPANY, NON_PROFIT, etc.",
+      "optional": true
+    },
+    {
+      "name": "specialties",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "Fields/Areas in which this company specializes in."
+    },
+    {
+      "name": "emailDomains",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "Company-specific domains; e.g. gmail.com, linkedin.com"
+    },
+    {
+      "name": "employeeCountRange",
+      "type": "string",
+      "doc": "Number of employees represented as preset ranges",
+      "optional": true
+    },
+    {
+      "name": "foundedDate",
+      "type": "com.linkedin.common.Date",
+      "doc": "TODO: Remove field. Date the company was founded.",
+      "deprecated": true,
+      "optional": true
+    },
+    {
+      "name": "foundedOn",
+      "type": "com.linkedin.common.Date",
+      "doc": "Date the company was founded.",
+      "optional": true
+    },
+    {
+      "name": "showcases",
+      "type": {
+        "type": "array",
+        "items": "BasicCompanyInfo"
+      },
+      "default": [],
+      "doc": "List of showcase (brand) pages related to this company."
+    },
+    {
+      "name": "parentCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "The parent company, if this is a showcase page.",
+      "optional": true
+    },
+    {
+      "name": "sections",
+      "type": "CompanySections",
+      "optional": true,
+      "doc": "All the possible sections/tabs on a company page."
+    },
+    {
+      "name": "entityInfo",
+      "type": "com.linkedin.voyager.entities.common.EntityInfo",
+      "doc": "It has the specific information about this entity."
+    },
+    {
+       "name": "numberOfEmployees",
+       "type": "int",
+       "doc": "The number of employees at the company on LinkedIn.",
+       "optional": true
+    },
+    {
+      "name": "jobsCount",
+      "type": "int",
+      "doc": "The number of jobs a company has on LinkedIn.",
+      "optional": true
+    }
+  ]
+}

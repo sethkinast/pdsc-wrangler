@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "Presentation",
+  "doc": "A presentation object. For example, related slideshare presentation in skill entity page. ",
+  "namespace": "com.linkedin.voyager.entities.skill",
+  "fields": [
+   {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.PresentationUrn",
+      "doc": "Identifier for this presentation."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the presentation."
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "Url for the presentation."
+    },
+    {
+      "name": "image",
+      "doc": "Image of the presentation.",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true
+    },
+    {
+      "name": "viewCount",
+      "type": "int",
+      "doc": "Number of views on the presentation.",
+      "optional": true
+    }
+  ]
+}

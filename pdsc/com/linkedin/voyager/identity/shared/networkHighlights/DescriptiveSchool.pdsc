@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "DescriptiveSchool",
+  "namespace": "com.linkedin.voyager.identity.shared.networkHighlights",
+  "doc": "Highlight about a member's connections who went to a particular school.",
+  "fields": [
+    {
+      "name": "school",
+      "type": "com.linkedin.voyager.entities.shared.MiniSchool",
+      "doc": "Brief information about the school."
+    },
+    {
+      "name": "numConnections",
+      "type": "int",
+      "doc": "Number of connections who went to this school."
+    },
+    {
+      "name": "connections",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.HighlightsMiniProfile",
+        "doc": "A list of connections, upto a maximum of 10, that went to this school."
+      },
+      "default": [],
+      "doc" : "A list of connections, upto a maximum of 10, that went to this school."
+    }
+  ]
+}

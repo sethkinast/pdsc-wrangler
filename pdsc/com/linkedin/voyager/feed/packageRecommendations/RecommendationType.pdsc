@@ -1,0 +1,11 @@
+{
+  "type" : "enum",
+  "name" : "RecommendationType",
+  "namespace" : "com.linkedin.voyager.feed.packageRecommendations",
+  "doc" : "The type of a recommendation package",
+  "symbols" : [ "FOLLOW", "UNFOLLOW"],
+  "symbolDocs": {
+    "FOLLOW": "Follow recommendation type",
+    "UNFOLLOW": "Unfollow recommendation type."
+  }
+}

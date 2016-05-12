@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "TypeaheadAutoComplete",
+  "doc": "Auto-completed search keyword used for search",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "displayText",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "optional": true,
+      "doc": "Optional display text for auto-complete search suggestion. Adds context to the TypeaheadHit text to let users know that this is a query completion. e.g. \"See all results for <autocompletion>\""
+    }
+  ]
+}

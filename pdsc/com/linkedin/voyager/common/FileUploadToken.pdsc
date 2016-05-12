@@ -1,0 +1,13 @@
+{
+  "type":"record",
+  "name":"FileUploadToken",
+  "doc": "Token used to do an upload to mupld",
+  "namespace":"com.linkedin.voyager.common",
+  "fields":[
+    {
+      "name":"uploadToken",
+      "type":"string",
+      "doc":"A token that is required for POSTing files to mupld"
+    }
+  ]
+}

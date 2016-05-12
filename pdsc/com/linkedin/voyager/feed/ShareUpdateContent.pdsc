@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "name": "ShareUpdateContent",
+  "doc": "Content for share update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "content",
+      "doc": "Union of possible shared content of the update. Ideally, we should reuse ShareType, but pegasus doesn't allow us to do so.",
+      "type": [
+        "ShareText",
+        "ShareArticle",
+        "ShareDocument",
+        "ShareImage",
+        "ShareJob",
+        "ShareVideo"
+      ]
+    }
+  ]
+}

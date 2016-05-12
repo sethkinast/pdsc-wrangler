@@ -1,0 +1,44 @@
+{
+  "type": "record",
+  "name": "GuidedSearchSuggestion",
+  "doc": "Guided search suggestion",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "hitInfo",
+      "type": [
+        "GuidedSearchKeywordsSuggestion",
+        "GuidedSearchVerticalSuggestion",
+        "GuidedSearchFacetSuggestion"
+      ],
+      "doc": "The detailed information of the different types of suggestions."
+    },
+    {
+      "name": "query",
+      "type": "SearchQuery",
+      "doc": "Search query needed to fetch search results, e.g. 'facetCurrentCompany=1234, q=people, keywords=square'."
+    },
+    {
+      "name": "displayText",
+      "type": "string",
+      "doc": "Localized name for this suggestion."
+    },
+    {
+      "name": "selected",
+      "type": "boolean",
+      "doc": "Indicate user already selected this suggestion or not."
+    },
+    {
+      "name": "guideKey",
+      "type": "string",
+      "doc": "Key of a key-value pair for encoding selected guides in a search request.",
+      "optional": true
+    },
+    {
+      "name": "guideValue",
+      "type": "string",
+      "doc": "Value of a key-value pair for encoding selected guides in a search request.",
+      "optional": true
+    }
+  ]
+}

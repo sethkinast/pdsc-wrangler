@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "WvmpJobTitleInsightCard",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "Insight card about viewers who have certain title like software engineer or product manager.",
+  "fields": [
+    {
+      "name": "numViews",
+      "type": "long",
+      "doc": "Profile view count over the total time."
+    },
+    {
+      "name": "viewerTitle",
+      "type": "string",
+      "doc": "Title of the viewers."
+    },
+    {
+      "name": "insight",
+      "type": "com.linkedin.voyager.identity.me.Insight",
+      "doc": "Insight about viewers' job title.",
+      "optional": true
+    },
+    {
+      "name": "cards",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.me.Card"
+      },
+      "doc": "Collection of all the various cards used for WVMP insight card",
+      "default": []
+    },
+    {
+      "name": "wvmpMetadata",
+      "type": "com.linkedin.voyager.identity.me.WvmpMetadata",
+      "doc": "Metadata about a collection of profile view cards.",
+      "optional": true
+    }
+  ]
+}

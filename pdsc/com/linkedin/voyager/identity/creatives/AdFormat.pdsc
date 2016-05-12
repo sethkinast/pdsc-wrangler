@@ -1,0 +1,45 @@
+{
+  "type" : "record",
+  "name" : "AdFormat",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for a format used in rendering ads",
+  "fields" : [
+    {
+      "name" : "name",
+      "doc" : "Name of the format (e.g. f300x250_exp_1_1).  This is the primary key.",
+      "type" : "string"
+    },
+    {
+      "name" : "filename",
+      "doc" : "Filename of the format (e.g. f300x250_exp_1_1.tl)",
+      "type" : "string"
+    },
+    {
+      "name" : "campaignCounts",
+      "doc" : "Count of each campaign type this format can render.  Key is campaign type (e.g. CUSTOM)",
+      "type" : {
+        "type" : "map",
+        "values" : "int"
+      }
+    },
+    {
+      "name" : "fkMinCampaignCounts",
+      "doc" : "Minimum count of each campaign type this format needs to render. If not specified fkMinCampaignCount == campaignCount",
+      "optional" : true,
+      "type" : {
+        "type" : "map",
+        "values" : "int"
+      }
+    },
+    {
+      "name" : "version",
+      "doc" : "Version of this format",
+      "type" : "double"
+    },
+    {
+      "name" : "size",
+      "doc" : "Size of format in form width x height (e.g. 300x250)",
+      "type" : "string"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "ConnectionsSummary",
+  "namespace": "com.linkedin.voyager.relationships.shared.connection",
+  "doc": "Member connections summary",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.RelConnectionsSummaryUrn",
+      "doc": "Identifier of this summary"
+    },
+    {
+      "name": "numConnections",
+      "type": "int",
+      "doc": "Number of connections"
+    }
+  ]
+}

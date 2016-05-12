@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "CategoryTypeCustom",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "doc": "Flow who has custom presentation and business logic.",
+  "fields": [
+    {
+      "name": "categoryName",
+      "type": "CategoryNames",
+      "doc": "The name of the flow/category. This is used to determine how the flow should be drawn and what should happen if its clicked."
+    }
+  ]
+}

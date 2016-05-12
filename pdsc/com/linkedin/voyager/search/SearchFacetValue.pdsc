@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "SearchFacetValue",
+  "doc": "Search facet value",
+  "namespace": "com.linkedin.voyager.search",
+  "include": ["com.linkedin.voyager.search.FacetValue"],
+  "fields": [
+    {
+      "name": "image",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true,
+      "doc": "Logo / image for the facet value (e.g if the facet value is a specific company)"
+    },
+    {
+      "name": "count",
+      "type": "int",
+      "doc": "Number of hits matching this facet value"
+    },
+    {
+      "name": "selected",
+      "type": "boolean",
+      "doc": "Indicates whether the facet value is selected"
+    }
+  ]
+}

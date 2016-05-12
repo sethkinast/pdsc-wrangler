@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "ShareContentCreate",
+  "namespace": "com.linkedin.voyager.messaging.create.message",
+  "doc": "Share content sent with a message",
+  "fields": [
+    {
+      "name" : "contentUrn",
+      "type" : "com.linkedin.common.Urn",
+      "doc" : "Urn for the shared content, e.g activity, article."
+    }
+  ]
+}

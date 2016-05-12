@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "FormField",
+  "doc": "A single form field in a GE Task. This field can may contain prefill information.",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "fields": [
+    {
+      "name": "fieldName",
+      "type": "FieldNames",
+      "doc": "An identifier for the form field. (Ex: company)"
+    },
+    {
+      "name": "prefillValues",
+      "type": {
+        "type": "array",
+        "items": [
+          "com.linkedin.voyager.common.Industry"
+        ]
+      },
+      "optional": true,
+      "doc": "A dictionary of values to prefill for the form field. (Ex: {companyName:\"Linkedin\", companyId:1337}) Used to have a ticket VOY-994 to comment this field out."
+    }
+  ]
+}

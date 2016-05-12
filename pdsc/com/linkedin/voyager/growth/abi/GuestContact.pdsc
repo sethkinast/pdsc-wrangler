@@ -1,0 +1,34 @@
+{
+  "type": "record",
+  "name": "GuestContact",
+  "doc": "A Guest user, with simple information for clients to display.",
+  "namespace": "com.linkedin.voyager.growth.abi",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string",
+      "doc": "First name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "doc": "Last name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "handle",
+      "type": [
+        "com.linkedin.common.EmailAddress",
+        "com.linkedin.common.PhoneNumber"
+      ],
+      "doc": "The handle using which the invitation should be sent to the guest."
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "Tracking id associated with the contact and the current flow.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "UnfollowCompany",
+  "doc": "Action type for unfollowing a company.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "companyUrn",
+      "type": "com.linkedin.voyager.common.MiniCompanyUrn",
+      "doc": "Company urn of the company that can be unfollowed"
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "doc": "Display name of the company",
+      "optional": true
+    },
+    {
+      "name": "followingInfo",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Information about the following relationship between the viewer and the company.",
+      "optional": true
+    }
+  ]
+}

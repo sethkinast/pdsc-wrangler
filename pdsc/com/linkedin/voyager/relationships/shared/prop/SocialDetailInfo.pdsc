@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "SocialDetailInfo",
+  "namespace": "com.linkedin.voyager.relationships.shared.prop",
+  "doc": "Social detail info",
+  "fields": [
+    {
+      "name": "threadId",
+      "doc": "The id of the thread that the likes/comments belong to",
+      "type": "string"
+    }
+  ]
+}

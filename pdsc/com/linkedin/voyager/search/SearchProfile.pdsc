@@ -1,0 +1,67 @@
+{
+  "type": "record",
+  "name": "SearchProfile",
+  "doc": "Profile information used to display a search hit",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Basic profile information."
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the profile. This field will be deprecated. Use miniProfileUrn instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.MemberUrn",
+      "doc": "Backend urn representing the member's profile. Contains the member's id. This should be used only for tracking."
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "distance to member"
+    },
+    {
+      "name": "maidenName",
+      "type": "string",
+      "doc": "Maiden name of a member",
+      "optional": true
+    },
+    {
+      "name": "industry",
+      "type": "string",
+      "doc": "Industry provided by the member.",
+      "optional": true
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "Location of a member",
+      "optional": true
+    },
+    {
+      "name": "snippets",
+      "type": {
+        "type": "array",
+        "items": "Snippet"
+      },
+      "optional": true,
+      "doc": "Snippets of matching information on member's profile"
+    },
+    {
+      "name": "sharedConnectionCount",
+      "type": "int",
+      "optional": true,
+      "doc": "Number of shared connections between this member and the viewer",
+      "deprecated": "This field is not used and will be cleaned up."
+    },
+    {
+      "name": "headless",
+      "type": "boolean",
+      "doc": "Flag to determine if the profile is headless. A member profile is marked as headless if it is out of network and has no shared groups."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Accept",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Profile action to accept a connection invitation (TODO: temporary empty fields)",
+  "fields": []
+}

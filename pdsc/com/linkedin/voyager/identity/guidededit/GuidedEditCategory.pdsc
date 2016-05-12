@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "GuidedEditCategory",
+  "doc": "An entity that represents a single Guided Edit Category Flow.",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "fields": [
+    {
+      "name": "id",
+      "type": "CategoryNames",
+      "doc": "An ID for this category"
+    },
+    {
+      "name": "categoryType",
+      "type": ["CategoryTypeProfileEdit", "CategoryTypeCustom"],
+      "doc": "The type of flow. This determines how the client should behave when the flow is selected as well as how the flow should be presented."
+    },
+    {
+      "name": "tasks",
+      "type": {
+        "type": "array",
+        "items": "GuidedEditTask"
+      },
+      "doc": "The tasks that are a part of this flow. These tasks can be of several task types. All profile edit tasks must pertain to fields within this flow's section."
+    }
+  ]
+}

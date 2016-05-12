@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "SharedExperiencesInfo",
+  "namespace": "com.linkedin.voyager.identity.shared.profileHighlights",
+  "doc": "A list of shared experiences (companies they have worked at) between two members (viewer and viewee)",
+  "fields": [
+    {
+      "name": "sharedExperiences",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.profileHighlights.SharedExperienceInfo",
+        "doc": "A list of shared experiences between the viewer and viewee"
+      },
+      "doc": "A list of shared experiences between the viewer and viewee"
+    }
+  ]
+}

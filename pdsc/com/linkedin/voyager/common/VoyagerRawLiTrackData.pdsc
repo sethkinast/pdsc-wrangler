@@ -1,0 +1,22 @@
+// LINT_SUPPRESS: include.internal.model
+{
+  "type": "record",
+  "name": "VoyagerRawLiTrackData",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "The value of voyager x-li-track header",
+  "include" : [ "com.linkedin.pemberly.common.RawLiTrackData" ],
+  "fields": [
+    {
+      "name": "clientMinorVersion",
+      "type": "string",
+      "doc": "The client minor version string",
+      "optional": true
+    },
+    {
+      "name": "deviceType",
+      "type": "string",
+      "doc": "The type of the mobile device",
+      "optional": true
+    }
+  ]
+}

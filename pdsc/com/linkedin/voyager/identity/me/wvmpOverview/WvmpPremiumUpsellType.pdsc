@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "WvmpPremiumUpsellType",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "Type of premium upsell.",
+  "symbols": [
+    "COMPANY",
+    "OCCUPATION",
+    "REFERRER_SOURCE",
+    "OTHER"
+  ],
+  "symbolDocs": {
+    "COMPANY": "WVMP premium upsell card for WVMP company insight card",
+    "OCCUPATION": "WVMP premium upsell card for WVMP occupation insight card",
+    "REFERRER_SOURCE": "WVMP premium upsell card for WVMP referrer source insight card.",
+    "OTHER": "WVMP premium upsell card for all other cases"
+  }
+}

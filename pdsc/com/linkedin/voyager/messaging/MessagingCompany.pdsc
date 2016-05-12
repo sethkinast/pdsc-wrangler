@@ -1,0 +1,39 @@
+{
+  "name": "MessagingCompany",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.messaging",
+  "doc": "Information needed to display a company sender/recipient in messaging",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MessagingCompanyUrn",
+      "doc": "Urn for MessagingCompany (a sender in the context of a conversation).",
+      "optional": true
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "deprecated": "Use the miniCompany field instead",
+      "doc": "The MiniProfile entity for member",
+      "optional": true
+    },
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "The MiniCompany entity for company",
+      "optional": true
+    },
+    {
+      "name": "alternateName",
+      "type": "string",
+      "doc": "Name to display instead of company name",
+      "optional": true
+    },
+    {
+      "name": "alternateImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Image to override logo of company",
+      "optional": true
+    }
+  ]
+}

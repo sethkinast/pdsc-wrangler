@@ -1,0 +1,12 @@
+{
+  "type": "typeref",
+  "name": "CustomContent",
+  "namespace": "com.linkedin.voyager.messaging.event.message",
+  "doc": "Union of all message custom content",
+  "ref": [
+    "com.linkedin.voyager.messaging.event.message.InmailContent",
+    "com.linkedin.voyager.messaging.event.message.GroupContent",
+    "com.linkedin.voyager.messaging.event.message.spinmail.SpInmailContent",
+    "com.linkedin.voyager.feed.ShareArticle"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "type": "record",
+  "name": "BizImage",
+  "doc": "An image associated with a company",
+  "fields": [
+    {
+      "type": {
+        "symbols": [
+          "SQUARE_LOGO",
+          "LOGO_LEGACY",
+          "SQUARE_LOGO_LEGACY"
+        ],
+        "type": "enum",
+        "name": "BizImageType",
+        "symbolDocs" : {
+          "SQUARE_LOGO": "300x300 or larger logo. Has cropped image.",
+          "LOGO_LEGACY": "Deprecated 100x60 or smaller logo. Does not have cropped image.",
+          "SQUARE_LOGO_LEGACY": "Deprecated 50x50 or smaller logo. Does not have cropped image."
+        }
+      },
+      "name": "type",
+      "doc": "Type of the image."
+    },
+    {
+      "type": "com.linkedin.common.Urn",
+      "name": "originalMedia",
+      "doc": "Urn of the original (uncropped) image"
+    },
+    {
+      "type": "com.linkedin.common.Urn",
+      "name": "croppedMedia",
+      "optional": true,
+      "doc": "Urn of the cropped image"
+    },
+    {
+      "name": "cropInfo",
+      "type": "BizCropInfo",
+      "optional": true,
+      "doc": "Info on the associated cropped image."
+    }
+  ]
+}
+

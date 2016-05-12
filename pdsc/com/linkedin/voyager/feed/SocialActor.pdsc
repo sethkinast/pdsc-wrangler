@@ -1,0 +1,13 @@
+{
+  "type": "typeref",
+  "name": "SocialActor",
+  "namespace": "com.linkedin.voyager.feed",
+  "doc": "All possible social actor type.",
+  "ref": [
+    "com.linkedin.voyager.feed.MemberActor",
+    "com.linkedin.voyager.feed.CompanyActor",
+    "com.linkedin.voyager.feed.SchoolActor",
+    "com.linkedin.voyager.feed.InfluencerActor",
+    "com.linkedin.voyager.feed.AppActor"
+  ]
+}

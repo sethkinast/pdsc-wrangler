@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "UpdateProfile",
+  "namespace": "com.linkedin.voyager.identity.me.suggestedactions",
+  "doc": "Suggested action to update profile.",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "The basic profile information about the logged-in member.",
+      "deprecated": true,
+      "optional": true
+    }
+  ]
+}

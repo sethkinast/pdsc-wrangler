@@ -1,0 +1,34 @@
+{
+  "type": "enum",
+  "name": "PremiumUpsellChannel",
+  "namespace": "com.linkedin.voyager.premium",
+  "doc": "Family of the product offered to members",
+  "symbols": [
+    "WVMP",
+    "NAVBAR",
+    "HYR",
+    "INMAIL",
+    "PROFILE",
+    "SETTINGS",
+    "AASAAN",
+    "JOBS",
+    "EMAIL",
+    "SPONSORED_INMAIL",
+    "APP_LAUNCHER",
+    "ME"
+  ],
+  "symbolDocs": {
+    "WVMP": "Who viewed my profile",
+    "NAVBAR": "Navigation bar",
+    "HYR": "How you rank",
+    "INMAIL": "When the upsell is shown on the inmail button/link",
+    "PROFILE": "When the upsell is shown on the Profile screen/page",
+    "SETTINGS": "When the upsell is shown on the Settings screen/page",
+    "AASAAN": "Search screen/page",
+    "JOBS": "Job posting screen/page",
+    "EMAIL": "Deep linking to upgrade from an email",
+    "SPONSORED_INMAIL": "When the upsell is shown in a sponsored inMail",
+    "APP_LAUNCHER": "When the upsell is shown in an app launcher",
+    "ME": "When the upsell is shown in ME profile screen"
+  }
+}

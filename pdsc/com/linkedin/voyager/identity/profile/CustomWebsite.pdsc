@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "CustomWebsite",
+  "doc": "Represents a website when the category is other and the clients needs to use the label.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "label",
+      "type": "string",
+      "optional": true,
+      "doc": "This label is used to give a succinct description of the type of link."
+    }
+  ]
+}

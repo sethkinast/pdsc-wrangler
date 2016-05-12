@@ -1,0 +1,13 @@
+{
+  "type":"record",
+  "name":"VersionTag",
+  "doc": "Version tag of the profile, used for optimistic locking.",
+  "namespace":"com.linkedin.voyager.identity.profile",
+  "fields":[
+    {
+      "name": "versionTag",
+      "type": "string",
+      "doc": "Version tag of the profile, used for optimistic locking."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "name": "EntitiesFeedModuleKey",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Module keys that will be used by Feed Items backend once Feed items have been displayed on Entities pages (e.g. Company Update, School Update).",
+  "symbols": [
+    "ENTITIES_COMPANY_PHONE",
+    "ENTITIES_SCHOOL_PHONE",
+    "ENTITIES_GROUP_PHONE"
+  ],
+  "symbolDocs": {
+    "ENTITIES_COMPANY_PHONE": "The module key for the updates shown on Entities Company page.",
+    "ENTITIES_SCHOOL_PHONE": "The module key for the updates shown on Entities School page.",
+    "ENTITIES_GROUP_PHONE": "The module key for the updates shown on Entities Group page."
+  }
+}

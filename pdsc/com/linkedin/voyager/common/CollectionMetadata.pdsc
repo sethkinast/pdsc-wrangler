@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "name": "CollectionMetadata",
+  "doc": "The standard metadata to include in a collection.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "optional": true,
+      "doc": "The type-specific id of the collection entity. Should include the name and method of the collection."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "optional": true,
+      "doc": "The type of the collection entity. Should include the page size and parent resource id."
+    }
+  ]
+}

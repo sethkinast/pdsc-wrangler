@@ -1,0 +1,26 @@
+{
+  "name": "Highlight",
+  "doc": "Highlight about a viewed member's profile as related to the viewer",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.identity.shared",
+  "fields": [
+     {
+        "name": "detail",
+        "type": [
+                  "com.linkedin.voyager.identity.shared.profileHighlights.ProfileHighlight",
+                  "com.linkedin.voyager.identity.shared.networkHighlights.NetworkHighlight"
+                ],
+        "doc": "More detailed information about the highlight"
+     },
+     {
+        "name": "highlightUrn",
+        "type": "com.linkedin.common.Urn",
+        "doc": "Highlight Urn returned by Feed backend which is used to resolve the highlight."
+     },
+     {
+        "name": "trackingId",
+        "type": "com.linkedin.voyager.common.Base64EncodedTrackingId",
+        "doc": "Unique TrackingId for this highlight returned by Feed - used for relevance tracking."
+     }
+   ]
+}

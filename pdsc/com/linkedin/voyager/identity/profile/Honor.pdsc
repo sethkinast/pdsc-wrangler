@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "Honor",
+  "doc": "Honor awarded to a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormHonor"],
+  "fields": []
+}

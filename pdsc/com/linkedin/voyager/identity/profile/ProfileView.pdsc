@@ -1,0 +1,428 @@
+{
+  "type": "record",
+  "name": "ProfileView",
+  "doc": "(Temporary) Profile View created to reduce calls made to the backend. This is meant as a work-around until we have a de-duping mechanism that can work to reduce the calls to Identity backends.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ProfileViewUrn",
+      "doc": "Identifier for this profile view, for caching purposes.",
+      "optional": true
+    },
+    {
+      "name": "profile",
+      "type": "Profile",
+      "doc": "Basic Information about the profile."
+    },
+    {
+      "name": "primaryLocale",
+      "type": "com.linkedin.common.Locale",
+      "doc": "The interface locale used when the member is signing up for a LinkedIn account, as well as the default profile locale used when the member doesn't have a profile in a requested profile locale. TODO make this field required.",
+      "optional": true
+    },
+    {
+      "name": "positionView",
+      "type": {
+        "type": "record",
+        "name": "PositionView",
+        "doc": "View of the positions of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "First 5 positions ordered by date in descending order.",
+            "type": {
+              "type": "array",
+              "items": "Position",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the positions of the profile, showing total count and the first X positions."
+    },
+    {
+      "name": "educationView",
+      "type": {
+        "type": "record",
+        "name": "EducationView",
+        "doc": "View of the educations of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of positions.",
+            "type": {
+              "type": "array",
+              "items": "Education",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the educations of the profile, showing total count and the first X educations."
+    },
+    {
+      "name": "certificationView",
+      "type": {
+        "type": "record",
+        "name": "CertificationView",
+        "doc": "View of the educations of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of certification.",
+            "type": {
+              "type": "array",
+              "items": "Certification",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the certifications of the profile, showing total count and the first X certifications."
+    },
+    {
+      "name": "courseView",
+      "type": {
+        "type": "record",
+        "name": "CourseView",
+        "doc": "View of the courses of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of courses.",
+            "type": {
+              "type": "array",
+              "items": "Course",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the courses of the profile, showing total count and the first X courses."
+    },
+    {
+      "name": "honorView",
+      "type": {
+        "type": "record",
+        "name": "HonorView",
+        "doc": "View of the honors of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of honors.",
+            "type": {
+              "type": "array",
+              "items": "Honor",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the honors of the profile, showing total count and the first X honors."
+    },
+    {
+      "name": "languageView",
+      "type": {
+        "type": "record",
+        "name": "LanguageView",
+        "doc": "View of the educations of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of languages.",
+            "type": {
+              "type": "array",
+              "items": "Language",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the languages of the profile, showing total count and the first X languages."
+    },
+    {
+      "name": "organizationView",
+      "type": {
+        "type": "record",
+        "name": "OrganizationView",
+        "doc": "View of the organizations of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of organizations.",
+            "type": {
+              "type": "array",
+              "items": "Organization",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the organizations of the profile, showing total count and the first X organizations."
+    },
+    {
+      "name": "patentView",
+      "type": {
+        "type": "record",
+        "name": "PatentView",
+        "doc": "View of the patents of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of patents.",
+            "type": {
+              "type": "array",
+              "items": "Patent",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the patents of the profile, showing total count and the first X patents."
+    },
+    {
+      "name": "projectView",
+      "type": {
+        "type": "record",
+        "name": "ProjectView",
+        "doc": "View of the projects of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of projects.",
+            "type": {
+              "type": "array",
+              "items": "Project",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the projects of the profile, showing total count and the first X projects."
+    },
+    {
+      "name": "publicationView",
+      "type": {
+        "type": "record",
+        "name": "PublicationView",
+        "doc": "View of the publications of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of publications.",
+            "type": {
+              "type": "array",
+              "items": "Publication",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the publications of the profile, showing total count and the first X publications."
+    },
+    {
+      "name": "skillView",
+      "type": {
+        "type": "record",
+        "name": "SkillView",
+        "doc": "View of the skills of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of skills.",
+            "type": {
+              "type": "array",
+              "items": "Skill",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the skills of the profile, showing total count and the first X skills."
+    },
+    {
+      "name": "testScoreView",
+      "type": {
+        "type": "record",
+        "name": "TestScoreView",
+        "doc": "View of the test scores of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of test scores.",
+            "type": {
+              "type": "array",
+              "items": "TestScore",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the test scores of the profile, showing total count and the first X test scores."
+    },
+    {
+      "name": "volunteerExperienceView",
+      "type": {
+        "type": "record",
+        "name": "VolunteerExperienceView",
+        "doc": "View of the volunteer experiences of a member",
+        "fields": [
+          {
+            "name": "profileId",
+            "doc": "Member's profile id. To allow clients to tell ember to look at this field for the id instead of autogenerating one.",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "name": "paging",
+            "doc": "Pagination and collection information.",
+            "type": "com.linkedin.restli.common.CollectionMetadata"
+          },
+          {
+            "name": "elements",
+            "doc": "Ordered array of volunteer experiences.",
+            "type": {
+              "type": "array",
+              "items": "VolunteerExperience",
+              "default": []
+            }
+          }
+        ]
+      },
+      "doc": "View of the volunteer experiences of the profile, showing total count and the first X volunteer exps."
+    }
+  ]
+}

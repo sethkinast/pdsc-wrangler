@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "SuggestedEndorsement",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "Resource describing a suggested endorsement for a member.",
+  "fields": [
+    {
+      "name": "recipient",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "The recipient's MiniProfile"
+    },
+    {
+      "name": "endorsedSkillName",
+      "type": "string",
+      "doc": "Name of the endorsed skill"
+    },
+    {
+      "name": "signature",
+      "type": "string",
+      "doc": "Signature for the suggestion. This is used for tracking the suggestion."
+    },
+    {
+      "name": "reason",
+      "type": [
+        "com.linkedin.voyager.identity.profile.SuggestedEndorsementReasonExpert",
+        "com.linkedin.voyager.identity.profile.SuggestedEndorsementReasonStandard"
+      ],
+      "doc" : "Reason why this SuggestedEndorsement is relevant.",
+      "optional": true
+    }
+  ]
+}

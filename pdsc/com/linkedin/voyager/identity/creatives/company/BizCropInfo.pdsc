@@ -1,0 +1,36 @@
+// LINT_SUPPRESS: naming.fields.camel
+{
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "type": "record",
+  "name": "BizCropInfo",
+  "doc": "Info on the cropped company image.",
+  "fields": [
+    {
+      "name": "height",
+      "type": "int",
+      "doc": "Height of the image."
+    },
+    {
+      "name": "width",
+      "type": "int",
+      "doc": "Width of the image."
+    },
+    {
+      "name": "x",
+      "type": "int",
+      "doc": "Cropped X Position of the image."
+    },
+    {
+      "name": "y",
+      "type": "int",
+      "doc": "Cropped Y Position of the image."
+    },
+    {
+      "name": "angle",
+      "type": "int",
+      "optional": true,
+      "doc": "Cropped rotated angle of the image."
+    }
+  ]
+}
+

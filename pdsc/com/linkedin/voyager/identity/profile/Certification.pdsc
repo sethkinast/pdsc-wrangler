@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "Certification",
+  "doc": "Certification obtained by a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormCertification"],
+  "fields": [
+    {
+      "name": "company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "optional": true,
+      "doc": "User selected company associated with this certification, selected from the type-ahead."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TypeaheadState",
+  "doc": "State information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the state. e.g., us.ca for california"
+    },
+    {
+      "name": "stateUrn",
+      "type": "com.linkedin.voyager.common.StateUrn",
+      "doc": "Urn representing the state."
+    }
+  ]
+}

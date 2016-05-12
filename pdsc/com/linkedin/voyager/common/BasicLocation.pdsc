@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "BasicLocation",
+  "namespace": "com.linkedin.voyager.common",
+  "include": ["NormBasicLocation"],
+  "doc": "The minimum information needed to represent a member's location.",
+  "fields": [
+    {
+      "name": "countryName",
+      "type": "string",
+      "doc": "The name of the member's country or district."
+    }
+  ]
+}

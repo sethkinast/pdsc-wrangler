@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "ShareImage",
+  "doc": "An image that was shared.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "text",
+      "doc": "The share commentary",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "doc": "Media Proxy'd image to be displayed on the feed.",
+      "type": "com.linkedin.voyager.common.Image"
+    },
+    {
+      "name": "originalImage",
+      "doc": "Original Image to be used for displaying in rich media viewer. Also MediaProxy's if possible.",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true
+    },
+    {
+      "name": "contentType",
+      "doc": "content type of the image (sharing backend needs this on create)",
+      "optional": true,
+      "type": "string"
+    },
+    {
+      "name": "fileId",
+      "doc": "file id of the image (sharing backend needs this on create)",
+      "type": "string"
+    }
+  ]
+}
+

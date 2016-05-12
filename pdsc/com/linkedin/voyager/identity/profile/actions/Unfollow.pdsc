@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Unfollow",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Profile action to unfollow another member",
+  "fields": []
+}

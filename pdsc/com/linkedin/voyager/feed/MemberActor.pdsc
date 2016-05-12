@@ -1,0 +1,36 @@
+{
+  "type": "record",
+  "name": "MemberActor",
+  "doc": "Wrapper type for members data needed by feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this member.",
+      "optional": true
+    },
+    {
+      "name": "miniProfile",
+      "doc": "Mini Profile for this user",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile"
+    },
+    {
+      "name": "followingInfo",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Indicates whether the member is already following this member"
+    },
+    {
+      "name": "showFollowAction",
+      "type": "boolean",
+      "doc": "Indicate whether or not to display the follow button",
+      "optional": true
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "Distance between the viewer and viewee. TODO: Make this required.",
+      "optional": true
+    }
+  ]
+}

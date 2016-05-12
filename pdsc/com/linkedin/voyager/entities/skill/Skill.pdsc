@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "Skill",
+  "doc": "Basic information about the skill.",
+  "namespace": "com.linkedin.voyager.entities.skill",
+  "fields": [
+    {
+      "name": "miniSkill",
+      "type": "com.linkedin.voyager.entities.shared.MiniSkill",
+      "doc": "Minimal set of information to display a skill, such as name."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "Description about the skill.",
+      "optional": true
+    },
+    {
+      "name": "memberCount",
+      "type": "long",
+      "doc": "The number of members having this skill.",
+      "optional": true
+    },
+    {
+      "name": "onProfile",
+      "type": "boolean",
+      "doc": "This field indicates if this skill appears on the member's profile."
+    }
+  ]
+}

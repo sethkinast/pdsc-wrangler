@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "PymkRoute",
+  "namespace": "com.linkedin.voyager.common.heathrow",
+  "doc": "Contains information about how PYMK (People You May Know) route should be invoked. Example details include whether to show an actors profile, etc",
+  "fields" : [
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "optional": true,
+      "doc": "LEGO Tracking Token that is passed to the client to fire impression and action tracking. No need to pass the token if this is a default route and impression need not be tracked"
+    }
+  ]
+}

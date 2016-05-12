@@ -1,0 +1,24 @@
+{
+   "type": "record",
+   "name": "PremiumFAQ",
+   "doc": "Frequently asked question and corresponding answer about a Premium plan or plans",
+   "namespace": "com.linkedin.voyager.premium",
+   "fields": [
+     {
+       "name": "question",
+       "type": "string",
+       "doc": "The question related to a plan or plans"
+     },
+     {
+       "name": "answer",
+       "type": "string",
+       "doc": "The answer for the question"
+     },
+     {
+       "name": "attributedAnswer",
+       "type": "com.linkedin.pemberly.text.AttributedText",
+       "doc": "Attributed Text for Answer",
+       "optional": true
+     }
+   ]
+ }

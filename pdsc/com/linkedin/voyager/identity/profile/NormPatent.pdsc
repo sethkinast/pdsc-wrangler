@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "NormPatent",
+  "doc": "Patent awarded to a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["CorePatent"],
+  "fields": [
+    {
+      "name": "inventors",
+      "type": {
+        "type": "array",
+        "items": "NormContributor"
+      },
+      "doc": "List of inventors of this patent, must include the profile owner."
+    }
+  ]
+}

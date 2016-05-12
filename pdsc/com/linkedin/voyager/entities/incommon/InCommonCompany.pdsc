@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "InCommonCompany",
+  "namespace": "com.linkedin.voyager.entities.incommon",
+  "doc": "This model has the information about the in-common companies between the viewer and another member.",
+  "fields": [
+    {
+      "name": "member",
+      "type": "com.linkedin.voyager.entities.shared.MiniProfileWithDistance",
+      "doc": "The basic information about the other member."
+    },
+    {
+      "name": "companies",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.entities.shared.MiniCompany"
+      },
+      "default": [],
+      "doc": "A list of shared companies between the viewer and other member."
+    },
+    {
+      "name": "total",
+      "type": "int",
+      "doc": "The total number of companies in common with the viewer."
+    }
+  ]
+}

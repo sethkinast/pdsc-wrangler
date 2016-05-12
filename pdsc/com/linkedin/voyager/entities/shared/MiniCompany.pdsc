@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "MiniCompany",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "The minimal set of information to display a company.",
+  "include": ["com.linkedin.voyager.common.TrackingObject"],
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MiniCompanyUrn",
+      "doc": "Identifier for this mini company."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Name of the company."
+    },
+    {
+      "name": "logo",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Logo image",
+      "optional": true
+    },
+    {
+      "name": "showcase",
+      "type": "boolean",
+      "doc": "Whether this company is a showcase",
+      "optional": true    // TODO: Make required
+    }
+  ]
+}

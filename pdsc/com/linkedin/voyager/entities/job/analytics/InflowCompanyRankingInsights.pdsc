@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "InflowCompanyRankingInsights",
+  "doc": "Companies ranked by number of previous employees hired by a particular company.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "rankings",
+      "type": {
+        "type": "array",
+        "items": "CompanyRanking"
+      },
+      "default": [],
+      "doc": "Rankings of companies based on number of previous employees hired by this company."
+    }
+  ]
+}

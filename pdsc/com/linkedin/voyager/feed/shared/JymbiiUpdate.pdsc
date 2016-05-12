@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "JymbiiUpdate",
+  "doc": "Job You May Be Interested In Update.",
+  "namespace": "com.linkedin.voyager.feed.shared",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this update."
+    },
+    {
+      "name": "company",
+      "doc": "A union of CompanyActor (for a LinkedIn company) and ExternalCompany (for a company not on LinkedIn).",
+      "type": [
+        "com.linkedin.voyager.feed.CompanyActor",
+        "ExternalCompany"
+      ]
+    },
+    {
+      "name": "createdAt",
+      "doc": "The created time of the update, in milliseconds since epoch.",
+      "type": "com.linkedin.common.Time"
+    },
+    {
+      "name": "miniJob",
+      "doc": "Mini Job of this job share.",
+      "type": "com.linkedin.voyager.entities.shared.MiniJob"
+    },
+    {
+      "name": "jobUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "URL for the job. To be used for re-sharing this Job.",
+      "optional": true
+    },
+    {
+      "name": "flavors",
+      "type": {
+          "type": "array",
+          "items": "com.linkedin.voyager.entities.shared.EntitiesFlavor"
+      },
+      "doc": "Array of flavors/insights for this jymbii update.",
+      "default": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "NetworkHighlight",
+  "doc": "Highlight about a viewed member's network",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.identity.shared.networkHighlights",
+  "fields": [
+    {
+      "name": "detail",
+      "type": [
+        "DescriptiveCompany",
+        "DescriptiveSchool",
+        "DescriptiveRegion",
+        "DescriptiveSeniorCompany"
+      ],
+      "doc": "More detailed information about the highlight"
+    },
+    {
+      "name": "reason",
+      "type": "com.linkedin.voyager.identity.shared.networkHighlights.NetworkHighlightReason",
+      "doc" : "Reason why this NetworkHighlight is relevant.",
+      "optional": true
+    }
+  ]
+}

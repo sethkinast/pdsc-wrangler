@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "ShareContent",
+  "doc": "Share content base class. All client should use this class to render the default view.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "text",
+      "doc": "The share commentary",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "doc": "Image of the document",
+      "type": "com.linkedin.voyager.common.Image",
+      "optional": true
+    }
+  ]
+}
+

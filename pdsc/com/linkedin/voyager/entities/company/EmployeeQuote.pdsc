@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "EmployeeQuote",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "Single quote about a company along with the employee's user information.",
+  "fields": [
+    {
+      "name": "member",
+      "type": "com.linkedin.voyager.entities.shared.EntitiesMiniProfile",
+      "doc": "EntitiesMiniProfile of the employee of the company that said the quote."
+    },
+    {
+      "name": "quote",
+      "type": "string",
+      "doc": "Quote of member."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "PhoneNumber",
+  "namespace" : "com.linkedin.voyager.growth.abi",
+  "doc" : "The phone number details of the contact.",
+  "include" : [ "com.linkedin.common.PhoneNumber" ],
+  "fields" : [ {
+    "name" : "type",
+    "type" : "string",
+    "doc" : "The user generated types of the number like Home, Mobile, custom etc.",
+    "optional" : true
+  },
+  {
+    "name" : "primary",
+    "type" : "boolean",
+    "doc" : "Indicates if this number is primary.",
+    "default" : false
+  }]
+}

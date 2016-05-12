@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "JobSavingInfo",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Information about whether the viewer saved this job",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.JobSavingInfoUrn",
+      "doc": "Identifier for this JobSavingInfo.",
+      "optional": true
+    },
+    {
+      "name": "saved",
+      "type": "boolean",
+      "doc": "Indicates whether the viewer saved this job."
+    }
+  ]
+}

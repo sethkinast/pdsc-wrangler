@@ -1,0 +1,9 @@
+{
+  "type": "typeref",
+  "name": "CoverMedia",
+  "doc": "All possible cover media types displayed at the top of LinkedIn 1st party (publishing) article.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "ref": [
+    "CoverImage"
+  ]
+}

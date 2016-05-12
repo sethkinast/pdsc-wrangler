@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "CommonShareFields",
+  "doc": "Fields common to all share/reshare updates in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "shareAudience",
+      "type": "ShareAudience",
+      "doc": "The audience the share is visible to."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "IncorrectlyMentionedMember",
+  "doc": "Action type for incorrectly mentioned member in a newsle update.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "profileUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc":  "Backend urn of the member incorrectly mentioned"
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "doc": "Text to display for name in control menu"
+    },
+    {
+      "name": "self",
+      "type": "boolean",
+      "doc":  "Whether or not this mention is of the logged-in member",
+      "default": false
+    }
+  ]
+}

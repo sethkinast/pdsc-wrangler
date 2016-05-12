@@ -1,0 +1,16 @@
+{
+  "type": "enum",
+  "name": "RecommendationStatus",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "Status of the recommendation.",
+  "symbols": [
+    "PENDING",
+    "VISIBLE",
+    "HIDDEN"
+  ],
+  "symbolDocs": {
+    "PENDING": "Indicates that the recommendation is still pending.",
+    "VISIBLE": "Indicates that the recommendation is in a visible state.",
+    "HIDDEN": "Indicates that the recommendation is in a hidden state."
+  }
+}

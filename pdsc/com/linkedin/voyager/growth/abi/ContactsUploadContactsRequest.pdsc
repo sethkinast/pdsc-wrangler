@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "ContactsUploadContactsRequest",
+  "doc": "List of raw contacts. NOTE - this model has been added just to enable mobile clients to easily upload an array of contacts. Should be deprecated in the long term.",
+  "namespace": "com.linkedin.voyager.growth.abi",
+  "fields": [
+    {
+      "name": "rawContacts",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.abi.RawContact"
+      },
+      "default": [],
+      "doc": "The contacts to upload"
+    },
+    {
+      "name" : "uploadTransactionId",
+      "type" : "string",
+      "doc" : "A unique identifier for tracking this upload transaction.",
+      "optional" : true
+    },
+    {
+      "name" : "deviceCountryCode",
+      "type" : "string",
+      "doc" : "The device country code/SIM card country code. Example - US",
+      "optional" : true
+    }
+  ]
+}

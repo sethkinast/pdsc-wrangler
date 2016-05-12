@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "MediaProcessorImage",
+  "doc": "Set of information describing a MPR image",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Ambry or media-server identifier"
+    }
+  ]
+}

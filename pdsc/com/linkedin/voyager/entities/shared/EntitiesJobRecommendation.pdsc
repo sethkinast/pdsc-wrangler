@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "EntitiesJobRecommendation",
+  "doc": "Job recommendation provided by JYMBII.",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "fields": [
+    {
+      "name": "createdAt",
+      "doc": "The created time of this job posting, in milliseconds since epoch.",
+      "type": "com.linkedin.common.Time"
+    },
+    {
+      "name": "miniJob",
+      "doc": "MiniJob of this job posting.",
+      "type": "com.linkedin.voyager.entities.shared.MiniJob"
+    },
+    {
+      "name": "jobUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "URL for the job. To be used for re-sharing this Job.",
+      "optional": true
+    }
+  ]
+}

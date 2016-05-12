@@ -1,0 +1,31 @@
+{
+  "type" : "record",
+  "name" : "CreativeVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables to represent the data stored in the creative.  These are serialized to xml and stored to the database.",
+  "fields" : [
+    {
+      "name" : "href",
+      "doc" : "URI destination to forward on a click",
+      "type" : "com.linkedin.common.Uri",
+      "optional" : true
+    },
+    {
+      "name" : "subType",
+      "doc" : "Subtype fields",
+      "type" : [
+        "CustomCreativeVariables",
+        "MediaCreativeVariables",
+        "TextAdCreativeVariables",
+        "SSUCreativeVariables",
+        "SjymbiiCreativeVariables",
+        "FollowCompanyCreativeVariables",
+        "FollowCreativeVariables",
+        "SponsoredInMailCreativeVariables",
+        "SlideshareLeadgenCreativeVariables",
+        "WorkWithUsCreativeVariables",
+        "PictureYourselfJobCreativeVariables"
+      ]
+    }
+  ]
+}

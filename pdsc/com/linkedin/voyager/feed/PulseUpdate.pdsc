@@ -1,0 +1,40 @@
+// LINT_SUPPRESS: naming.time
+{
+  "type": "record",
+  "name": "PulseUpdate",
+  "doc": "Pulse update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ShareUpdateContent",
+    "com.linkedin.voyager.feed.UpdateSocialContext",
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this update.",
+      "optional": true
+    },
+    {
+      "name": "actor",
+      "type": "ChannelActor",
+      "doc": "Channel that shared this update."
+    },
+    {
+      "name": "header",
+      "doc": "Entire header to display for this update in the feed, ie Trending in X",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText"
+    },
+    {
+      "name": "contentPool",
+      "doc": "Content pool this article belongs to from Pulse.",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText"
+    },
+    {
+      "name": "createdTime",
+      "doc": "The created time of the update.",
+      "type": "com.linkedin.common.Time"
+    }
+  ]
+}

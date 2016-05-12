@@ -1,0 +1,14 @@
+{
+  "type": "enum",
+  "name": "CompanySupportedItems",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "These are the bag names of supported items.",
+  "symbols": [
+    "AMADEUS",
+    "BACH"
+  ],
+  "symbolDocs": {
+    "AMADEUS": "This represents the name of a bag that includes: RECENT_UPDATES, ALL_JOBS, IMMEDIATE_CONNECTIONS, IN_COMMON_PEOPLE, ABOUT, MATCHED_JOBS, DETAILS, SHOWCASES, SIMILAR_COMPANIES, CAREER_TITLES, CAREER_RESOURCES, CAREER_EMPLOYEE_QUOTES, CAREER_ABOUT, CAREER_ABOUT_2",
+    "BACH": "This represents the name of a bag that includes all the items from AMADEUS, plus COMPANY_EMPLOYEES."
+  }
+}

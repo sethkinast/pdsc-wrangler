@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "SubscriptionCart",
+  "doc": "Subscription Cart object that encapulates OMS cart id which is required for checkout.",
+  "namespace": "com.linkedin.voyager.premium",
+  "fields": [
+    {
+      "name": "cartId",
+      "type": "long",
+      "doc": "OMS cart id that will be used for purchase purposes"
+    }
+  ]
+}

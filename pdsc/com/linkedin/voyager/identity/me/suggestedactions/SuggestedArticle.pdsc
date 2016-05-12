@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "SuggestedArticle",
+  "namespace": "com.linkedin.voyager.identity.me.suggestedactions",
+  "doc": "Article to be suggested to the member.",
+  "fields": [
+    {
+      "name": "data",
+      "type": "com.linkedin.voyager.feed.urlpreview.UrlPreviewData",
+      "doc": "Data of the suggested article used to pre-populate a share action."
+    }
+  ]
+}

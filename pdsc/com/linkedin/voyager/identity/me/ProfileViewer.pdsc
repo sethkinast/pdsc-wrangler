@@ -1,0 +1,10 @@
+{
+  "type": "typeref",
+  "name": "ProfileViewer",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Union for the types of profile viewers.",
+  "ref": [
+    "FullProfileViewer",
+    "ObfuscatedProfileViewer"
+  ]
+}

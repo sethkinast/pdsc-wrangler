@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "StickerEvent",
+  "namespace": "com.linkedin.voyager.messaging.event",
+  "doc": "A sticker event.",
+  "fields": [
+    {
+      "name": "sticker",
+      "type": "com.linkedin.voyager.messaging.event.message.Sticker",
+      "doc": "The Sticker object within the sticker event."
+    },
+    {
+      "name" : "customContent",
+      "type" : [
+        "com.linkedin.voyager.messaging.event.message.GroupContent"
+      ],
+      "optional" : true,
+      "doc": "Custom Content within a sticker event."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "BoostUpgradeResult",
+  "doc": "The upgrade result of fulfilment of the promotional offer",
+  "namespace": "com.linkedin.voyager.premium.boost",
+  "fields": [
+    {
+      "name": "upgradeFulfilled",
+      "type": "boolean",
+      "doc": "Flag that specifies if the user is upgraded with the promotional offer"
+    }
+  ]
+}

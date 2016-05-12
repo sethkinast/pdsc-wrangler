@@ -1,0 +1,62 @@
+{
+   "fields":[
+      {
+         "name":"croppedImage",
+         "type":"com.linkedin.common.Urn",
+         "optional":true,
+         "doc":"urn representing cropped image"
+      },
+      {
+         "name":"uncroppedImage",
+         "type":"com.linkedin.common.Urn",
+         "optional":true,
+         "doc":"urn representing uncropped image"
+      },
+      {
+         "name":"url",
+         "type":"com.linkedin.common.Uri",
+         "optional":true,
+         "doc":"url of image"
+      },
+      {
+         "name":"height",
+         "type":"int",
+         "optional":true,
+         "doc":"original height"
+      },
+      {
+         "name":"width",
+         "type":"int",
+         "optional":true,
+         "doc":"original width"
+      },
+      {
+         "name":"cropHeight",
+         "type":"int",
+         "optional":true,
+         "doc":"cropped height"
+      },
+      {
+         "name":"cropWidth",
+         "type":"int",
+         "optional":true,
+         "doc":"cropped width"
+      },
+      {
+         "name":"cropXPosition",
+         "type":"int",
+         "optional":true,
+         "doc":"crop starts from this position on x axis"
+      },
+      {
+         "name":"cropYPosition",
+         "type":"int",
+         "optional":true,
+         "doc":"crop starts from this position on y axis"
+      }
+   ],
+   "namespace":"com.linkedin.voyager.identity.creatives.company",
+   "type":"record",
+   "name":"BizCroppedImage",
+   "doc":"A cropped image on LinkedIn"
+}

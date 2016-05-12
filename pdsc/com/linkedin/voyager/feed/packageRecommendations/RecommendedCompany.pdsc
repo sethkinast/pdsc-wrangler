@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "RecommendedCompany",
+  "doc": "Entity that represents a company in a recommended package to a member",
+  "namespace": "com.linkedin.voyager.feed.packageRecommendations",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "doc": "Mini profile for a company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany"
+    },
+    {
+      "name": "followingInfo",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Indicates whether the member is already following this company"
+    },
+    {
+      "name": "reason",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "doc": "Editorial reason for recommending this company",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "typeref",
+  "name": "SuggestedAction",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "A reference to all the various suggestion actions possible from a suggested action card.",
+  "ref": [
+    "com.linkedin.voyager.identity.me.suggestedactions.AddSkills",
+    "com.linkedin.voyager.identity.me.suggestedactions.PYMK",
+    "com.linkedin.voyager.identity.me.suggestedactions.UpdateProfile",
+    "com.linkedin.voyager.identity.me.suggestedactions.ComposeShare"
+  ]
+}

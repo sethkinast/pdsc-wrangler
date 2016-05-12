@@ -1,0 +1,43 @@
+{
+  "type" : "record",
+  "name" : "AppUniverseItem",
+  "namespace" : "com.linkedin.voyager.common",
+  "doc" : "Contains information related to a LinkedIn app (app name, app store URL, etc.). This data should be used in the app universe menu.",
+  "fields" : [
+    {
+      "name": "appName",
+      "type": "string",
+      "doc": "The name of the app"
+    },
+    {
+      "name": "tagline",
+      "type": "string",
+      "doc": "A short sentence to describe and promote the app"
+    },
+    {
+      "name": "storeUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "The app store URL for this app"
+    },
+    {
+      "name": "appUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "The app URL for this app (i.e. the URL used for deeplinking)"
+    },
+    {
+      "name": "iconUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "The URL of the app icon"
+    },
+    {
+      "name": "trackingCode",
+      "type": "string",
+      "doc": "The tracking code for this app"
+    },
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "doc": "The lego tracking token associated with this app widget"
+    }
+  ]
+}

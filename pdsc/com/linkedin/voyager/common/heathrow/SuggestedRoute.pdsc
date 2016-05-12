@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "SuggestedRoute",
+  "namespace": "com.linkedin.voyager.common.heathrow",
+  "doc": "Route where user should land on, for example accepting invitation from email should land a member on ABI splash page based on lego and offline relevance calculations.",
+  "fields" : [
+    {
+      "name": "route",
+      "type": ["AbiRoute","PymkRoute","FeedRoute"],
+      "doc": "Union which contains information that helps to route member to that specific experience"
+    }
+  ]
+}

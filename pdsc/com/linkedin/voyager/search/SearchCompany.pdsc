@@ -1,0 +1,46 @@
+{
+  "type": "record",
+  "name": "SearchCompany",
+  "doc": "Company information used to display a search hit",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the company. This field will be deprecated. Use entityUrn in MiniCompany instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.CompanyUrn",
+      "doc": "Backend urn representing the company. This should be used only for tracking."
+    },
+    {
+      "name": "company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Basic company information"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "The location of the company's headquarters",
+      "optional": true
+    },
+    {
+      "name": "industry",
+      "type": "string",
+      "doc": "The industry of the company.",
+      "optional": true
+    },
+    {
+      "name": "size",
+      "type": "string",
+      "doc": "The size of the company.",
+      "optional": true
+    },
+    {
+      "name": "following",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Indicates whether the member is already following this company."
+    }
+  ]
+}

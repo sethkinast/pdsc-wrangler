@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "NextGroupsCollection",
+  "namespace": "com.linkedin.voyager.entities.group",
+  "doc": "Represents a list of similar groups.",
+  "fields": [
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": "NextGroup"
+      },
+      "doc": "A list of similar groups."
+    }
+  ]
+}

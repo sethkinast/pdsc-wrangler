@@ -1,0 +1,48 @@
+{
+  "type": "record",
+  "name": "NormVolunteerExperience",
+  "doc": "Volunteer experience of a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.VolunteerExperienceUrn",
+      "doc": "Identifier for this volunteer experience",
+      "optional": true
+    },
+    {
+      "name": "companyName",
+      "type": "string",
+      "doc": "The name of the company where the volunteer experience took place."
+    },
+    {
+      "name": "companyUrn",
+      "type": "com.linkedin.voyager.common.MiniCompanyUrn",
+      "optional": true,
+      "doc": "URN of the company given by the user, as provided from the type-ahead."
+    },
+    {
+      "name": "role",
+      "type": "string",
+      "doc": "Role of the member during the volunteer experience."
+    },
+    {
+      "name": "cause",
+      "type": "com.linkedin.voyager.identity.VolunteerCause",
+      "optional": true,
+      "doc": "Cause associated the volunteer experience."
+    },
+    {
+      "name": "timePeriod",
+      "type": "com.linkedin.voyager.common.DateRange",
+      "optional": true,
+      "doc": "The time period when this volunteer experience took place. This DateRange is meant for holding months and years only."
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "Description given by the member about his volunteer experience.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "TypeaheadFieldOfStudy",
+  "doc": "Field of study information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the Field of Study.",
+      "deprecate": "Use fieldOfStudyUrn instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.FieldOfStudyUrn",
+      "doc": "Backend urn representing the field of study. This should be used only for tracking."
+    },
+    {
+      "name": "fieldOfStudyUrn",
+      "type": "com.linkedin.voyager.common.FieldOfStudyUrn",
+      "doc": "Urn representing the field fo study. This can be used for frontend APIs to use in subsequent requests."
+    }
+  ]
+}

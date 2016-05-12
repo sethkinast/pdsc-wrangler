@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "SkillCourse",
+  "namespace": "com.linkedin.voyager.entities.skill",
+  "doc": "Information about a course for a skill based on data gathered from course provider, e.g. Lynda.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.SkillCourseUrn",
+      "doc": "Identifier for this skillCourse."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "The course title stored on the backend."
+    },
+    {
+      "name": "courseProvider",
+      "type": "CourseProvider",
+      "doc": "The provider of the course."
+    },
+    {
+      "name": "heroImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "The hero image for the course.",
+      "optional": true
+    },
+    {
+      "name": "website",
+      "type": "com.linkedin.common.Uri",
+      "doc": "URL for this course's website.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "enum",
+  "name": "LegacyCategoryNames",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "doc": "Polaris category names: add_current_position, school_name, etc.",
+  "symbols": [
+    "ADD_CURRENT_POSITION",
+    "SCHOOL_NAME"
+  ],
+  "symbolDocs": {
+    "ADD_CURRENT_POSITION": "Category add current position.",
+    "SCHOOL_NAME": "Category to edit school name."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "EmployeeCountRange",
+  "doc": "Range of employees",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "start",
+      "type": "int",
+      "doc": "Start of the range. It can equal to 0, in that case it means it's a single employee company."
+    },
+    {
+      "name": "end",
+      "type": "int",
+      "doc": "End of the range. When it's not set it should be interpreted as the max number of employees and the UI should say {START}+ employees",
+      "optional": true
+    }
+  ]
+}

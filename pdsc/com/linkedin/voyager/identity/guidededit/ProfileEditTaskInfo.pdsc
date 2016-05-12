@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "ProfileEditTaskInfo",
+  "doc": "Information for a task which involves editing some form fields on the profile.",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "fields": [
+    {
+      "name": "updateEntity",
+      "type": "com.linkedin.common.Urn",
+      "optional": true,
+      "doc": "URN that points to a profile entity that this task will update. This field will only be populated if this task is within an update flow.",
+      "deprecated" : true
+    },
+    {
+      "name": "updateEntityUrn",
+      "type": "com.linkedin.common.Urn",
+      "optional": true,
+      "doc": "URN that points to a profile entity that this task will update. This field will only be populated if this task is within an update flow."
+    },
+    {
+      "name": "formFields",
+      "type": {
+        "type": "array",
+        "items": "FormField"
+      },
+      "doc": "A list of form fields which will be edited in this task. This list should be used by the clients to construct the forms to display to the member."
+    }
+  ]
+}

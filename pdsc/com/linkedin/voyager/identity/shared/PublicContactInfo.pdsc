@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "PublicContactInfo",
+  "namespace": "com.linkedin.voyager.identity.shared",
+  "doc": "Contact information visible to everyone on linkedin",
+  "fields": [
+    {
+      "name": "twitterHandles",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.TwitterHandle"
+      },
+      "doc": "A list of Twitter handles",
+      "default": []
+    }
+  ]
+}

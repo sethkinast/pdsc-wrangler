@@ -1,0 +1,30 @@
+{
+  "type": "record",
+  "name": "NextGroup",
+  "namespace": "com.linkedin.voyager.entities.group",
+  "doc": "Basic group information to be able to display on Next module.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.NextGroupUrn",
+      "doc": "Identifier for this NextGroup."
+    },
+    {
+      "name": "miniGroup",
+      "type": "com.linkedin.voyager.entities.shared.MiniGroup",
+      "doc": "Minimum information about the group."
+    },
+    {
+      "name": "recentPostAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The time for the most recent post in this group.",
+      "optional": true
+    },
+    {
+      "name": "memberCount",
+      "type": "int",
+      "doc": "This represents the number of members in this group.",
+      "optional": true
+    }
+  ]
+}

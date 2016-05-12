@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "NormSkill",
+  "doc": "Skills of a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": [
+    "CoreSkill"
+  ],
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.SkillUrn",
+      "doc": "Identifier for this skill",
+      "optional": true
+    }
+  ]
+}

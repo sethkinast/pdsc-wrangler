@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "InCommonCompanyCollection",
+  "namespace": "com.linkedin.voyager.entities.incommon",
+  "doc": "Represents a list of InCommonCompany.",
+  "fields": [
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": "InCommonCompany"
+      },
+      "doc": "A list of InCommonCompany."
+    },
+    {
+      "name": "pagingInfo",
+      "type": "com.linkedin.voyager.entities.common.PagingInfo",
+      "doc": "The paging info for items."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "type": "record",
+  "name": "Prop",
+  "namespace": "com.linkedin.voyager.relationships.shared.prop",
+  "doc": "Professional relationship opportunity",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.RelPropUrn",
+      "doc": "Identifier of this prop"
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "a unique id which represents this particular instance of an entity, created when the entity is materialized"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the prop"
+    },
+    {
+      "name": "displayMessages",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.pemberly.text.AttributedText"
+      },
+      "doc": "Display messages for the prop"
+    },
+    {
+      "name": "propType",
+      "type": "PropType",
+      "doc": "Prop type"
+    },
+    {
+      "name": "actions",
+      "type": {
+        "type": "array",
+        "items": "PropAction"
+      },
+      "default": [],
+      "doc": "List of actions that user may take on the prop"
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Mini profile data about the member. For calendar sync prop and invitation/aggregated_invitations prop, it will be null",
+      "optional": true
+    },
+    {
+      "name": "seen",
+      "type": "boolean",
+      "doc": "Indicates whether the viewer has seen this prop before or not"
+    },
+    {
+      "name": "details",
+      "type": {
+        "type": "array",
+        "items": "PropDetail"
+      },
+      "doc": "Additional details of prop",
+      "default": []
+    },
+    {
+      "name": "socialActivityInfo",
+      "type": "com.linkedin.voyager.feed.shared.SocialActivityCounts",
+      "doc": "Counts of total comments, likes on this update, and is this update liked by the viewer. Applied for activities.",
+      "optional": true
+    }
+  ]
+}

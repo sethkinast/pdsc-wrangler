@@ -1,0 +1,64 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "CompanyDetails",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "This has the company details information.",
+  "fields": [
+    {
+      "name": "industries",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "Industries this company belongs to."
+    },
+    {
+      "name": "websiteUrl",
+      "type": "com.linkedin.common.Uri",
+      "doc": "URL for this company's website.",
+      "optional": true
+    },
+    {
+      "name": "employeeCountRange",
+      "type": "string",
+      "doc": "Number of employees represented as preset ranges.",
+      "optional": true
+    },
+    {
+      "name": "companyType",
+      "type": "string",
+      "doc": "The type of company; e.g. PUBLIC_COMPANY, NON_PROFIT, etc.",
+      "optional": true
+    },
+    {
+      "name": "specialties",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "Fields/Areas in which this company specializes in."
+    },
+    {
+      "name": "headquarters",
+      "type": "string",
+      "doc": "City of the company headquarters",
+      "optional": true
+    },
+    {
+      "name": "foundedDate",
+      "type": "com.linkedin.common.Date",
+      "doc": "TODO: Remove this field. Date the company was founded.",
+      "deprecated": true,
+      "optional": true
+    },
+    {
+      "name": "foundedOn",
+      "type": "com.linkedin.common.Date",
+      "doc": "Date the company was founded.",
+      "optional": true
+    }
+  ]
+}

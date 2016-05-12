@@ -1,0 +1,23 @@
+{
+  "name": "MemberTopCard",
+  "namespace": "com.linkedin.voyager.messaging",
+  "type": "record",
+  "doc": "TopCard data for member in conversation",
+  "fields": [
+    {
+      "name": "messagingMember",
+      "type": "com.linkedin.voyager.messaging.MessagingMember",
+      "doc": "MessagingMember data for member"
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "The distance between the viewer and the member"
+    },
+    {
+      "name": "contactInfo",
+      "type": "com.linkedin.voyager.messaging.shared.ContactInfo",
+      "doc": "Contact info for member"
+    }
+  ]
+}

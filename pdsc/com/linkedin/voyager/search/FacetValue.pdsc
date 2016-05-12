@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "FacetValue",
+  "doc" : "Selectable value of a facet",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "value",
+      "type": "string",
+      "doc": "Value to construct subsequent search queries."
+    },
+    {
+      "name": "displayValue",
+      "type": "string",
+      "doc": "Display value of the facet."
+    }
+  ]
+}

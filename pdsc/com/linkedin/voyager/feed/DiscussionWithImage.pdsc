@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "DiscussionWithImage",
+  "namespace": "com.linkedin.voyager.feed",
+  "doc": "The type of discussion with image.",
+  "include": [
+    "com.linkedin.voyager.feed.DiscussionBase"
+  ],
+  "fields": [
+    {
+      "name": "contentId",
+      "type": "string",
+      "doc": "The id of the content."
+    },
+    {
+      "name": "contentUrl",
+      "type": "com.linkedin.common.Url",
+      "doc": "The the url for the content."
+    },
+    {
+      "name": "contentImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "The image for the content."
+    }
+  ]
+}

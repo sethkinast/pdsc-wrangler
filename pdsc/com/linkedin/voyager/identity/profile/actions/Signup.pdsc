@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Signup",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Profile action to register with linkedin.",
+  "fields": []
+}

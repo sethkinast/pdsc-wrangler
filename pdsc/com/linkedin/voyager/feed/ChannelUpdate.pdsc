@@ -1,0 +1,59 @@
+// LINT_SUPPRESS: naming.time
+{
+  "type": "record",
+  "name": "ChannelUpdate",
+  "doc": "Channel update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ShareUpdateContent",
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "backend Urn for this update.",
+      "optional": true
+    },
+    {
+      "name": "actor",
+      "type": "ChannelActor",
+      "doc": "Channel that shared this update."
+    },
+    {
+      "name": "header",
+      "doc": "Header to display for this update (eg. Trending in X)",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText"
+    },
+    {
+      "name": "contentPool",
+      "doc": "Content pool this article belongs to from Pulse.",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "articleUpdate",
+      "doc": "Update types supported for a Channel Update",
+      "type": "Update",
+      "optional": true
+    },
+    {
+      "name": "createdTime",
+      "doc": "The created time of the update.",
+      "type": "com.linkedin.common.Time",
+      "optional": true
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "***DEPRECATED*** a unique id which represents this particular instance of an entity, created when the entity is materialized",
+      "optional": true
+    },
+    {
+      "name": "tracking",
+      "type": "TrackingData",
+      "doc": "***DEPRECATED*** Tracking information to be used for sending Feed Tracking events : FeedImpressionEvent, FeedActionEvent.",
+      "optional": true
+    }
+  ]
+}

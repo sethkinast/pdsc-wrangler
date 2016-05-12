@@ -1,0 +1,34 @@
+{
+  "type": "enum",
+  "name": "CategoryNames",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "doc": "Flow IDs corresponding to Lego widget group IDs.",
+  "symbols": [
+    "ADD_CURRENT_POSITION",
+    "ADD_PAST_POSITION",
+    "ADD_EDUCATION",
+    "UPDATE_EDUCATION",
+    "ADD_CERTIFICATION",
+    "ADD_SUGGESTED_SKILLS",
+    "ADD_SUGGESTED_CERTIFICATIONS",
+    "ADD_SUGGESTED_PATENTS",
+    "ADD_SUGGESTED_PUBLICATIONS",
+    "ADD_INDUSTRY",
+    "ADD_LOCATION",
+    "ADD_PHOTO"
+  ],
+  "symbolDocs": {
+    "ADD_CURRENT_POSITION": "Category add current position.",
+    "ADD_PAST_POSITION": "Category add past position.",
+    "ADD_EDUCATION": "Category add education.",
+    "UPDATE_EDUCATION": "Category update education.",
+    "ADD_CERTIFICATION": "Category to add certification.",
+    "ADD_SUGGESTED_SKILLS": "Category add suggested skill.",
+    "ADD_SUGGESTED_CERTIFICATIONS": "Category used to add certification.",
+    "ADD_SUGGESTED_PATENTS": "Category used to add patent.",
+    "ADD_SUGGESTED_PUBLICATIONS": "Category used to add publication.",
+    "ADD_INDUSTRY": "Category used to add industry.",
+    "ADD_LOCATION": "Category used to add location.",
+    "ADD_PHOTO": "Category used to add photo."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "GroupContent",
+  "doc": "A group of Lego widgets.",
+  "namespace": "com.linkedin.voyager.growth.lego",
+  "fields": [
+    {
+      "name": "groupId",
+      "type": "string",
+      "doc": "The Lego group id."
+    },
+    {
+      "name": "widgets",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.lego.WidgetContent"
+      },
+      "doc": "Widgets to be shown."
+    }
+  ]
+}

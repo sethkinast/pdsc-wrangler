@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "SearchQuery",
+  "namespace": "com.linkedin.voyager.search",
+  "doc": "Representation of a Search Query",
+  "fields": [
+    {
+      "name": "parameters",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "SearchQueryParam",
+          "type": "record",
+          "namespace": "com.linkedin.voyager.search",
+          "fields": [
+            {
+              "name": "name",
+              "type": "string",
+              "doc": "name of the parameter used to make the search"
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "doc": "value of parameter."
+            }
+          ]
+        }
+      },
+      "doc": "parameters used to make the search with their values. Also includes Facets. eg keywords, country code, facetNetwork",
+      "optional": true
+    }
+  ]
+}

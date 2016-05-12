@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "UnfollowActions",
+  "doc": "This is a complex type will be used for aggregated update control menus.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "actions",
+      "doc": "A list of possible unfollow actions.",
+      "type": {
+        "type": "array",
+        "items": "UnfollowType"
+      }
+    }
+  ]
+}

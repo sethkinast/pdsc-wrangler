@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "UnfollowGroup",
+  "doc": "Type unfollowing a group.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "groupUrn",
+      "type": "com.linkedin.voyager.common.MiniGroupUrn",
+      "doc": "Group urn of the group that can be unfollowed"
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "doc": "Display name of the group",
+      "optional": true
+    },
+    {
+      "name": "followingInfo",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Information about the following relationship between the viewer and the group.",
+      "optional": true
+    }
+  ]
+}

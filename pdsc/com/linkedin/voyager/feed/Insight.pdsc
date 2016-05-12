@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "Insight",
+  "doc": "Insight for determining why a particular update/object appears in a list ib the UI",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "reason",
+      "doc": "Simple text of the insight",
+      "type": "string"
+    }
+  ]
+}

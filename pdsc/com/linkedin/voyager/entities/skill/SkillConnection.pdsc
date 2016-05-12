@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "SkillConnection",
+  "doc": "Basic info of a member's connection who also has a certain skill.",
+  "namespace": "com.linkedin.voyager.entities.skill",
+  "fields": [
+    {
+      "name": "miniProfileWithDistance",
+      "type": "com.linkedin.voyager.entities.shared.MiniProfileWithDistance",
+      "doc": "mini profile of the connection and the connection degree with the member."
+    }
+  ]
+}

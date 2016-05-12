@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "Format",
+  "doc": "Format applied to a text substring",
+  "namespace": "com.linkedin.voyager.relationships.shared.annotation",
+  "deprecated": "Please use /pemberly/text/AttributeType instead.",
+  "fields": [
+    {
+      "type": "FormatType",
+      "doc": "Type of the formatting to apply",
+      "name": "type"
+    }
+  ]
+}

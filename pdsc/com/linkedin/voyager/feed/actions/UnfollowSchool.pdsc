@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "UnfollowSchool",
+  "doc": "Action Type for unfollowing a school.",
+  "namespace": "com.linkedin.voyager.feed.actions",
+  "fields": [
+    {
+      "name": "schoolUrn",
+      "type": "com.linkedin.voyager.common.MiniSchoolUrn",
+      "doc": "school urn of the school that can be unfollowed"
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "doc": "Display name of the school",
+      "optional": true
+    },
+    {
+      "name": "followingInfo",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Information about the following relationship between the viewer and the school.",
+      "optional": true
+    }
+  ]
+}

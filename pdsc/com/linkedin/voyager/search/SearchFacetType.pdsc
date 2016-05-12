@@ -1,0 +1,18 @@
+{
+  "type": "enum",
+  "name": "SearchFacetType",
+  "doc": "Type of search facet",
+  "namespace": "com.linkedin.voyager.search",
+  "symbols": [
+    "CURRENT_COMPANY",
+    "GEO_REGION",
+    "INDUSTRY",
+    "NETWORK"
+  ],
+  "symbolDocs": {
+    "CURRENT_COMPANY": "Current company of the member",
+    "GEO_REGION": "Current location of the member",
+    "INDUSTRY": "Current industry of the member",
+    "NETWORK": "Current relationship degree between the viewer and the member"
+  }
+}

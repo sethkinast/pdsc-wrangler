@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "TypeaheadCompany",
+  "doc": "Company information used to display a search hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the company. This field is deprecated. Use entityUrn in MiniCompany instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.CompanyUrn",
+      "doc": "Backend Urn for company. Contains company id. This should be used only for tracking."
+    },
+    {
+      "name": "company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Basic company information"
+    },
+    {
+      "name": "following",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Details about whether the viewer is following the company.",
+      "optional": true
+    },
+    {
+      "name": "industryId",
+      "type": "int",
+      "doc": "The id of the industry that this company is part of",
+      "optional": true
+    }
+  ]
+}

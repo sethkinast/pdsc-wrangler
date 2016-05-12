@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "MemberConnection",
+  "doc": "Connection of a member.",
+  "namespace": "com.linkedin.voyager.identity.shared",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "MiniProfile of a member."
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "The distance between the viewer and the person."
+    }
+  ]
+}

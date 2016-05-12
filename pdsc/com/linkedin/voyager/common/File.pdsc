@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "File",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "A generic blob/file from ambry",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "Identified of this file - typically an Ambry ID"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "Display name of the attachment - may also include extension"
+    },
+    {
+      "name": "byteSize",
+      "type": "long",
+      "optional": true,
+      "doc": "Size of attachment in bytes"
+    },
+    {
+      "name": "mediaType",
+      "type": "com.linkedin.common.MediaType",
+      "doc": "Media/Mime type of the file"
+    },
+    {
+      "name": "reference",
+      "type": [
+        "MediaProxyImage",
+        "com.linkedin.common.Url"
+      ],
+      "doc": "Union of various ways to reference a File"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "ProfileAction",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Available action to perform on the profile",
+  "fields": [
+    {
+      "name": "action",
+      "type": [
+        "Connect",
+        "PersonalizedConnect",
+        "InvitationPending",
+        "Accept",
+        "Message",
+        "Follow",
+        "SendInMail",
+        "Disconnect",
+        "Unfollow",
+        "Block",
+        "Report",
+        "Signup"
+      ],
+      "doc": "The actual profile action, typed as a union of all the card types"
+    },
+    {
+      "name": "type",
+      "type": "ActionType",
+      "optional": true,
+      "doc": "Describes where an action on the profile belongs"
+    }
+  ]
+}

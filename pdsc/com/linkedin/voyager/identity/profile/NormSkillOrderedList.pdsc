@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "NormSkillOrderedList",
+  "doc": "The ordered list of all skills of a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "normSkills",
+      "type": {
+        "type": "array",
+        "items": "NormSkill"
+      },
+      "doc": "The array of all skills of a member."
+    }
+  ]
+}

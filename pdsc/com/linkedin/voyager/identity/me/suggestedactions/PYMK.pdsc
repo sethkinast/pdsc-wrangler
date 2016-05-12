@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "PYMK",
+  "namespace": "com.linkedin.voyager.identity.me.suggestedactions",
+  "doc": "Suggested action to view people you may know.",
+  "fields": []
+}

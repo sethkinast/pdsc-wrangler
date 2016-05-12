@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TypeaheadSiteFeature",
+  "doc": "Site feature information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the site feature."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend urn representing the site feature. This should be used only for tracking."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "type": "record",
+  "name": "Attachment",
+  "namespace": "com.linkedin.voyager.internal.messaging",
+  "doc": "Used internally on Voyager API only. Not to be used by clients. Attachment schema for creating download link with inbox-play.",
+  "fields":
+    [
+      {
+        "name": "mediaId",
+        "type": "string",
+        "doc": "Ambry ID"
+      },
+      {
+        "name": "visibleByMembers",
+        "type": {
+          "type": "array",
+          "items": "int"
+        },
+        "doc": "Members allowed to see this attachment"
+      },
+      {
+        "name": "filename",
+        "type": "string",
+        "optional" : true,
+        "doc": "Name of the file"
+      },
+      {
+        "name": "size",
+        "type": "long",
+        "optional": true,
+        "doc": "Size of the attachment in bytes"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "optional": true,
+        "doc": "Media Type (ex. pdf,jpeg,png,etc)"
+      },
+      {
+        "name": "downloadUrl",
+        "type": "string",
+        "doc": "URL to download attachment"
+      }
+    ]
+}

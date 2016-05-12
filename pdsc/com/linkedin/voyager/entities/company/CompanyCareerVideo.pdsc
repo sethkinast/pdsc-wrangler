@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "CompanyCareerVideo",
+  "doc": "Contains text and url for a link to be displayed in the careers tab.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "videoType",
+      "type": "CompanyCareerVideoType",
+      "doc": "Type of embed code for video",
+      "optional": true
+    },
+    {
+      "name": "videoCode",
+      "type": "string",
+      "doc": "For Youtube, this is code to embed video. For Embedly, this is the video url on Embedly"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "CalendarEventAttendee",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.growth.calendar",
+  "doc": "This defines the attendee in the calendar event",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "The name of the attendee",
+      "optional": true
+    },
+    {
+      "name": "email",
+      "type": "string",
+      "doc": "The email address of the attendee"
+    },
+    {
+      "name": "status",
+      "type": "CalendarEventAttendeeStatus",
+      "doc": "The status of the attendee",
+      "default": "PENDING"
+    }
+  ]
+}

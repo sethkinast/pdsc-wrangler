@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "SharedConnectionsInfo",
+  "namespace": "com.linkedin.voyager.identity.shared.profileHighlights",
+  "doc": "Shared connections between two members (viewer and viewee)",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.SharedConnectionsInfoUrn",
+      "doc": "Entity urn representing the viewee.",
+      "optional": true
+    },
+    {
+      "name": "sharedConnections",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.HighlightsMiniProfile",
+        "doc": "A list of shared connections, upto a maximum of 20."
+      },
+      "default": [],
+      "doc": "A list of shared connections between the viewer and viewee, upto a maximum of 20."
+    },
+    {
+      "name": "totalCount",
+      "type": "int",
+      "doc": "Total number of shared connections between the viewer and viewee."
+    }
+  ]
+}

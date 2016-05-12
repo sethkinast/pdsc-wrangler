@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "MessageCreate",
+  "namespace": "com.linkedin.voyager.messaging.create",
+  "doc": "Create for a message event",
+  "fields": [
+    {
+      "name": "body",
+      "type": "string",
+      "doc": "The body of the message"
+    },
+    {
+      "name" : "attachments",
+      "type": {
+        "type": "array",
+        "items" : "com.linkedin.voyager.common.File"
+      },
+      "default": [],
+      "doc": "Attachments (ex. images & other files)"
+    },
+    {
+      "name" : "customContent",
+      "type" : [
+        "com.linkedin.voyager.messaging.create.message.InmailContentCreate",
+        "com.linkedin.voyager.messaging.create.message.ShareCreate",
+        "com.linkedin.voyager.common.MiniGroupUrn"
+      ],
+      "optional" : true,
+      "doc": "Custom Content to send with a message"
+    },
+    {
+      "name" : "shareContent",
+      "type" : "com.linkedin.voyager.messaging.create.message.ShareContentCreate",
+      "optional" : true,
+      "doc": "Share content sent with a message, e.g member post, feed articles"
+    }
+  ]
+}

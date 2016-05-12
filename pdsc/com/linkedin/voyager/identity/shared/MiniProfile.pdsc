@@ -1,0 +1,48 @@
+{
+  "type": "record",
+  "name": "MiniProfile",
+  "doc": "Minimal set of information used to display a miniature profile",
+  "namespace": "com.linkedin.voyager.identity.shared",
+  "include": ["com.linkedin.voyager.common.TrackingObject"],
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MiniProfileUrn",
+      "doc": "Identifier for this mini profile"
+    },
+    {
+      "name": "firstName",
+      "type": "string",
+      "doc": "First name of a member"
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "optional": true,
+      "doc": "Last name of a member"
+    },
+    {
+      "name": "occupation",
+      "type": "string",
+      "optional": true,
+      "doc": "Occupation of the user. It is computed with the following rules: If the member has a position, it will be defaulted to his first position. If the member has an education, it will be defaulted as the first education. Lastly their headline will be used."
+    },
+    {
+      "name": "backgroundImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Background image of this member. Note that this is optimized for quick display, hence it's low resolution and cropped by default. Fetch com.linkedin.voyager.identity.profile.BackgroundImage to display the full resolution.",
+      "optional": true
+    },
+    {
+      "name": "picture",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Profile picture of this member. By default this is the cropped version.",
+      "optional": true
+    },
+    {
+      "name": "publicIdentifier",
+      "type": "string",
+      "doc": "Public identifier of this member, whether it is the public profile id or the vanity name"
+    }
+  ]
+}

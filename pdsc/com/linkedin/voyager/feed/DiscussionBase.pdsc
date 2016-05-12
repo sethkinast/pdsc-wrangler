@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "DiscussionBase",
+  "namespace": "com.linkedin.voyager.feed",
+  "doc": "The simplest type of discussion, only containing text title and body. Other type of discussions extend from this basic discussion.",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the discussion."
+    },
+    {
+      "name": "body",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true,
+      "doc": "The text body of the discussion."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "record",
+  "name": "SchoolRecruitReason",
+  "doc": "A flavor reason based on viewer's shared past education.",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "fields": [
+    {
+      "name" : "mostRecentSchool",
+      "type" : "MiniSchool",
+      "doc" : "The school that the alumni have in common with the viewer (the viewer's most recent school)."
+    },
+    {
+      "name" : "totalNumberOfAlumni",
+      "type" : "int",
+      "doc" : "Total number of people who are alumni of the viewer's most recent school who now work at this company (or the company that posted this jobPosting)"
+    },
+    {
+      "name": "alumniOfMostRecentSchool",
+      "type": {
+        "type": "array",
+        "items": "EntitiesMiniProfile"
+      },
+      "doc": "Up to ten members who are alumni of the viewer's most recent school who now work at this company (or the company that posted this jobPosting), ordered by most recent transition first."
+    }
+  ]
+}

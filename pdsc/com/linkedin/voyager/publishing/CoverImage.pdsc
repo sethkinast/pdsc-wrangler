@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "CoverImage",
+  "doc": "A cover image for LinkedIn 1st party (publishing) article.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "fields": [
+    {
+      "name": "originalImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Original uploaded image of the article."
+    },
+    {
+      "name": "caption",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Optional caption for the image.",
+      "optional": true
+    },
+    {
+      "name": "croppedImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Cropped cover image of the article."
+    },
+    {
+      "name": "cropInfo",
+      "type": "com.linkedin.common.Rectangle",
+      "doc": "Cropped image metadata."
+    }
+  ]
+}

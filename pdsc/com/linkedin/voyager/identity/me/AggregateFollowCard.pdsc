@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "AggregateFollowCard",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "An aggregate follow card on the Me feed.",
+  "fields": [
+    {
+      "name": "publishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The timestamp in milliseconds of when the latest follow in this aggregation happened."
+    },
+    {
+      "name": "followers",
+      "type": {
+        "type": "array",
+        "items": "ActorMiniProfile"
+      },
+      "doc": "Basic profiles with distance of the followers."
+    },
+    {
+      "name": "numFollowers",
+      "type": "long",
+      "doc": "Number of followers in this aggregate card."
+    },
+    {
+      "name": "read",
+      "type": "boolean",
+      "doc": "Whether this card has been read by the member."
+    }
+  ]
+}

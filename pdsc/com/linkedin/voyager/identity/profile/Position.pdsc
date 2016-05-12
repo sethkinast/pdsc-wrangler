@@ -1,0 +1,60 @@
+{
+  "type": "record",
+  "name": "Position",
+  "doc": "Member position information",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["NormPosition"],
+  "fields": [
+    {
+      "name": "company",
+      "type": "PositionCompany",
+      "doc": "Company info if the position's company is a standardized one.",
+      "optional": true
+    },
+    {
+      "name": "projects",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.ProjectUrn"
+      },
+      "doc": "Projects associated with the position.",
+      "default": []
+    },
+    {
+      "name": "organizations",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.OrganizationUrn"
+      },
+      "doc": "Organizations associated with the position.",
+      "default": []
+    },
+    {
+      "name": "honors",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.HonorUrn"
+      },
+      "doc": "Awards earned for this position.",
+      "default": []
+    },
+    {
+      "name": "courses",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.CourseUrn"
+      },
+      "doc": "Courses taken in relation with this position.",
+      "default": []
+    },
+    {
+      "name": "recommendations",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.common.RecommendationUrn"
+      },
+      "doc": "List of urns containing the endorsements received by this member for this position.",
+      "default": []
+    }
+  ]
+}

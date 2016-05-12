@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "EntityAwareSearchQuery",
+  "doc": "A suggested search for the user to perform. For a typeahead query like \"java\" we may suggest \"People with the skill java\".",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "query",
+      "type": "com.linkedin.voyager.search.SearchQuery",
+      "doc": "Search query that represents the suggestion."
+    },
+    {
+      "name": "suggestedEntities",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.typeahead.SuggestedEntity"
+      },
+      "doc": "The entities in the suggestion, e.g. a skill, company, title, or school."
+    }
+  ]
+}

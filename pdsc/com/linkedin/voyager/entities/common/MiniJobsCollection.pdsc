@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "MiniJobsCollection",
+  "namespace": "com.linkedin.voyager.entities.common",
+  "doc": "A list of mini jobs.",
+  "fields": [
+    {
+      "name": "items",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.entities.shared.MiniJob"
+      },
+      "doc": "A list of mini jobs."
+    },
+    {
+      "name": "pagingInfo",
+      "type": "com.linkedin.voyager.entities.common.PagingInfo",
+      "doc": "The paging info for items."
+    }
+  ]
+}

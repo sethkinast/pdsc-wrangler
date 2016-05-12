@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "ActorMiniProfile",
+  "doc": "Information needed to display a miniature profile, including distance between the viewer and viewee.",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Mini profile data about a member."
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "Distance between the viewer and viewee."
+    }
+  ]
+}

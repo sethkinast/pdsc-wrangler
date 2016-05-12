@@ -1,0 +1,30 @@
+{
+  "type": "enum",
+  "name": "IsbFieldNames",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "doc": "Field names from a member profile like stored in ISB, e.g. degree, startMonthYear, and endMonthYear, mainly from update use cases like update_education_dates",
+  "symbols": [
+    "POSITIONS_COMPANY",
+    "POSITIONS_TITLE",
+    "POSITIONS_STARTMONTHYEAR",
+    "POSITIONS_LOCATION",
+    "POSITIONS_ENDMONTHYEAR",
+    "EDUCATIONS_STARTMONTHYEAR",
+    "EDUCATIONS_ENDMONTHYEAR",
+    "EDUCATIONS_DEGREENAME",
+    "EDUCATIONS_SCHOOLNAME",
+    "EDUCATIONS_FIELDSOFSTUDY"
+  ],
+  "symbolDocs": {
+    "POSITIONS_COMPANY": "Fieldname company.",
+    "POSITIONS_TITLE": "Fieldname title.",
+    "POSITIONS_STARTMONTHYEAR": "Fieldname startMonthYear.",
+    "POSITIONS_LOCATION": "Fieldname location.",
+    "POSITIONS_ENDMONTHYEAR": "Fieldname endMonthYear.",
+    "EDUCATIONS_STARTMONTHYEAR": "Fieldname startMonthYear for education.",
+    "EDUCATIONS_ENDMONTHYEAR": "Fieldname endMonthYear for education.",
+    "EDUCATIONS_DEGREENAME": "Fieldname degreeName for education.",
+    "EDUCATIONS_SCHOOLNAME": "Fieldname schoolName for education.",
+    "EDUCATIONS_FIELDSOFSTUDY": "Fieldname fieldOfStudy for education."
+  }
+}

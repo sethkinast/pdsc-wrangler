@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "BrowsemapMiniProfile",
+  "doc": "MiniProfile that is displayed in a profile browsemap.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "MiniProfile of a person in the browsemap."
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "The distance between the viewer and the person."
+    }
+  ]
+}

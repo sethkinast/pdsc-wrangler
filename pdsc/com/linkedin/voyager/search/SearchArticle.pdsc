@@ -1,0 +1,79 @@
+{
+  "type": "record",
+  "name": "SearchArticle",
+  "doc": "Content information used to display a search hit.",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.ArticleUrn",
+      "doc": "Backend urn representing the content. This should be used only for tracking."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the article",
+      "optional": true
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "URL for the full article.",
+      "optional": true
+    },
+    {
+      "name": "authorName",
+      "type": "string",
+      "doc": "Localized name of the article author. This could either be an individual's name or a 3rd party source e.g npr.org.",
+      "optional": true
+    },
+    {
+      "name": "authorFollowersCount",
+      "type": "long",
+      "doc": "The number of author's followers.",
+      "optional": true
+    },
+    {
+      "name": "authorProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Profile of the author, if the author is a LinkedIn member.",
+      "optional": true
+    },
+    {
+      "name": "authorFollowing",
+      "type": "com.linkedin.voyager.entities.shared.MemberFollowingInfo",
+      "doc": "Whether the viewer is following the article author.",
+      "optional": true
+    },
+    {
+      "name": "image",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Image to be displayed with the article.",
+      "optional": true
+    },
+    {
+      "name": "snippet",
+      "type": "string",
+      "doc": "Snippet of the article content.",
+      "optional": true
+    },
+    {
+      "name": "postedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The UTC timestamp when the article posted.",
+      "optional": true
+    },
+    {
+      "name": "parentUrl",
+      "type": "string",
+      "doc": "The parent part of article url. e.g. the parent url of 'www.linkedin.com/xxx' is 'www.linkedin.com'.",
+      "optional": true
+    },
+    {
+      "name": "socialActivityInfo",
+      "type": "com.linkedin.voyager.feed.shared.SocialActivityCounts",
+      "doc": "Social activity information about this article, e.g. counts of comments, likes on it, and whether liked by the viewer.",
+      "optional": true
+    }
+  ]
+}

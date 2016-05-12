@@ -1,0 +1,40 @@
+{
+  "type": "record",
+  "name": "MessageEvent",
+  "namespace": "com.linkedin.voyager.messaging.event",
+  "doc": "A Message event",
+  "fields": [
+    {
+      "name": "body",
+      "type": "string",
+      "doc": "The body of the message"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "optional": true,
+      "doc": "Subject of the message if any primarily for InMails and backwards compatibility"
+    },
+    {
+      "name" : "attachments",
+      "type": {
+        "type": "array",
+        "items" : "com.linkedin.voyager.common.File"
+      },
+      "default": [],
+      "doc": "Attachments (ex. images & other files)"
+    },
+    {
+      "name" : "customContent",
+      "type" : "com.linkedin.voyager.messaging.event.message.CustomContent",
+      "optional" : true,
+      "doc": "Message custom content."
+    },
+    {
+      "name" : "shareContent",
+      "type" : "com.linkedin.voyager.messaging.event.message.ShareContent",
+      "optional" : true,
+      "doc": "Message custom content."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "NextSchool",
+  "namespace": "com.linkedin.voyager.entities.school",
+  "doc": "Basic school information to be able to display on Next module.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.NextSchoolUrn",
+      "doc": "Identifier for this NextSchool.",
+      "optional": true
+    },
+    {
+      "name": "miniSchool",
+      "type": "com.linkedin.voyager.entities.shared.MiniSchool",
+      "doc": "Minimum information about the school."
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "The location of the school's main campus.",
+      "optional": true
+    },
+    {
+      "name": "studentsAndAlumniCount",
+      "type": "StudentsAndAlumniCount",
+      "doc": "This represents the number of students and alumni of this school on Linkedin.",
+      "optional": true
+    },
+    {
+      "name": "objectUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Pointer to the backend object underlying this NextSchool.",
+      "optional": true
+    }
+  ]
+}

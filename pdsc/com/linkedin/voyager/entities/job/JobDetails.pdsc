@@ -1,0 +1,44 @@
+{
+  "type": "record",
+  "name": "JobDetails",
+  "namespace": "com.linkedin.voyager.entities.job",
+  "doc": "This has the job details information.",
+  "fields": [
+    {
+      "name": "employmentStatus",
+      "type": "string",
+      "optional": true,
+      "doc": "The employment type for this job (e.g. full-time, part-time, internship, etc.)."
+    },
+    {
+      "name": "experience",
+      "type": "string",
+      "optional": true,
+      "doc": "The experience level for this job (e.g. entry level, director, etc.)."
+    },
+    {
+      "name": "jobFunctions",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "The duties specific to a job (e.g. Accounting, Marketing, Sales)."
+    },
+    {
+      "name": "industries",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": [],
+      "doc": "The related industries listed as part of this job positing."
+    },
+    {
+      "name": "jobId",
+      "type": "long",
+      "doc": "Identifier for this job.",
+      "optional": true
+    }
+  ]
+}

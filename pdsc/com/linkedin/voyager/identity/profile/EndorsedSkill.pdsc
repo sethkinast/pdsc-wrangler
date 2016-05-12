@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "EndorsedSkill",
+  "doc": "A skill with its endorsement count and all of its endorsements",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.EndorsedSkillUrn",
+      "optional": true,
+      "doc": "Identifier for this endorsed skill."
+    },
+    {
+      "name": "skill",
+      "type": "Skill",
+      "doc": "The skill being endorsed."
+    },
+    {
+      "name": "endorsementCount",
+      "type": "int",
+      "default": 0,
+      "doc": "The number of endorsements for the given skill."
+    },
+    {
+      "name": "endorsedByViewer",
+      "type": "boolean",
+      "doc": "True if and only if the viewer endorsed the viewee for this skill."
+    },
+    {
+      "name": "endorsements",
+      "type": {
+        "type": "array",
+        "items": "Endorsement"
+      },
+      "default": [],
+      "doc": "An array of endorsements given to the owner of this skill"
+    }
+  ]
+}

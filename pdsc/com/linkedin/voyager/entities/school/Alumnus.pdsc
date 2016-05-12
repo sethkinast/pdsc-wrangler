@@ -1,0 +1,52 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "Alumnus",
+  "namespace": "com.linkedin.voyager.entities.school",
+  "doc": "Represents an alumnus from a school.",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "The mini profile of the alumnus."
+    },
+    {
+      "name": "degreeLevel",
+      "type": "string",
+      "doc": "The degree level to which the ranking applies (e.g. Undergraduate, MBA, etc).",
+      "optional": true
+    },
+    {
+      "name": "fieldOfStudy",
+      "type": "string",
+      "doc": "Field of study that the alumnus participated in at this school.",
+      "optional": true
+    },
+    {
+      "name": "startDate",
+      "type": "com.linkedin.common.Date",
+      "doc": "TODO: remove field. DEPRECATED - The date the member started attending this school.",
+      "deprecated": true,
+      "optional": true
+    },
+    {
+      "name": "endDate",
+      "type": "com.linkedin.common.Date",
+      "doc": "TODO: remove field. DEPRECATED - The date the member graduated from this school, or expected graduation date.",
+      "deprecated": true,
+      "optional": true
+    },
+    {
+      "name": "timePeriod",
+      "type": "com.linkedin.voyager.common.DateRange",
+      "doc": "The time period during which this alumnus attended the school.",
+      "optional": true
+    },
+    {
+      "name": "objectUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Pointer to the backend object underlying this Alumnus.",
+      "optional": true
+    }
+  ]
+}

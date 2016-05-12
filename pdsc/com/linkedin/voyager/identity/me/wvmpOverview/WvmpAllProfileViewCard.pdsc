@@ -1,0 +1,10 @@
+{
+  "type": "typeref",
+  "name": "WvmpAllProfileViewCard",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "A reference to all the various WVMP profile view cards.",
+  "ref": [
+    "com.linkedin.voyager.identity.me.WvmpProfileViewCard",
+    "com.linkedin.voyager.identity.me.WvmpAnonymousProfileViewCard"
+  ]
+}

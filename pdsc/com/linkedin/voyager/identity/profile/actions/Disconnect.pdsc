@@ -1,0 +1,7 @@
+{
+  "type": "record",
+  "name": "Disconnect",
+  "namespace": "com.linkedin.voyager.identity.profile.actions",
+  "doc": "Profile action to disconnect from another member (TODO: temporary empty fields)",
+  "fields": []
+}

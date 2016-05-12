@@ -1,0 +1,44 @@
+// LINT_SUPPRESS: naming.date
+{
+  "type": "record",
+  "name": "NormHonor",
+  "doc": "Honor awarded to a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.HonorUrn",
+      "doc": "Identifier for this honor",
+      "optional": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the honor."
+    },
+    {
+      "name": "issueDate",
+      "type": "com.linkedin.common.Date",
+      "optional": true,
+      "doc": "Date at which the awarded has been issued to the member."
+    },
+    {
+      "name": "issuer",
+      "type": "string",
+      "optional": true,
+      "doc": "Organization that awarded this honor."
+    },
+    {
+      "name": "occupation",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Occupation held by the member when the honor or award was completed.",
+      "optional": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "optional": true,
+      "doc": "Description provided by the user about this honor."
+    }
+  ]
+}

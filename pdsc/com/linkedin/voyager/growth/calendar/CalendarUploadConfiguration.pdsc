@@ -1,0 +1,27 @@
+{
+  "name": "CalendarUploadConfiguration",
+  "type": "record",
+  "namespace": "com.linkedin.voyager.growth.calendar",
+  "doc": "This defines the configuration for calendar sync/upload",
+  "fields": [
+    {
+      "name": "uploadEnabled",
+      "type": "boolean",
+      "doc": "Is uploading calendar enabled for the member?",
+      "default" : false
+    },
+    {
+      "name": "uploadFrequency",
+      "type": "long",
+      "doc": "The frequency in milliseconds for uploading the calendar, default value is 24 hours in ms.",
+      "default" : 86400000
+    },
+    {
+      "name": "uploadTimePeriod",
+      "type": "long",
+      "doc": "The amount of time in milliseconds for uploading the calendar, default value is 26 hours in ms.",
+      "default" : 93600000
+
+    }
+  ]
+}

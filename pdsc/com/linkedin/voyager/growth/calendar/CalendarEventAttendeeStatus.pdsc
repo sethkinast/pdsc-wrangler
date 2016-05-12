@@ -1,0 +1,26 @@
+{
+  "type": "enum",
+  "name": "CalendarEventAttendeeStatus",
+  "namespace": "com.linkedin.voyager.growth.calendar",
+  "doc": "This defines the attendee status in the calendar event.",
+  "symbols": [
+    "UNRECOGNIZED",
+    "PENDING",
+    "ACCEPTED",
+    "DECLINED",
+    "TENTATIVE",
+    "DELEGATED",
+    "COMPLETED",
+    "IN_PROCESS"
+  ],
+  "symbolDocs": {
+    "UNRECOGNIZED": "The participant's status is not one of the recognized values for LinkedIn.",
+    "PENDING": "The participant's status is pending.",
+    "ACCEPTED": "The participant accepted the event.",
+    "DECLINED": "The participant declined the event.",
+    "TENTATIVE": "The participant tentatively accepted the event.",
+    "DELEGATED": "The participant delegated participation.",
+    "COMPLETED": "The participant's status is completed.",
+    "IN_PROCESS": "The participant's status is in process."
+  }
+}

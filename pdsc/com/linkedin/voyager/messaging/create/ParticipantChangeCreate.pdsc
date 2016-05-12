@@ -1,0 +1,32 @@
+{
+  "type": "record",
+  "name": "ParticipantChangeCreate",
+  "namespace": "com.linkedin.voyager.messaging.create",
+  "doc": "Create for changing participants",
+  "fields": [
+    {
+      "name" : "addParticipants",
+      "type": {
+        "type": "array",
+        "items" : "string"
+      },
+      "optional": true,
+      "doc": "Profile ids of members to add to conversation"
+    },
+    {
+      "name" : "showHistory",
+      "type" : "boolean",
+      "doc" : "True to expose history of thread to added participants",
+      "default" : false
+    },
+    {
+      "name" : "removeParticipants",
+      "type": {
+        "type": "array",
+        "items" : "string"
+      },
+      "optional": true,
+      "doc": "Profile ids of members to remove from the conversation"
+    }
+  ]
+}

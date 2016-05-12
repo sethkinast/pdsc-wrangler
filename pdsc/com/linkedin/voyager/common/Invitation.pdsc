@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "Invitation",
+  "deprecated": "Use /growth/invitation/NormInvitation.pdsc instead.",
+  "doc": "DEPRECATED. An instance of a linkedin invitation request.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "invitee",
+      "doc": "Deprecated. Use growth/Invitation/NormInvitation instead. The identifier of the person who is receiving the invite.",
+      "type": [
+        {
+          "name": "InviteeProfile",
+          "type": "record",
+          "doc": "Obfuscated member ID for a member.",
+          "fields": [
+            {
+              "name": "profileId",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "name": "InviteeEmail",
+          "type": "record",
+          "doc": "Invitee's email",
+          "fields": [
+            {
+              "name": "email",
+              "type": "com.linkedin.common.EmailAddress",
+              "doc": "Invitee's email"
+            }
+          ]
+        },
+        {
+          "name": "InviteePhone",
+          "type": "record",
+          "doc": "Invitee's phone",
+          "fields": [
+            {
+              "name": "phoneNumber",
+              "type": "com.linkedin.common.PhoneNumber"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

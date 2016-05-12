@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "SearchHistoryArticle",
+  "doc": "A article recently viewed from search or typeahead results.",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.ArticleUrn",
+      "doc": "Backend Urn for article. This should be used only for tracking."
+    },
+    {
+      "name": "article",
+      "type": "com.linkedin.voyager.search.SearchArticle",
+      "doc": "Basic article information."
+    }
+  ]
+}

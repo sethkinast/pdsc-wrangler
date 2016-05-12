@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "CompanyCareerSlidesCode",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "Record modelling a single slideshare slideshow.",
+  "fields": [
+    {
+      "name": "code",
+      "type": "string",
+      "doc": "Contains a unique identifier for the slideshare."
+    }
+  ]
+}
+

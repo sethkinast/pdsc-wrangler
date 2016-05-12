@@ -1,0 +1,16 @@
+{
+  "type" : "enum",
+  "name" : "JobFlavor",
+  "namespace" : "com.linkedin.voyager.entities.shared",
+  "doc" : "Specifies the types of flavors (reasons) of jobs that are recommended to an end user.",
+  "symbols" : [
+    "IN_NETWORK",
+    "COMPANY_RECRUIT",
+    "SCHOOL_RECRUIT"
+  ],
+  "symbolDocs" : {
+    "IN_NETWORK": "Jobs In Your Network.",
+    "COMPANY_RECRUIT": "Jobs From Companies Hiring From Your Company.",
+    "SCHOOL_RECRUIT": "Jobs From Companies Hiring From Your School."
+  }
+}

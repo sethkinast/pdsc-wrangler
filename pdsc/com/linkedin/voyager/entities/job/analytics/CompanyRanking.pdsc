@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "CompanyRanking",
+  "doc": "Company ranking based on the number of employees; includes mini company with company information.",
+  "namespace": "com.linkedin.voyager.entities.job.analytics",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Mini company containing company information (e.g. name, id, logo)."
+    },
+    {
+      "name": "count",
+      "type": "long",
+      "doc": "Number of employees from this company."
+    },
+    {
+      "name": "rank",
+      "type": "int",
+      "doc": "Ranking of the company based on number of employees from the company."
+    },
+    {
+      "name": "viewerFromCompany",
+      "type": "boolean",
+      "doc": "Flag denoting whether or not the viewer is employed by this company."
+    }
+  ]
+}

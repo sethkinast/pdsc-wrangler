@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "Picture",
+  "doc": "Picture Information about a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "croppedImage",
+      "type": "string",
+      "doc": "Id in Ambry of the cropped image. This should be used to display in most cases."
+    },
+    {
+      "name": "masterImage",
+      "type": "string",
+      "doc": "Id in Ambry of the master image. This should only be used when viewing the full image (for example, clicking on the cropped image)"
+    },
+    {
+      "name": "cropInfo",
+      "doc": "Cropping information for this image.",
+      "type": "ImageCropInfo"
+    }
+  ]
+}

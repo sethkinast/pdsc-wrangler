@@ -1,0 +1,8 @@
+{
+  "type": "record",
+  "name": "NormContactInfo",
+  "doc": "Voyager Contact Info for a  member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["ContactInfo"],
+  "fields": []
+}

@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "State",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "The representation of a state (one administrative level beneath country) in voyager.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.StateUrn",
+      "doc": "Identifier for this state",
+      "optional": true
+    },
+    {
+      "name": "stateName",
+      "type": "string",
+      "doc": "The name of this state."
+    },
+    {
+      "name": "stateCode",
+      "type": "string",
+      "doc": "The geo place code of this state. ex. California's will be '7-1'"
+    }
+  ]
+}

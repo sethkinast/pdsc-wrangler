@@ -1,0 +1,53 @@
+{
+  "type" : "record",
+  "name" : "CreativeRenderingVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "include" : [ "CreativeVariables" ],
+  "doc" : "Variables used in rendering the creative.  These are derived at run-time by calling downstream services and they generally relate to the viewing member and advertising entity. They include the CreativeVariables (static stored variables) as those are also sometimes used in rendering.",
+  "fields" : [
+    {
+      "name" : "renderingSubType",
+      "doc" : "This will tell you what type of rendering variables you have.",
+      "type" : [
+        "WorkWithUsCreativeRenderingVariables",
+        "PictureYourselfJobCreativeRenderingVariables"
+      ]
+    },
+    {
+      "name": "internalClickTrackingUrls",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.Url"
+      },
+      "default": [ ],
+      "doc": "List of urls used for internal(LinkedIn owned) click tracking"
+    },
+    {
+      "name": "externalClickTrackingUrls",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.Url"
+      },
+      "default": [ ],
+      "doc": "List of urls used for external click tracking"
+    },
+    {
+      "name":"internalImpressionTrackingUrls",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.Url"
+      },
+      "default": [ ],
+      "doc": "List of urls used for internal(LinkedIn owned) impression tracking"
+    },
+    {
+      "name": "externalImpressionTrackingUrls",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.Url"
+      },
+      "default": [ ],
+      "doc": "List of urls used for external impression tracking"
+    }
+  ]
+}

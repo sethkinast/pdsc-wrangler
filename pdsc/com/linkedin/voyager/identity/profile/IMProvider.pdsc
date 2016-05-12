@@ -1,0 +1,26 @@
+{
+  "type": "enum",
+  "name": "IMProvider",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "doc": "IM provide available in the profile.",
+  "symbols": [
+    "AIM",
+    "SKYPE",
+    "WINDOWS_LIVE_MESSENGER",
+    "YAHOO_MESSENGER",
+    "ICQ",
+    "GTALK",
+    "QQ",
+    "WECHAT"
+  ],
+  "symbolDocs": {
+    "AIM": "AIM messaging system.",
+    "SKYPE": "Skype messaging system.",
+    "WINDOWS_LIVE_MESSENGER": "Windows live messaging system.",
+    "YAHOO_MESSENGER": "Yahoo messaging system.",
+    "ICQ": "ICQ messaging system.",
+    "GTALK": "Gtalk messaging system.",
+    "QQ": "QQ messaging system.",
+    "WECHAT": "WeChat messaging system."
+  }
+}

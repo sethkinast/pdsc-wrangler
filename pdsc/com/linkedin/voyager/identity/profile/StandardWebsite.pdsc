@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "StandardWebsite",
+  "doc": "Represents a website that falls under one of the standard category (see WebsiteCategory).",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "category",
+      "doc": "Describes the type of website.",
+      "type": "com.linkedin.voyager.identity.profile.WebsiteCategory"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "type": "record",
+  "name": "SameNameProfileResult",
+  "doc": "A record that wraps the result of People profile returned as part of a same name search or lookup.",
+  "namespace": "com.linkedin.voyager.growth.seo",
+  "fields": [
+    {
+      "name": "education",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "An array of entities that represent an education within a member's profile.",
+      "default": []
+    },
+    {
+      "name": "industry",
+      "type": "string",
+      "optional": true,
+      "doc": "Work industry of the member."
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "optional": true,
+      "doc": "Location or region in which the member works."
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "MiniProfile data about this profile."
+    },
+    {
+      "name": "currentPositions",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "An array of entities that represent current member position information.",
+      "default": []
+    },
+    {
+      "name": "pastPositions",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "An array of entities that represent past member position information.",
+      "default": []
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "optional": true,
+      "doc": "Summary provided by the member."
+    }
+  ]
+}

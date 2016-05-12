@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "ContactInfo",
+  "doc": "Contact info for a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "weChatContactInfo",
+      "type": "com.linkedin.voyager.identity.profile.WeChatContactInfo",
+      "doc": "the member's wechat contact information",
+      "optional": true
+    },
+    {
+      "name": "phoneNumbers",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.PhoneNumber"
+      },
+      "doc": "A list of phone numbers.  The first one is the primary",
+      "optional": true
+    },
+    {
+      "name": "websites",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.profile.Website"
+      },
+      "doc": "A list of website urls.  The first one is the primary",
+      "optional": true
+    },
+    {
+      "name": "emailAddress",
+      "type": "com.linkedin.common.EmailAddress",
+      "doc": "The members primary email address",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "record",
+  "name": "HeathrowEntryKey",
+  "namespace": "com.linkedin.voyager.common.heathrow",
+  "doc": "Every heathrow entry can be modelled using UserAction and Origin. For example, accepting an invitation from profile can be modelled as UserAction.ACCEPT_INVITATION and Origin.PROFILE. If server determines that a userAction cannot be performed on a origin, for example UserAction.ACCEPTED_INVITATION can never happen on a Origin.PROFILE, server will reject the request.",
+  "fields" : [
+    {
+      "name": "userActionType",
+      "type": "com.linkedin.voyager.common.heathrow.UserActionType",
+      "doc": "Type of users action, for example accepting an invitation."
+    },
+    {
+      "name": "origin",
+      "type": "com.linkedin.voyager.common.heathrow.Origin",
+      "doc": "Origin of the users action, for example if the user accepting the invitation from Origin.PROFILE."
+    },
+    {
+      "name": "platform",
+      "type": {
+        "type": "enum",
+        "name": "platformType",
+        "doc": "Available platform.",
+        "symbols": [
+          "MOBILE",
+          "DESKTOP"
+        ],
+        "symbolDocs": {
+          "MOBILE": "If the request is being made from Mobile App",
+          "DESKTOP": "If the request is being made from Desktop"
+        }
+      },
+      "doc": "Platform from where the request is made. This is needed to query LEGO to figure out the capping and invoke the offline relevance."
+    }
+  ]
+}

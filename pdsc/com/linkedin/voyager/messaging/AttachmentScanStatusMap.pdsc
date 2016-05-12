@@ -1,0 +1,5 @@
+{
+  "doc" : "Map of MediaId to AttachmentScanStatus. Used for batch attachment scan.",
+  "type" : "map",
+  "values" : "com.linkedin.voyager.messaging.AttachmentScanStatus"
+}

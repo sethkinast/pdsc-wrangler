@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "Showcases",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "doc": "A list of company's showcases.",
+  "fields": [
+    {
+      "name": "showcases",
+      "type": {
+        "type": "array",
+        "items": "BasicCompanyInfo"
+      },
+      "doc": "List of showcase (brand) pages related to this company."
+    },
+    {
+      "name": "pagingInfo",
+      "type": "com.linkedin.voyager.entities.common.PagingInfo",
+      "doc": "The paging info for companies.",
+      "optional": true //TODO: make required
+    }
+  ]
+}

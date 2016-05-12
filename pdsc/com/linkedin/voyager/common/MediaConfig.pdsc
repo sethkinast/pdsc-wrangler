@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "MediaConfig",
+  "doc": "Configuration to control client image URL generation library",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "mprConfig",
+      "doc": "Configuration to control client image media processor URL generation",
+      "type": "com.linkedin.voyager.common.MediaProcessorConfig"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "record",
+  "name": "EventCreateResponse",
+  "namespace": "com.linkedin.voyager.messaging.create",
+  "doc": "Response data to return on a conversation / event creation",
+  "fields": [
+    {
+      "name": "createdAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "Server Timestamp subject to slight change (milliseconds since epoch)"
+    },
+    {
+      "name": "conversationUrn",
+      "type": "com.linkedin.voyager.common.ConversationUrn",
+      "doc": "Identifier for conversation of created event"
+    },
+    {
+      "name": "eventUrn",
+      "type": "com.linkedin.voyager.common.EventUrn",
+      "doc": "Identifier for created event"
+    }
+  ]
+}

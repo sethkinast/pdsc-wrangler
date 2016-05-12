@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "PictureYourselfJobCreativeRenderingVariables",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "Variables for rendering the PICTURE_YOURSELF_JOB creatives that need to be generated at run-time by calling downstream services or by looking at the user cookie. This PDSC assumes that the client can generate the click through urls based upon the job ids and company id.  We simply provide the click tracking url to append.",
+  "fields" : [
+    {
+      "name" : "jobs",
+      "doc" : "Jobs matching the viewer.",
+      "type" : {
+        "type" : "array",
+        "items" : "com.linkedin.voyager.identity.creatives.WorkWithUsJobInfo"
+      },
+      "default" : []
+    },
+    {
+      "name" : "viewerInfo",
+      "doc" : "Information about the viewer.  Note this is not the regular profile object but rather an ads specific object with data needed by the ad.",
+      "type" : "ViewerInfo",
+      "optional" : true
+    },
+    {
+      "name" : "companyInfo",
+      "doc" : "Company information needed for rendering the ad.",
+      "type" : "com.linkedin.voyager.identity.creatives.company.BizCompany",
+      "optional" : true
+    }
+  ]
+}

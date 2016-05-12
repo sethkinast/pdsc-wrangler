@@ -1,0 +1,22 @@
+{
+  "type": "enum",
+  "name": "SnippetField",
+  "namespace": "com.linkedin.voyager.search",
+  "doc": "Type of snippet field.",
+  "symbols": [
+    "CURRENT_POSITION",
+    "PAST_POSITION",
+    "EDUCATION",
+    "SUMMARY",
+    "SPECIALTIES",
+    "SKILL"
+  ],
+  "symbolDocs": {
+    "CURRENT_POSITION": "The current position of the member.",
+    "PAST_POSITION": "A previous position of the member.",
+    "EDUCATION": "Education information of the member.",
+    "SUMMARY": "Summary information of the member, job, company, group, school, etc.",
+    "SPECIALTIES": "Specialization of the member.",
+    "SKILL": "Skill of the member or job."
+  }
+}

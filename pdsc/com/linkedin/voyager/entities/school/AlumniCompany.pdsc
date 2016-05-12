@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "AlumniCompany",
+  "namespace": "com.linkedin.voyager.entities.school",
+  "doc": "Represents a company and the number of alumni from the target school that work there.",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Mini company containing name and logo information."
+    },
+    {
+      "name": "alumniCount",
+      "type": "int",
+      "doc": "Number of alumni of the school that work at this company."
+    },
+    {
+      "name": "industry",
+      "type": "string",
+      "doc": "The industry the company belongs to.",
+      "optional": true
+    }
+  ]
+}

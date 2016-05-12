@@ -1,0 +1,50 @@
+{
+  "type": "record",
+  "name": "ProfileNetworkInfo",
+  "doc": "Information about network statistics for the viewee and relationships between the viewee and the viewer.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ProfileNetworkInfoUrn",
+      "doc": "Identifier for this network info",
+      "optional": true
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "doc": "Distance between the viewer and the viewee."
+    },
+    {
+      "name": "connectionsCount",
+      "type": "int",
+      "doc": "Number of connections for the viewee, between 1 and 500. There is a cut-off at 500 and it should be shown to the user as 500+."
+    },
+    {
+        "name": "followingInfo",
+        "type": "com.linkedin.voyager.common.FollowingInfo",
+        "doc": "Indicates whether the member is currently following the viewee and how many followers the viewee has",
+        "optional": true
+    },
+    {
+      "name": "followersCount",
+      "type": "long",
+      "doc": "Number of followers the viewee has.",
+      "optional": true,
+      "deprecated": "Please use the followersCount field in followingInfo. This field is already being used by clients in the wild so cannot be removed until we stop supporting old enough clients."
+    },
+    {
+      "name": "following",
+      "type": "boolean",
+      "doc": "Whether the viewer is following the viewee.",
+      "optional": true,
+      "deprecated": "Please use the followersCount field in followingInfo. This field is already being used by clients in the wild so cannot be removed until we stop supporting old enough clients."
+    },
+    {
+      "name": "followable",
+      "type": "boolean",
+      "doc": "Whether the viewer can follow the viewee.",
+      "optional": true
+    }
+  ]
+}

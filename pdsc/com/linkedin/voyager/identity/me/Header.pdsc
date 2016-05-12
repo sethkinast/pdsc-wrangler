@@ -1,0 +1,55 @@
+{
+  "type": "record",
+  "name": "Header",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Header on the Me feed page.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MeHeaderUrn",
+      "doc": "Identifier for this header."
+    },
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "Feed owner's mini profile."
+    },
+    {
+      "name": "backgroundImage",
+      "type": "com.linkedin.voyager.identity.profile.BackgroundImage",
+      "doc": "Feed owner's background image.",
+      "optional": true
+    },
+    {
+      "name": "numProfileViews",
+      "type": "long",
+      "doc": "Number of recent profile views this member received.",
+      "optional": true
+    },
+    {
+      "name": "numLastUpdateViews",
+      "type": "long",
+      "doc": "Number of views of the member's last update (post or share).",
+      "optional": true
+    },
+    {
+      "name": "lastUpdateType",
+      "type": "SocialUpdateType",
+      "doc": "Type of the member's last update (post or share).",
+      "optional": true
+    },
+    {
+      "name": "numFollowers",
+      "type": "long",
+      "doc": "Number of followers this member has.",
+      "optional": true
+    },
+    {
+      "name": "numActivities",
+      "type": "long",
+      "doc": "Count of this member's recent activities.",
+      "deprecated": true,
+      "optional": true
+    }
+  ]
+}

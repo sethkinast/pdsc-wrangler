@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "PeopleYouMayKnow",
+  "namespace": "com.linkedin.voyager.relationships.shared.pymk",
+  "doc": "Entity that describes a member or a guest that the viewer can connect with.",
+  "include": ["com.linkedin.voyager.common.Trackable"],
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.RelPeopleYouMayKnowUrn",
+      "doc": "Identifier of this Pymk"
+    },
+    {
+      "name": "entity",
+      "doc": "A Pymk entity that represents either a member or a guest identified using email or a phonenumber.",
+      "type": [
+        "com.linkedin.voyager.identity.shared.MiniProfile",
+        "com.linkedin.voyager.growth.abi.GuestContact"
+      ]
+    }
+  ]
+}

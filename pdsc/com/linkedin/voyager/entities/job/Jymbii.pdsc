@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "Jymbii",
+  "doc": "This has all the information about Jymbii.",
+  "namespace": "com.linkedin.voyager.entities.job",
+  "fields": [
+    {
+      "name": "sponsored",
+      "type": "boolean",
+      "doc": "Is this jymbii update a sponsored update."
+    },
+    {
+      "name": "trackingId",
+      "type": "com.linkedin.voyager.common.Base64EncodedTrackingId",
+      "doc": "A unique id which represents this particular instance of the job posting."
+    },
+    {
+      "name": "objectUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Pointer to the backend object underlying this job posting."
+    },
+    {
+      "name": "jymbiiUpdate",
+      "type": "com.linkedin.voyager.feed.shared.JymbiiUpdate",
+      "doc": "Jobs You May Be Interested In Feed Update."
+    }
+  ]
+}

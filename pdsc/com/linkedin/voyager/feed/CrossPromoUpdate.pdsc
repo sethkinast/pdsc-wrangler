@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "CrossPromoUpdate",
+  "doc": "Cross promo that floats within the feed stream",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "legoTrackingToken",
+      "type": "string",
+      "doc": "***DEPRECATED*** Lego tracking token(raw token) for this widget",
+      "deprecated": true
+    },
+    {
+      "name": "legoTrackingId",
+      "type": "com.linkedin.common.TrackingId",
+      "doc": "Lego tracking Id (short token) for this widget"
+    },
+    {
+      "name": "header",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "doc": "Social proof header for the promo"
+    },
+    {
+      "name": "actor",
+      "type": "AppActor",
+      "doc": "The promoted application"
+    },
+    {
+       "name": "text",
+       "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+       "optional": true,
+       "doc": "The promotion main text"
+    },
+    {
+      "name": "content",
+      "type": [
+        "ShareArticle",
+        "ShareJob"
+      ],
+      "optional": true,
+      "doc": "The main bolt-on for this promo, which should portray the value prop of the promoted app"
+    }
+  ]
+}

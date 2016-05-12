@@ -1,0 +1,102 @@
+{
+  "type": "record",
+  "name": "RawContact",
+  "doc": "An address book contact",
+  "namespace": "com.linkedin.voyager.growth.abi",
+  "fields": [
+    {
+      "name": "fullName",
+      "type": "string",
+      "doc": "Full name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "firstName",
+      "type": "string",
+      "doc": "First name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "doc": "Last name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "doc": "Middle name of the contact.",
+      "optional": true
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the contact.",
+      "optional": true
+    },
+    {
+      "name": "emails",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.abi.Email"
+      },
+      "doc": "Email addresses of the contact.",
+      "default": []
+    },
+    {
+      "name": "phoneNumbers",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.abi.PhoneNumber"
+      },
+      "doc": "Phone Numbers of the contact.",
+      "default": []
+    },
+    {
+      "name": "instantMessageHandles",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.common.IM"
+      },
+      "doc": "List of instant message handles for the contact.",
+      "default": []
+    },
+    {
+      "name": "addresses",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.abi.Address"
+      },
+      "doc": "List of addresses of the contact.",
+      "default": []
+    },
+    {
+      "name": "bornOn",
+      "type": "com.linkedin.common.Date",
+      "doc": "Birthday of the contact.",
+      "optional": true
+    },
+    {
+      "name": "sites",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.growth.abi.Site"
+      },
+      "doc": "Websites associated with the contact.",
+      "default": []
+    },
+    {
+      "name": "bookmarked",
+      "type": "boolean",
+      "default": false,
+      "doc": "Indicates if the contact is bookmarked."
+    },
+    {
+      "name": "notes",
+      "type": "string",
+      "doc": "***DEPRECATED*** Notes about the contact.",
+      "deprecated": true,
+      "optional": true
+    }
+  ]
+}

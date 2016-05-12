@@ -1,0 +1,52 @@
+// LINT_SUPPRESS: naming.time
+{
+  "type": "record",
+  "name": "Reshare",
+  "doc": "Reshare content model contains the actual share content, and the original actor who shares the content. We didn't include entire share update to optimize it for UI / payload. These are the minimal information we need to render reshare update.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.CommonShareFields",
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this update.",
+      "optional": true
+    },
+    {
+      "name": "text",
+      "doc": "The share commentary",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText",
+      "optional": true
+    },
+    {
+      "name": "originalUpdate",
+      "doc": "the share that was reshared.",
+      "type": "Update"
+    },
+    {
+      "name": "actor",
+      "type": "SocialActor",
+      "doc": "The resharer of the update."
+    },
+    {
+      "name": "createdTime",
+      "doc": "The created time of the update.",
+      "type": "com.linkedin.common.Time"
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "***DEPRECATED*** a unique id which represents this particular instance of an entity, created when the entity is materialized",
+      "optional": true
+    },
+    {
+      "name": "tracking",
+      "type": "TrackingData",
+      "doc": "***DEPRECATED*** Tracking information to be used for sending Feed Tracking events : FeedImpressionEvent, FeedActionEvent.",
+      "optional": true
+    }
+  ]
+}

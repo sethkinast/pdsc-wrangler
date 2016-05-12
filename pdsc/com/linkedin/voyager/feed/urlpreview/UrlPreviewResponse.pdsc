@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "UrlPreviewResponse",
+  "doc": "This is a wrapper class for response of url preview endpoint.",
+  "namespace": "com.linkedin.voyager.feed.urlpreview",
+  "fields": [
+    {
+      "name": "value",
+      "doc": "A union of all possible responses to the UrlPreview task.",
+      "type": [
+        "PreviewCreationSuccessful",
+        "PreviewCreationInProgress",
+        "PreviewCreationFailed"
+      ]
+    }
+  ]
+}

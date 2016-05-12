@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "LocalizedVolunteerCause",
+  "doc": "Wrapper class containing VolunteerCause and display cause name",
+  "namespace": "com.linkedin.voyager.identity",
+  "fields": [
+    {
+      "name": "cause",
+      "doc": "Type of volunteer cause.",
+      "type": "VolunteerCause"
+    },
+    {
+      "name": "displayName",
+      "type": "string",
+      "doc": "Localized cause name for display."
+    }
+  ]
+}

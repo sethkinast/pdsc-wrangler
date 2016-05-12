@@ -1,0 +1,44 @@
+{
+  "type": "record",
+  "name": "TypeaheadHit",
+  "doc": "Typeahead search hit.",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "text",
+      "type": "com.linkedin.voyager.relationships.shared.annotation.AnnotatedText",
+      "doc": "The text of typeahead hit with highlight information."
+    },
+    {
+      "name": "subtext",
+      "type": "string",
+      "doc": "The subtext of typeahead hit",
+      "optional": true
+    },
+    {
+      "name": "hitInfo",
+      "type": [
+        "TypeaheadProfile",
+        "TypeaheadAutoComplete",
+        "TypeaheadCompany",
+        "TypeaheadSchool",
+        "TypeaheadTitle",
+        "TypeaheadFieldOfStudy",
+        "TypeaheadRegion",
+        "TypeaheadDegree",
+        "TypeaheadGroup",
+        "TypeaheadSiteFeature",
+        "TypeaheadShowcase",
+        "TypeaheadSkill",
+        "TypeaheadSuggestion",
+        "TypeaheadCountry",
+        "TypeaheadState",
+        "TypeaheadCity",
+        "TypeaheadPostalCode",
+        "TypeaheadIndustry"
+      ],
+      "doc": "Typeahead hit infos specific to its type.",
+      "optional": true
+    }
+  ]
+}

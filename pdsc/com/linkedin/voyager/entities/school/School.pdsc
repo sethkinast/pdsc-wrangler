@@ -1,0 +1,162 @@
+{
+  "type": "record",
+  "name": "School",
+  "doc": "Basic school information.",
+  "namespace": "com.linkedin.voyager.entities.school",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.SchoolUrn",
+      "doc": "Identifier for this school.",
+      "optional": true
+    },
+    {
+      "name": "basicSchoolInfo",
+      "type": "BasicSchoolInfo",
+      "doc": "All of the info needed to give the viewer a basic summary of the school."
+    },
+    {
+      "name": "heroImage",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Hero image - used as the cover photo for the School.",
+      "optional": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "Summary of school.",
+      "optional": true
+    },
+    {
+      "name": "numberOfStudentsAndAlumni",
+      "type": "int",
+      "doc": "Number of students and alumni at this school.",
+      "optional": true
+    },
+    {
+      "name": "homepageUrl",
+      "type": "com.linkedin.common.Uri",
+      "doc": "URL for this school's homepage.",
+      "optional": true
+    },
+    {
+      "name": "emailAddress",
+      "type": "com.linkedin.common.EmailAddress",
+      "doc": "School email address.",
+      "optional": true
+    },
+    {
+      "name": "phoneNumber",
+      "type": "com.linkedin.common.PhoneNumber",
+      "doc": "School phone number.",
+      "optional": true
+    },
+    {
+      "name": "schoolType",
+      "type": "string",
+      "doc": "Will be either PUBLIC, PRIVATE, PROFIT.",
+      "optional": true
+    },
+    {
+      "name": "address",
+      "type": "string",
+      "doc": "School location address.",
+      "optional": true
+    },
+    {
+      "name": "yearLevel",
+      "type": "string",
+      "doc": "Will be either UNDER_TWO_YEAR, TWO_TO_FOUR_YEAR, or FOUR_OR_MORE_YEAR.",
+      "optional": true
+    },
+    {
+      "name": "numberOfUndergradStudents",
+      "type": "int",
+      "doc": "Number of undergraduate students.",
+      "optional": true
+    },
+    {
+      "name": "numberOfGradStudents",
+      "type": "int",
+      "doc": "Number of graduate students.",
+      "optional": true
+    },
+    {
+      "name": "numberOfFaculty",
+      "type": "int",
+      "doc": "Number of faculty members at the school.",
+      "optional": true
+    },
+    {
+      "name": "totalPopulation",
+      "type": "int",
+      "doc": "Total count of all students and faculty.",
+      "optional": true
+    },
+    {
+      "name": "maleStudentPercentage",
+      "type": "float",
+      "doc": "Percentage of the student population that is male.",
+      "optional": true
+    },
+    {
+      "name": "femaleStudentPercentage",
+      "type": "float",
+      "doc": "Percentage of the student population that is female.",
+      "optional": true
+    },
+    {
+      "name": "admittedPercentage",
+      "type": "float",
+      "doc": "Percentage of applicants accepted.",
+      "optional": true
+    },
+    {
+      "name": "graduationPercentage",
+      "type": "float",
+      "doc": "Graduation rate.",
+      "optional": true
+    },
+    {
+      "name": "studentFacultyRatio",
+      "type": "float",
+      "doc": "Student to Faculty ratio.",
+      "optional": true
+    },
+    {
+      "name": "financialAidAvailable",
+      "type": "boolean",
+      "doc": "Financial aid availability.",
+      "optional": true
+    },
+    {
+      "name": "financialAidPercentage",
+      "type": "float",
+      "doc": "Percentage of the student population receiving financial aid.",
+      "optional": true
+    },
+    {
+      "name": "inStateTuition",
+      "type": "string",
+      "doc": "In-state tuition cost.",
+      "optional": true
+    },
+    {
+      "name": "outOfStateTuition",
+      "type": "string",
+      "doc": "Out-of-state tuition cost.",
+      "optional": true
+    },
+    {
+      "name": "sections",
+      "type": "SchoolSections",
+      "doc": "This has all the sections/tabs available on school page.",
+      "optional": true
+    },
+    {
+      "name": "entityInfo",
+      "type": "com.linkedin.voyager.entities.common.EntityInfo",
+      "doc": "It has the specific information about this entity."
+    }
+  ]
+}

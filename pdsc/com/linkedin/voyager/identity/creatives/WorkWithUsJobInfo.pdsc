@@ -1,0 +1,106 @@
+// LINT_SUPPRESS: naming.time
+// LINT_SUPPRESS: naming.boolean
+{
+  "type" : "record",
+  "name" : "WorkWithUsJobInfo",
+  "namespace" : "com.linkedin.voyager.identity.creatives",
+  "doc" : "This record contains the information needed to render a job in a WWU or PY ad.",
+  "fields" : [
+    {
+      "name" : "jobId",
+      "type" : "com.linkedin.common.Urn",
+      "doc" : "Id of the job"
+    },
+    {
+      "name" : "jobTitle",
+      "type" : "string",
+      "doc" : "Title of the job."
+    },
+    {
+      "name" : "postedDate",
+      "doc" : "When this job was posted.",
+      "type" : "com.linkedin.common.Time"
+    },
+    {
+      "name" : "descriptionSnippet",
+      "doc" : "Very short description snippet for the job. NOT the standard description field in the JobInfo object.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "thirdPartyTrackingPixel",
+      "doc" : "Optional third party tracking pixels.",
+      "type" : {
+        "type" : "array",
+        "items" : "com.linkedin.common.Url"
+      },
+      "optional" : true
+    },
+    {
+      "name" : "isApplied",
+      "doc" : "Whether or not the viewer has already applied to this job.",
+      "type" : "boolean",
+      "default" : false
+    },
+    {
+      "name" : "isSaved",
+      "doc" : "Whether or not the viewer has saved this job.",
+      "type" : "boolean",
+      "default" : false
+    },
+    {
+      "name" : "displayLocation",
+      "doc" : "String representing the location of the job (e.g. Mountain View, CA).  This is an input offered to the job poster so we have to honor it.  That is why we do not standardize location.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "listedDate",
+      "doc" : "When this job was listed.",
+      "type" : "com.linkedin.common.Time",
+      "optional" : true
+    },
+    {
+      "name" : "isSponsored",
+      "doc" : "Whether or not this job is sponsored.",
+      "type" : "boolean",
+      "default" : false
+    },
+    {
+      "name" : "simplyHiredUrl",
+      "doc" : "If this is a Simply Hired job (i.e. scraped from simplyhired.com), this is the url for it.",
+      "type" : "com.linkedin.common.Url",
+      "optional" : true
+    },
+    {
+      "name" : "jobLocale",
+      "doc" : "This is the locale of the job.  Used for translation.",
+      "type" : "com.linkedin.common.Locale",
+      "optional" : true
+    },
+    {
+      "name" : "thirdPartyJobCode",
+      "doc" : "Third party job code.",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "sourceDomain",
+      "doc" : "Source for the job (i.e. simplyhired.com, ubiquity.com, etc)",
+      "type" : "string",
+      "optional" : true
+    },
+    {
+      "name" : "jobApplyUrl",
+      "doc" : "Url to apply for the job.",
+      "type" : "com.linkedin.common.Url",
+      "optional" : true
+    },
+    {
+      "name" : "employeeJobApplyUrl",
+      "doc" : "Url to apply for the job if you are an employee of the company.",
+      "type" : "com.linkedin.common.Url",
+      "optional" : true
+    }
+  ]
+}

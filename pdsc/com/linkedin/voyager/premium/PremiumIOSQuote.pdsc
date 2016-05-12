@@ -1,0 +1,24 @@
+{
+   "type": "record",
+   "name": "PremiumIOSQuote",
+   "doc": "IOS quote, contains mimimal information required to complete iOS payments. These fields are required by payments-frontend",
+   "namespace": "com.linkedin.voyager.premium",
+   "fields": [
+     {
+       "name": "verificationSignature",
+       "type": "string",
+       "doc": "The verification signature that OMS requires to verify that the payment is for the specified price id"
+     },
+     {
+       "name": "priceId",
+       "type": "int",
+       "doc": "The id of the plan that the member purchased. This id is defined in OMS"
+     },
+     {
+       "name": "_ed",
+       "type": "string",
+       "doc": "The encrypted promotion id that was applied to the plan that the member purchased. The name of this field is per payment-frontend /purchase endpoint",
+       "optional": true
+     }
+   ]
+ }

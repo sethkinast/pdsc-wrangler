@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "PymkResult",
+  "deprecated": "Please use /relationships/shared/pymk/PeopleYouMayKnow.pdsc instead.",
+  "doc": "DEPRECATED. A single PYMK result in the context of new user onboarding.",
+  "namespace": "com.linkedin.voyager.growth.pymk",
+  "include": ["com.linkedin.voyager.common.Trackable"],
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "The mini profile of the member."
+    }
+  ]
+}

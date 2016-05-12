@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "SecondaryResult",
+  "doc": "Information about secondary search results such as different verticals, for example a people search for 'java' may also have matches in the jobs vertical.",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "type",
+      "type": "SearchType",
+      "doc": "Search type of the secondary search result"
+    },
+    {
+      "name": "total",
+      "type": "int",
+      "doc": "Number of results matched in the secondary search result"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "enum",
+  "name": "TimeFrame",
+  "namespace": "com.linkedin.voyager.identity.me.wvmpOverview",
+  "doc": "Possible profile TimeFrames.",
+  "symbols": [
+    "LAST_90_DAYS",
+    "LAST_7_DAYS",
+    "LAST_30_DAYS",
+    "LAST_6_MONTHS",
+    "LAST_12_MONTHS",
+    "ALL"
+  ],
+  "symbolDocs": {
+    "LAST_90_DAYS": "Last 90 days.",
+    "LAST_7_DAYS": "Last 7 days.",
+    "LAST_30_DAYS": "Last 30 days.",
+    "LAST_6_MONTHS": "Last 6 months.",
+    "LAST_12_MONTHS": "Last 12 months.",
+    "ALL": "All."
+  }
+}

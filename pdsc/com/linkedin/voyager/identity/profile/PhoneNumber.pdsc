@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "PhoneNumber",
+  "doc": "Phone number for a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": [
+    "com.linkedin.common.PhoneNumber"
+  ],
+  "fields": [
+    {
+      "name": "type",
+      "doc": "Work, home, mobile, fax, pager type of phone number.",
+      "type": "PhoneNumberType",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "CareerTitles",
+  "doc": "Title and subtitle of company career.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Primary title text."
+    },
+    {
+      "name": "subtitle",
+      "type": "string",
+      "doc": "Subtitle text.",
+      "optional": true
+    }
+  ]
+}

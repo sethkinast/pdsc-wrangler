@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "GuidedEditTask",
+  "namespace": "com.linkedin.voyager.identity.guidededit",
+  "doc": "A single task within a Guided Edit flow.",
+  "fields": [
+    {
+      "name": "legoTrackingId",
+      "type": "string",
+      "doc": "A tracking id used by lego to track widget impressions and actions."
+    },
+    {
+      "name": "required",
+      "type": "boolean",
+      "doc": "Required tasks cannot be skipped. All required tasks must be completed before any submit to the backend is possible."
+    },
+    {
+      "name": "counted",
+      "type": "boolean",
+      "doc": "A flag indicating whether this task should be shown with the order number in the flow."
+    },
+    {
+      "name": "taskName",
+      "type": "TaskNames",
+      "doc": "An identifier which represents which task this is. Clients should use this field to determine all business logic for this task.",
+      "optional": true
+    },
+    {
+      "name": "taskInfo",
+      "type": [
+        "ProfileEditTaskInfo",
+        "SimpleTaskInfo",
+        "CustomTaskInfo",
+        "SuggestedEditTaskInfo"
+      ],
+      "doc": "Information important to the task. Union of all task info types which contain varying pieces of information."
+    }
+  ]
+}

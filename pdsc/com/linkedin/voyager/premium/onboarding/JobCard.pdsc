@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "JobCard",
+  "doc": "The job insight premium onboarding card on the voyager.",
+  "namespace": "com.linkedin.voyager.premium.onboarding",
+  "fields": [
+    {
+      "name": "job",
+      "type": "com.linkedin.voyager.entities.shared.MiniJob",
+      "doc": "The job information (title, location and company logo)."
+    },
+    {
+      "name": "company",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "The company that posted the job (company name and logo)."
+    },
+    {
+      "name": "applicantInsightPercent",
+      "type": "int",
+      "doc": "The applicant ranking percent about the job posting."
+    },
+    {
+      "name": "applicantInsightTotal",
+      "type": "long",
+      "doc": "The number of total applicants applying the job."
+    }
+  ]
+}

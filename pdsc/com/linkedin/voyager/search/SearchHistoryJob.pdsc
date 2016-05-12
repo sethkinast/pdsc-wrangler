@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "SearchHistoryJob",
+  "doc": "A job recently viewed from search or typeahead results.",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "job",
+      "type": "com.linkedin.voyager.entities.shared.MiniJob",
+      "doc": "Basic job information."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.JobUrn",
+      "doc": "Backend urn representing the job. This should be used only for tracking."
+    }
+  ]
+}

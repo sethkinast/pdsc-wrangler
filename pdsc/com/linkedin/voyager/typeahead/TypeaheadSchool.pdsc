@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "TypeaheadSchool",
+  "doc": "School information used to display a typeahead hit.",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "doc": "The id of the school. This field is deprecated. Use entityUrn in MiniSchool instead."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.SchoolUrn",
+      "doc": "Backend Urn for school. Contains school id. This should be used only for tracking."
+    },
+    {
+      "name": "school",
+      "type": "com.linkedin.voyager.entities.shared.MiniSchool",
+      "doc": "Basic school information."
+    },
+    {
+      "name": "following",
+      "type": "com.linkedin.voyager.common.FollowingInfo",
+      "doc": "Details about whether the viewer is following the school.",
+      "optional": true
+    }
+  ]
+}

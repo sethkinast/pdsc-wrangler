@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "Link",
+  "doc": "Information about a treasury item that links to a specific website.",
+  "namespace": "com.linkedin.voyager.identity.profile.treasury",
+  "fields": [
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "The URL for this link."
+    },
+    {
+      "name": "html",
+      "type": "string",
+      "optional": true,
+      "doc": "The html embed code for this link, e.g. blogpost"
+    },
+    {
+      "name": "width",
+      "type": "int",
+      "optional": true,
+      "doc": "The width for html embed code block."
+    },
+    {
+      "name": "height",
+      "type": "int",
+      "optional": true,
+      "doc": "The height for html embed block"
+    }
+  ]
+}

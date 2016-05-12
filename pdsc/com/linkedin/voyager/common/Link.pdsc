@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "Link",
+  "doc": "Contains text and url for a hyperlink.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "text",
+      "type": "string",
+      "doc": "Text to be displayed for the link."
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "doc": "URL of the link."
+    }
+  ]
+}

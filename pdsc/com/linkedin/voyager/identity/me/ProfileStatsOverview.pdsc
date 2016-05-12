@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "ProfileStatsOverview",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "Summary about the profile stats",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ProfileStatsOverviewUrn",
+      "doc": "Identifier for this profile stats overview."
+    },
+    {
+      "name": "numProfileViews",
+      "type": "long",
+      "doc": "Number of recent profile views this member received."
+    },
+    {
+      "name": "someViewers",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.MiniProfile"
+      },
+      "doc": "Information about a subset of the profile viewers.",
+      "default": []
+    }
+  ]
+}

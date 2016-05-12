@@ -1,0 +1,56 @@
+{
+  "type": "record",
+  "name": "FirstPartyArticle",
+  "doc": "A 1st party publishing article from a non-editor or public context.",
+  "namespace": "com.linkedin.voyager.publishing",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.FirstPartyArticleUrn",
+      "doc": "Identifier for this first party article"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "doc": "Title of the article."
+    },
+    {
+      "name": "authors",
+      "doc": "The author(s) of the article.",
+      "namespace": "com.linkedin.voyager.publishing",
+      "type": {
+        "type": "array",
+        "items": "FirstPartyAuthor"
+      }
+    },
+    {
+      "name": "state",
+      "type": "ArticleState",
+      "doc": "The state of the 1st party article."
+    },
+    {
+      "name": "permalink",
+      "type": "string",
+      "doc": "Unique string used to compose the permalink of the 1st party article. Blank for articles that have never been published.",
+      "default": "" // Empty string indicates that the article has never been published
+    },
+    {
+      "name": "coverMedia",
+      "type": "CoverMedia",
+      "doc": "The cover media at the top of a 1st party article.",
+      "optional": true
+    },
+    {
+      "name": "contentHtml",
+      "type": "string",  // v1 will only support HTML. In v2, we will support structured JSON data instead.
+      "doc": "Full text of the content body with HTML markup. Possible to save but not publish an article with an empty body.",
+      "optional": true
+    },
+    {
+      "name": "publishedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The date and time the article was published. Not present for articles that have never been published.",
+      "optional": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "type": "array",
+  "items": "com.linkedin.voyager.common.RegionUrn",
+  "doc": "List of geo region urns."
+}

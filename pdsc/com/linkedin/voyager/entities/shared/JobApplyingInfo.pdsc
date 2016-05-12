@@ -1,0 +1,33 @@
+// LINT_SUPPRESS: naming.time
+{
+  "type": "record",
+  "name": "JobApplyingInfo",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Information about whether the viewer applied for this job.",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.JobApplyingInfoUrn",
+      "doc": "Identifier for this JobApplyingInfo.",
+      "optional": true
+    },
+    {
+      "name": "applied",
+      "type": "boolean",
+      "doc": "Indicates whether the viewer applied for this job."
+    },
+    {
+      "name": "appliedTime",
+      "type": "com.linkedin.common.Time",
+      "doc": "TODO: remove field. DEPRECATED - The application time for this job.",
+      "optional": true,
+      "deprecated": true
+    },
+    {
+      "name": "appliedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The application time for this job.",
+      "optional": true
+    }
+  ]
+}

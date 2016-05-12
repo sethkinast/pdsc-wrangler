@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TypeaheadSkill",
+  "doc": "Skill information used to display a typeahead hit",
+  "namespace": "com.linkedin.voyager.typeahead",
+  "fields": [
+    {
+      "name": "skill",
+      "type": "com.linkedin.voyager.entities.shared.MiniSkill",
+      "doc": "Basic skill information."
+    },
+    {
+      "name": "backendUrn",
+      "type": "com.linkedin.common.SkillUrn",
+      "doc": "Backend Urn for the skill. This should be used only for tracking."
+    }
+  ]
+}

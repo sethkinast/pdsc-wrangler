@@ -1,0 +1,27 @@
+{
+  "type": "record",
+  "name": "Insight",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "A container for all the insights surfaced in the Me project.",
+  "fields": [
+    {
+      "name": "value",
+      "type": [
+        "com.linkedin.voyager.identity.shared.networkHighlights.NetworkHighlight",
+        "com.linkedin.voyager.identity.me.wvmpOverview.WvmpJymbiiInsight",
+        "com.linkedin.voyager.identity.me.ConnectionsInCommonInsight"
+      ],
+      "doc": "Union for all insights used on the Me project."
+    },
+    {
+      "name": "objectUrn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Pointer to the backend object underlying this insight."
+    },
+    {
+      "name": "trackingId",
+      "type": "com.linkedin.voyager.common.Base64EncodedTrackingId",
+      "doc": "Unique tracking id for this instance of the insight."
+    }
+  ]
+}

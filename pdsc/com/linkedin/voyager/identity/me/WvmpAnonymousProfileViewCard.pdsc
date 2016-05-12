@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "WvmpAnonymousProfileViewCard",
+  "namespace": "com.linkedin.voyager.identity.me",
+  "doc": "An anonymous profile view card on the Who Viewed My Profile Page.",
+  "fields": [
+    {
+      "name": "viewedAt",
+      "type": "com.linkedin.common.Time",
+      "doc": "The timestamp in milliseconds since epoch. For premium members, the value will be the first millisecond of the week. For free members, it will be the timestamp when the latest anonymous view happened."
+    },
+    {
+      "name": "numViewers",
+      "type": "long",
+      "doc": "Number of viewers in this anonymous profile view card."
+    }
+  ]
+}

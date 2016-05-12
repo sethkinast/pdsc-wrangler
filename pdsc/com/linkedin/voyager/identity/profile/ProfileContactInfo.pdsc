@@ -1,0 +1,67 @@
+{
+  "type": "record",
+  "name": "ProfileContactInfo",
+  "doc": "Contact info for a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.ContactInfoUrn",
+      "doc": "Entity Urn of the contact info."
+    },
+    {
+      "name": "weChatContactInfo",
+      "type": "WeChatContactInfo",
+      "doc": "the member's WeChat contact information",
+      "optional": true
+    },
+    {
+      "name": "phoneNumbers",
+      "type": {
+        "type": "array",
+        "items": "PhoneNumber"
+      },
+      "doc": "A list of phone numbers. The first one is the primary",
+      "default": []
+    },
+    {
+      "name": "websites",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.profile.ProfileWebsite"
+      },
+      "doc": "A list of website urls. The first one is the primary",
+      "default": []
+    },
+    {
+      "name": "twitterHandles",
+      "doc": "A list of twitter handles for this member.",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.TwitterHandle"
+      },
+      "default": []
+    },
+    {
+      "name": "ims",
+      "doc": "List of instant messaging handles for this member.",
+      "type": {
+        "type": "array",
+        "items": "IM"
+      },
+      "default": []
+    },
+    {
+      "name": "emailAddress",
+      "type": "com.linkedin.common.EmailAddress",
+      "doc": "The member's primary email address",
+      "optional": true
+    },
+    {
+      "name": "address",
+      "doc": "Address as entered by the member.",
+      "type": "string",
+      "optional": true
+    }
+  ]
+}

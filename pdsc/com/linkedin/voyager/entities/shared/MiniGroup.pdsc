@@ -1,0 +1,37 @@
+{
+  "type": "record",
+  "name": "MiniGroup",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "doc": "Minimal set of information to display a group or thumbnail of a group.",
+  "include": ["com.linkedin.voyager.common.TrackingObject"],
+  "fields": [
+    {
+      "name": "entityUrn",
+      "type": "com.linkedin.voyager.common.MiniGroupUrn",
+      "doc": "Identifier for this mini group."
+    },
+    {
+      "name": "groupName",
+      "type": "string",
+      "doc": "Name of the group."
+    },
+    {
+      "name": "groupDescription",
+      "type": "string",
+      "doc": "The description of the group.",
+      "optional": true
+    },
+    {
+      "name": "logo",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "Logo image of the group.",
+      "optional": true
+    },
+    {
+      "doc": "The number of recent activities",
+      "name": "recentActivityCount",
+      "type": "int",
+      "optional": true
+    }
+  ]
+}

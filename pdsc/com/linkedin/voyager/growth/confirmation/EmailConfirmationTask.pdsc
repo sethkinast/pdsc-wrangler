@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "EmailConfirmationTask",
+  "doc": "Whether or not the user needs to confirm his or her email. ",
+  "namespace": "com.linkedin.voyager.growth.confirmation",
+  "fields": [
+    {
+      "name": "email",
+      "type": "com.linkedin.common.EmailAddress",
+      "optional": true,
+      "doc": "If present, the user needs to confirm an email and this is the suggested email to confirm. If missing, it means there is no need to confirm an email or it could not be determined."
+    }
+  ]
+}

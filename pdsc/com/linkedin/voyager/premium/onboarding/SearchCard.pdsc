@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "SearchCard",
+  "doc": "The unlimited search premium onboarding card on the voyager.",
+  "namespace": "com.linkedin.voyager.premium.onboarding",
+  "fields": [
+    {
+      "name": "profiles",
+      "type": {
+        "type": "array",
+        "items": "com.linkedin.voyager.identity.shared.MiniProfile"
+      },
+      "doc": "A list of search result profiles."
+    },
+    {
+      "name": "totalResult",
+      "type": "long",
+      "doc": "The total amount of the search result."
+    }
+  ]
+}

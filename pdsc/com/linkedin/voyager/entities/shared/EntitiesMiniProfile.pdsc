@@ -1,0 +1,25 @@
+{
+  "type": "record",
+  "name": "EntitiesMiniProfile",
+  "doc": "MiniProfile wrapper for entities pillar.",
+  "namespace": "com.linkedin.voyager.entities.shared",
+  "fields": [
+    {
+      "name": "miniProfile",
+      "type": "com.linkedin.voyager.identity.shared.MiniProfile",
+      "doc": "mini profile of a member."
+    },
+    {
+      "name": "distance",
+      "type": "com.linkedin.voyager.common.MemberDistance",
+      "optional": true,
+      "doc": "The distance between the viewer and the person."
+    },
+    {
+      "name": "headless",
+      "type": "boolean",
+      "optional": true,
+      "doc": "Flag to determine if the profile is headless. A member profile is marked as headless if it is out of network and has no shared groups. This field is populated when retrieving a profile using search APIs."
+    }
+  ]
+}

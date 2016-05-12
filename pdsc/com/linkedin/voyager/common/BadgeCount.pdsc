@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "BadgeCount",
+  "doc": "A container for badge count.",
+  "namespace": "com.linkedin.voyager.common",
+  "fields": [
+    {
+      "name": "count",
+      "type": "long",
+      "doc": "Number on the badge"
+    }
+  ]
+}

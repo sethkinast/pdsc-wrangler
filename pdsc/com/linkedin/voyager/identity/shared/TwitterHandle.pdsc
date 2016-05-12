@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "TwitterHandle",
+  "namespace": "com.linkedin.voyager.identity.shared",
+  "doc": "Twitter account information",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string",
+      "doc": "The Twitter username"
+    },
+    {
+      "name": "credentialId",
+      "type": "string",
+      "doc": "LinkedIn id for the Twitter account, used when creating a share"
+    }
+  ]
+}

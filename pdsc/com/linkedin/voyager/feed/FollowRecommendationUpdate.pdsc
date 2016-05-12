@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "FollowRecommendationUpdate",
+  "doc": "Follow Recommendation Update",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "recommendation",
+      "doc": "The entity we are recommending the viewer follow",
+      "type": "com.linkedin.voyager.feed.packageRecommendations.RecommendedEntity"
+    },
+    {
+      "name": "recommendationText",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "doc": "Editorial reason for recommending this entity",
+      "optional": true
+    }
+  ]
+}

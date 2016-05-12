@@ -1,0 +1,11 @@
+{
+  "namespace": "com.linkedin.voyager.feed",
+  "name": "DiscussionSource",
+  "type": "enum",
+  "doc": "Indicates where the discussion came from",
+  "symbols":["ORGANIC", "RECOMMENDED"],
+  "symbolDocs": {
+    "ORGANIC": "Organic discussion",
+    "RECOMMENDED": "Discussion from a recommender service"
+  }
+}

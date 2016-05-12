@@ -1,0 +1,61 @@
+{
+  "type": "record",
+  "name": "ViralUpdate",
+  "doc": "Viral update in feed.",
+  "namespace": "com.linkedin.voyager.feed",
+  "include": [
+    "com.linkedin.voyager.feed.ControlActions"
+  ],
+  "fields": [
+    {
+      "name": "urn",
+      "type": "com.linkedin.common.Urn",
+      "doc": "Backend URN for this update.",
+      "optional": true
+    },
+    {
+      "name": "actor",
+      "type": "SocialActor",
+      "doc": "The actor of the viral update."
+    },
+    {
+      "name": "originalUpdate",
+      "doc": "The update on which the viral action occurred.",
+      "type": "Update"
+    },
+    {
+      "name": "insight",
+      "type": "string",
+      "doc": "The insight of the update.",
+      "optional": true
+    },
+    {
+      "name": "header",
+      "doc": "Header to display for this update (eg. X commented on this)",
+      "type": "com.linkedin.pemberly.text.AttributedText",
+      "optional": true
+    },
+    {
+      "name": "viralType",
+      "doc": "Type of viral update",
+      "type": [
+        "ViralLikeType",
+        "ViralCommentType",
+        "ViralLikeOnCommentType",
+        "ViralCommentOnCommentType"
+      ]
+    },
+    {
+      "name": "trackingId",
+      "type": "string",
+      "doc": "***DEPRECATED*** a unique id which represents this particular instance of an entity, created when the entity is materialized",
+      "optional": true
+    },
+    {
+      "name": "tracking",
+      "type": "TrackingData",
+      "doc": "***DEPRECATED*** Tracking information to be used for sending Feed Tracking events : FeedImpressionEvent, FeedActionEvent.",
+      "optional": true
+    }
+  ]
+}

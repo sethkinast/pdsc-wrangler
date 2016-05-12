@@ -1,0 +1,11 @@
+{
+  "type": "typeref",
+  "name": "Image",
+  "namespace": "com.linkedin.voyager.common",
+  "doc": "A reference to an image, either MPR, media-proxy, or fully qualified URL",
+  "ref": [
+    "MediaProcessorImage",
+    "MediaProxyImage",
+    "com.linkedin.common.Url"
+  ]
+}

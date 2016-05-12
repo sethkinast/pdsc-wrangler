@@ -1,0 +1,63 @@
+// LINT_SUPPRESS: naming.date
+{
+  "fields": [
+    {
+      "type": "boolean",
+      "name": "active",
+      "default": true,
+      "doc": "Whether this relationship is still active"
+    },
+    {
+      "type": "boolean",
+      "name": "includeRelatedJobs",
+      "default": false,
+      "doc": "include jobs from affliated company in careers page"
+    },
+    {
+      "type": "boolean",
+      "name": "includeRelatedEmployees",
+      "default": false,
+      "doc": "include employees from affliated company in count and in employee list display"
+    },
+    {
+      "type": "com.linkedin.common.Urn",
+      "name": "relatedCompany",
+      "doc": "urn of related company"
+    },
+    {
+      "optional": true,
+      "type": "com.linkedin.common.DateRange",
+      "name": "dateRange",
+      "doc": "time period for relationship"
+    },
+    {
+      "optional": true,
+      "type": {
+        "symbols": [
+          "DIVISION",
+          "SUBSIDIARY",
+          "PARENT",
+          "ACQUISITION",
+          "MERGER",
+          "BRAND"
+        ],
+        "type": "enum",
+        "name": "BizRelationshipType",
+        "symbolDocs": {
+          "DIVISION": "This company is division of related company.",
+          "SUBSIDIARY": "This company is a subsidiary of related company.",
+          "PARENT": "This company is a parent of related company",
+          "ACQUISITION": "This company has been acquired by related company",
+          "MERGER": "This company has merged with related company",
+          "BRAND": "This company is a brand of related company"
+        }
+      },
+      "name": "type",
+      "doc": "type of relationship"
+    }
+  ],
+  "namespace": "com.linkedin.voyager.identity.creatives.company",
+  "type": "record",
+  "name": "BizRelationship",
+  "doc": "Represents relationship a company can have with other companies"
+}

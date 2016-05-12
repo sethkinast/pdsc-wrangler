@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "name": "ShareText",
+  "doc": "The shared text in ShareUpdate.",
+  "namespace": "com.linkedin.voyager.feed",
+  "fields": [
+    {
+      "name": "text",
+      "doc": "The shared text.",
+      "type": "com.linkedin.voyager.feed.shared.AnnotatedText"
+    }
+  ]
+}
+

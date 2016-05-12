@@ -1,0 +1,24 @@
+{
+  "type": "record",
+  "name": "Snippet",
+  "doc": "snippet of search hit",
+  "namespace": "com.linkedin.voyager.search",
+  "fields": [
+    {
+      "name": "fieldType",
+      "type": "SnippetField",
+      "doc": "Field of the entity for the snippet."
+    },
+    {
+      "name": "heading",
+      "type": "com.linkedin.voyager.relationships.shared.annotation.AnnotatedText",
+      "optional": true,
+      "doc": "Heading of snippet. This is usually metadata about the snippet body. For example if we match on the body of a profile position description, then the heading would be the position title. More concretely, for query \"human interation\" and position with title \"designer\" and position description \"lead researcher on human computer interaction at company\", we populate heading with \"designer\""
+    },
+    {
+      "name": "body",
+      "type": "com.linkedin.voyager.relationships.shared.annotation.AnnotatedText",
+      "doc": "Body of snippet."
+    }
+  ]
+}

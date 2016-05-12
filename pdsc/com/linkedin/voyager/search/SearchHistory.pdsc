@@ -1,0 +1,38 @@
+{
+  "type": "record",
+  "name": "SearchHistory",
+  "namespace": "com.linkedin.voyager.search",
+  "doc": "Describes search history of a member. It can either be a keyword search performed by user or entity viewed from search/typeahead result",
+  "fields": [
+    {
+      "name": "displayText",
+      "type": "string",
+      "doc": "Text to be displayed for the search history activity. eg entity name or search query."
+    },
+    {
+      "name": "subtext",
+      "type": "string",
+      "doc": "The subtext to be displayed under the display text.  e.g. this would be additional member info, or search suggestion info.",
+      "optional": true
+    },
+    {
+      "name": "searchType",
+      "type": "SearchType",
+      "doc": "Type of entity viewed from search or vertical in which the the search was performed."
+    },
+    {
+      "name": "historyInfo",
+      "type": [
+        "SearchHistoryProfile",
+        "SearchHistoryJob",
+        "SearchHistoryCompany",
+        "SearchHistoryGroup",
+        "SearchHistorySchool",
+        "SearchQuery",
+        "EntityAwareSearchQuery",
+        "SearchHistoryTrendingResultContainer"
+      ],
+      "doc": "Contains information about entity viewed or search performed."
+    }
+  ]
+}

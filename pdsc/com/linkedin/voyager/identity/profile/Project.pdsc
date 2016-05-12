@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "Project",
+  "doc": "Project done by a member.",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "include": ["CoreProject"],
+  "fields": [
+    {
+      "name": "members",
+      "type": {
+        "type": "array",
+        "items": "Contributor"
+      },
+      "doc": "List of members of this project, must include the profile owner."
+    }
+  ]
+}

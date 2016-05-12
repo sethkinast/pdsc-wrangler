@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "PositionCompany",
+  "doc": "Company model for profile position",
+  "namespace": "com.linkedin.voyager.identity.profile",
+  "fields": [
+    {
+      "name": "miniCompany",
+      "type": "com.linkedin.voyager.entities.shared.MiniCompany",
+      "doc": "Information about the mini company inside this position"
+    },
+    {
+      "name": "employeeCountRange",
+      "type": "EmployeeCountRange",
+      "doc": "Range corresponding to the number of employees in this company.",
+      "optional": true
+    },
+    {
+      "name": "industries",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "doc": "Industries this company is a part of",
+      "default": []
+    }
+  ]
+}

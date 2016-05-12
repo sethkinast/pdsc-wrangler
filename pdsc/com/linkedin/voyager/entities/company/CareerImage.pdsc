@@ -1,0 +1,31 @@
+{
+  "type": "record",
+  "name": "CareerImage",
+  "doc": "The image used in company career.",
+  "namespace": "com.linkedin.voyager.entities.company",
+  "fields": [
+    {
+      "name": "image",
+      "type": "com.linkedin.voyager.common.Image",
+      "doc": "reference to image. (It's usually a MediaProcessorImage.)"
+    },
+    {
+      "name": "url",
+      "type": "com.linkedin.common.Url",
+      "optional": true,
+      "doc": "Url for more information."
+    },
+    {
+      "name": "height",
+      "type": "int",
+      "optional": true,
+      "doc": "Height of the image."
+    },
+    {
+      "name": "width",
+      "type": "int",
+      "optional": true,
+      "doc": "Width of the image."
+    }
+  ]
+}

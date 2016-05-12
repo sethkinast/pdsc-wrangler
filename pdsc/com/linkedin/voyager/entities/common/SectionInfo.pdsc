@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "SectionInfo",
+  "doc": "This has all the information about a section.",
+  "namespace": "com.linkedin.voyager.entities.common",
+  "fields" : [
+    {
+      "name": "name",
+      "doc": "This is a list of all the possible names for the Entities section groups.",
+      "type": {
+        "name": "SectionName",
+        "type": "enum",
+        "symbols": [
+          "DETAILS",
+          "HIGHLIGHTS",
+          "PEOPLE",
+          "CAREERS",
+          "POSTS",
+          "INSIGHTS"
+        ],
+        "symbolDocs": {
+          "DETAILS": "The details section name.",
+          "HIGHLIGHTS": "The highlights section name.",
+          "PEOPLE": "The people section name.",
+          "CAREERS": "The careers section name.",
+          "POSTS": "The posts section name.",
+          "INSIGHTS": "The insights section name."
+        }
+      }
+    }
+  ]
+}
+
