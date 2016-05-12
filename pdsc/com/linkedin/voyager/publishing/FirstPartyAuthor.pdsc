@@ -1,9 +1,0 @@
-{
-   "type": "typeref",
-   "name": "FirstPartyAuthor",
-   "doc": "All possible author types of LinkedIn 1st party (publishing) content.",
-   "namespace": "com.linkedin.voyager.publishing",
-   "ref": [
-     "MemberAuthor"
-   ]
- }

@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "FollowChannel",
-  "doc": "Action type for following a channel.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

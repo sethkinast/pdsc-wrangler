@@ -1,8 +1,0 @@
-{
-  "type": "record",
-  "name": "Organization",
-  "doc": "Organization to which a member belongs.",
-  "namespace": "com.linkedin.voyager.identity.profile",
-  "include": ["NormOrganization"],
-  "fields": []
-}

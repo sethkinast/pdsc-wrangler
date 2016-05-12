@@ -1,8 +1,0 @@
-{
-  "type": "record",
-  "name": "PreviewCreationFailed",
-  "doc": "value of url preview when the preview creation has failed on the backend.",
-  "namespace": "com.linkedin.voyager.feed.urlpreview",
-  "fields": [
-  ]
-}

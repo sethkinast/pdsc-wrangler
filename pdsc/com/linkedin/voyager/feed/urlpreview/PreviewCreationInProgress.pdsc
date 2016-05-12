@@ -1,8 +1,0 @@
-{
-  "type": "record",
-  "name": "PreviewCreationInProgress",
-  "doc": "value of url preview when the preview creation has not finished and is in progress.",
-  "namespace": "com.linkedin.voyager.feed.urlpreview",
-  "fields": [
-  ]
-}

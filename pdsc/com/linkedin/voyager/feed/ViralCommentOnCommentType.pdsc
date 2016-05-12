@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "ViralCommentOnCommentType",
-  "doc": "Type for a Viral Comment on Comment.",
-  "namespace": "com.linkedin.voyager.feed",
-  "fields": []
-}

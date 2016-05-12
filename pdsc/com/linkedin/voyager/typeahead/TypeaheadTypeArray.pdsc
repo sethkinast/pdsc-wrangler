@@ -1,5 +1,0 @@
-{
-  "type": "array",
-  "items": "com.linkedin.voyager.typeahead.TypeaheadType",
-  "doc": "List of typeahead type."
-}

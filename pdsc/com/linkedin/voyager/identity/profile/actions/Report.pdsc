@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Report",
-  "namespace": "com.linkedin.voyager.identity.profile.actions",
-  "doc": "Profile overflow action to report a user",
-  "fields": []
-}

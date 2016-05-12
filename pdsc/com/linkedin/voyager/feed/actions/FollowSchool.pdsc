@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "FollowSchool",
-  "doc": "Action type for following a school.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

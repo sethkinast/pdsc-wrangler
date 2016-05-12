@@ -1,7 +1,0 @@
-{
-  "type": "typeref",
-  "name": "Base64EncodedTrackingId",
-  "namespace": "com.linkedin.voyager.common",
-  "doc": "This type is meant to provide a solution to the problem where TrackingId are transferred as an UTF8 string on the wire, which ends up being incompatible with browsers. This type makes sure that the tracking id is encoded (base64) into a string that can be transported and won't cause issues with browser and other applications.",
-  "ref": "string"
-}

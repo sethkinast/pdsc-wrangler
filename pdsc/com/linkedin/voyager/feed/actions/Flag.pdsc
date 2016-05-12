@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Flag",
-  "doc": "Type for a Flag Action.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

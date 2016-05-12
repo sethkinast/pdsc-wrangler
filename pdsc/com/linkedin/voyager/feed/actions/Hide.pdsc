@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Hide",
-  "doc": "Type for a Hide Action.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

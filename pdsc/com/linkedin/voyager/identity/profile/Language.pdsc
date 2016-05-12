@@ -1,8 +1,0 @@
-{
-  "type": "record",
-  "name": "Language",
-  "doc": "Language that a member has, associated with his level in this language.",
-  "namespace": "com.linkedin.voyager.identity.profile",
-  "include": ["NormLanguage"],
-  "fields": [ ]
-}

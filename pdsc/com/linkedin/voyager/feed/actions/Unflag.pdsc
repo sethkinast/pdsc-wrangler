@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Unflag",
-  "doc": "Action type for unflagging an update.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

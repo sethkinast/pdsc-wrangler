@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Follow",
-  "namespace": "com.linkedin.voyager.identity.profile.actions",
-  "doc": "Profile action to follow a member",
-  "fields": []
-}

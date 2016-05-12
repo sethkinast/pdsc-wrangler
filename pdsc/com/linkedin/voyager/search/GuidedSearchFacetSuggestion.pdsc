@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "GuidedSearchFacetSuggestion",
-  "doc": "Guided search suggestion for search facet, e.g. 'Your first connections in Square'.",
-  "namespace": "com.linkedin.voyager.search",
-  "fields": []
-}

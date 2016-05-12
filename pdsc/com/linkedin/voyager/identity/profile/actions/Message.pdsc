@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Message",
-  "namespace": "com.linkedin.voyager.identity.profile.actions",
-  "doc": "Profile action to message another member (TODO: temporary empty fields)",
-  "fields": []
-}

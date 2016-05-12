@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Report",
-  "doc": "Type for a Report Action.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

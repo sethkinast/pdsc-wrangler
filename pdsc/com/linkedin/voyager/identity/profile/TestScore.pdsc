@@ -1,8 +1,0 @@
-{
-  "type": "record",
-  "name": "TestScore",
-  "doc": "Test score for a member.",
-  "namespace": "com.linkedin.voyager.identity.profile",
-  "include": ["NormTestScore"],
-  "fields": []
-}

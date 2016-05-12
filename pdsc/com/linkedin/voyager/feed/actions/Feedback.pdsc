@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "Feedback",
-  "doc": "Type for a Feedback Action.",
-  "namespace": "com.linkedin.voyager.feed.actions",
-  "fields": []
-}

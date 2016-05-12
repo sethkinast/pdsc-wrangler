@@ -1,7 +1,0 @@
-{
-  "type": "record",
-  "name": "InvitationPending",
-  "namespace": "com.linkedin.voyager.identity.profile.actions",
-  "doc": "State when a inviter has already sent the invitee a connection invitation (inviter is viewing invitee's profile)",
-  "fields": []
-}

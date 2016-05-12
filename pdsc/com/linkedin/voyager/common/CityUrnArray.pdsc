@@ -1,5 +1,0 @@
-{
-  "type": "array",
-  "items": "com.linkedin.voyager.common.CityUrn",
-  "doc": "List of geo city urns."
-}
