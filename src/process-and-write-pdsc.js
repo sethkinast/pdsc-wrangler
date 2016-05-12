@@ -1,6 +1,6 @@
 const path = require('path');
 const dust = require('dustjs-helpers');
-const write = require('then-write-file');
+const write = require('safe-write-file');
 
 const pdscToModelUtils = require('./util/pdsc-to-model');
 
@@ -10,7 +10,6 @@ module.exports = function processAndWrite(model) {
   if (!model) {
     return;
   }
-if(!model.name) { console.log(model)}
   modelTemplate(model, function(err, data) {
     let modelPath = model.namespace? model.namespace + '.' + model.name : model.name;
     write(

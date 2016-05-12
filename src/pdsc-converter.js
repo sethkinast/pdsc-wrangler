@@ -49,13 +49,9 @@ function processFieldType(type, namespace, collectedImports) {
   }
 
   if (typeof type === 'string') {
-    if (type.indexOf('com.linkedin.voyager') === 0 || type.indexOf('com.linkedin') === -1) {
-      let typeName = type.split('.').pop();
-      collectedImports[typeName] = pdscToModelUtils.pdscPackageNameToModelPath(type);
-      return typeName;
-    } else {
-      // some other type, todo
-    }
+    let typeName = type.split('.').pop();
+    collectedImports[typeName] = pdscToModelUtils.pdscPackageNameToModelPath(type);
+    return typeName;
   }
 
   if (Array.isArray(type)) {
@@ -66,6 +62,9 @@ function processFieldType(type, namespace, collectedImports) {
   if (typeof type === 'object') {
     if (type.type === 'array') {
       return processFieldType(type.items, namespace, collectedImports);
+    }
+    if (type.type === 'map') {
+      return processFieldType(type.values, namespace, collectedImports);
     }
     if (type.type === 'enum') {
       return processFieldType('string');
