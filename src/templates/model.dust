@@ -7,8 +7,10 @@ import Model from 'app/api/NotTerribleModel';
      * @property {name}
      * {doc|s}
      */
-    {name}: {type|s},
+    {name}: {type|s}{@sep},
 
-    {/fields}modelType: "{modelName}"
+    {/sep}{/fields}
   }{?includes}){/includes}
+
+  static modelType = "{modelName}"
 }{:else}export default {typeref};{/typeref}
