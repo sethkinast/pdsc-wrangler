@@ -64,7 +64,8 @@ function processFieldType(type, namespace, collectedImports) {
       return processFieldType(type.items, namespace, collectedImports);
     }
     if (type.type === 'map') {
-      return processFieldType(type.values, namespace, collectedImports);
+      processFieldType(type.values, namespace, collectedImports);
+      return 'Model.MAP';
     }
     if (type.type === 'enum') {
       return processFieldType('string');
