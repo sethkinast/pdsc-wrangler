@@ -5,5 +5,6 @@ module.exports = {
   string: 'Model.STRING',
   double: 'Model.FLOAT',
   float: 'Model.FLOAT',
-  boolean: 'Model.BOOL'
+  boolean: 'Model.BOOL',
+  map: 'Model.MAP'
 };

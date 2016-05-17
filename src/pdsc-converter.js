@@ -7,6 +7,8 @@ const pdscToModelUtils = require('./util/pdsc-to-model');
 const PRIMITIVES = require('./primitives');
 const processAndWrite = require('./process-and-write-pdsc');
 
+const LINE_SPLIT_REGEX = /(\r\n|.){1,80}(\b|$)/g;
+
 function normalizeName(name, namespace) {
   // Try to normalize the name of the type to its fully-qualified name
   if (typeof name === 'string' && name.indexOf('.') === -1) {
@@ -18,7 +20,7 @@ function normalizeName(name, namespace) {
 function processField(field, { collectedImports, namespace }) {
   const ret = {
     name: field.name,
-    doc: field.doc
+    doc: field.doc? field.doc.match(LINE_SPLIT_REGEX) : field.doc
   };
 
   ret.type = processFieldType(field.type, namespace, collectedImports);
@@ -38,7 +40,8 @@ function processField(field, { collectedImports, namespace }) {
 function processFieldType(type, namespace, collectedImports) {
   // Simple types like "int" and "string"
   if (PRIMITIVES.hasOwnProperty(type)) {
-    return PRIMITIVES[type];
+    collectedImports[PRIMITIVES[type]] = true;
+    return PRIMITIVES[type].split('.')[1];
   }
 
   type = normalizeName(type, namespace);
@@ -48,15 +51,18 @@ function processFieldType(type, namespace, collectedImports) {
     type = type.pop();
   }
 
+  // A single ref to a type, either in this namespace or an external namespace
   if (typeof type === 'string') {
     let typeName = type.split('.').pop();
     collectedImports[typeName] = pdscToModelUtils.pdscPackageNameToModelPath(type);
     return typeName;
   }
 
+  // A non-unary array of types
   if (Array.isArray(type)) {
     let types = type.map((type) => processFieldType(type, namespace, collectedImports));
-    return `Model.oneOf(${types.join(', ')})`;
+    collectedImports['Model.oneOf'] = true;
+    return `oneOf(${types.join(', ')})`;
   }
 
   if (typeof type === 'object') {
@@ -65,10 +71,10 @@ function processFieldType(type, namespace, collectedImports) {
     }
     if (type.type === 'map') {
       processFieldType(type.values, namespace, collectedImports);
-      return 'Model.MAP';
+      return processFieldType('map', namespace, collectedImports);
     }
     if (type.type === 'enum') {
-      return processFieldType('string');
+      return processFieldType('string', namespace, collectedImports);
     }
     if (type.type === 'record') {
       // Give it the same namespace as its containing type
@@ -77,8 +83,7 @@ function processFieldType(type, namespace, collectedImports) {
       return processFieldType(type.name, namespace, collectedImports);
     }
   }
-
-  return `Model.foreignUrn('${type}')`;
+  throw new Error('Bombing out because failed to process', type);
 }
 
 function convert(pdsc) {
@@ -86,7 +91,7 @@ function convert(pdsc) {
   const collectedImports = {};
 
   if (ret.type === 'enum') {
-    ret.typeref = 'Model.STRING';
+    ret.typeref = processFieldType('string', ret.namespace, collectedImports);
   }
 
   if (ret.type === 'array') {
@@ -98,7 +103,7 @@ function convert(pdsc) {
   }
 
   if (ret.type === 'map') {
-    ret.typeref = 'Model.MAP';
+    ret.typeref = processFieldType('map', ret.namespace, collectedImports);
     if (!ret.name) {
       // This is a horrible top-level type that has no name (e.g. CityUrn)
       ret.name = ret.values + humps.pascalize(ret.type);
@@ -122,8 +127,18 @@ function convert(pdsc) {
   }
 
   ret.imports = [];
+  ret.primitiveImports = [];
   for (let item in collectedImports) {
-    ret.imports.push({ name: item, path: collectedImports[item] });
+    if (!item.indexOf('Model.')) {
+      ret.primitiveImports.push(item.split('.')[1]);
+    } else {
+      ret.imports.push({ name: item, path: collectedImports[item] });
+    }
+  }
+
+  // 100-character boundary split for docs, respect spaces
+  if (ret.doc) {
+    ret.doc = ret.doc.match(LINE_SPLIT_REGEX);
   }
 
   ret.modelName = pdscToModelUtils.pdscPackageNameToModelPath(ret.namespace + '.' + ret.name);

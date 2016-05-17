@@ -1,12 +1,15 @@
-import Model from 'app/api/NotTerribleModel';
+import {^typeref}Model{/typeref}{?primitiveImports}{^typeref}, {/typeref}{ {#primitiveImports}{.}{@sep}, {/sep}{/primitiveImports} }{/primitiveImports} from 'app/api/NotTerribleModel';
 {#imports}import {name} from "app/models/{path}";
 {/imports}
+{?doc}/**
+{#doc} * {.|s}
+{/doc} */{/doc}
 {^typeref}export default class {name} extends Model {
   static schema = {?includes}Object.assign({}, {#includes}{.}.schema, {/includes}{/includes}{
     {#fields}/**
      * @property {name}
-     * {doc|s}
-     */
+{#doc}     * {.|s}
+{/doc}     */
     {name}: {type|s}{@sep},
 
     {/sep}{/fields}
