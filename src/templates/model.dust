@@ -5,15 +5,19 @@ import {^typeref}Model{/typeref}{?primitiveImports}{^typeref}, {/typeref}{ {#pri
 {#doc} * {.|s}
 {/doc} */{/doc}
 {^typeref}export default class {name} extends Model {
-  static schema = {?includes}Object.assign({}, {#includes}{.}.schema, {/includes}{/includes}{
-    {#fields}/**
-     * @property {name}
-{#doc}     * {.|s}
-{/doc}     */
-    {name}: {type|s}{@sep},
+  static get schema() {
+    return {?includes}Object.assign({}, {#includes}{.}.schema, {/includes}{/includes}{
+      {#fields}/**
+       * @property {name}
+  {#doc}     * {.|s}
+  {/doc}     */
+      {name}: {type|s}{@sep},
 
-    {/sep}{/fields}
-  }{?includes}){/includes}
+      {/sep}{/fields}
+    }{?includes}){/includes};
+  }
 
-  static modelType = "{modelName}"
+  static get modelType() {
+    return "{modelName}";
+  }
 }{:else}export default {typeref};{/typeref}
